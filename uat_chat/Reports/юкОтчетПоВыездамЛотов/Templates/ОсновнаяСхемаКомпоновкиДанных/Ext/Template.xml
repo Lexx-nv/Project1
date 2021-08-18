@@ -1,0 +1,810 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТипТС</dataPath>
+			<field>ТипТС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип ТС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдентификаторСтрокиЗаявки</dataPath>
+			<field>ИдентификаторСтрокиЗаявки</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Колонна</dataPath>
+			<field>Колонна</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Колонна</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЗаявкаБезЛота</dataPath>
+			<field>ЗаявкаБезЛота</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заявка без лота</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазнарядкаБезЛота</dataPath>
+			<field>РазнарядкаБезЛота</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разнарядка без лота</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПутевыеЛистыПоЗаявкеБезЛота</dataPath>
+			<field>ПутевыеЛистыПоЗаявкеБезЛота</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путевые листы по заявке без лота</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПутевыеЛистыПоЛоту</dataPath>
+			<field>ПутевыеЛистыПоЛоту</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путевые листы по лоту</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПутевыеЛистыВсего</dataPath>
+			<field>ПутевыеЛистыВсего</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путевые листы всего</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НеЗакрытоПоЛоту</dataPath>
+			<field>НеЗакрытоПоЛоту</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не закрыто по лоту</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РазнарядкаПоЛоту</dataPath>
+			<field>РазнарядкаПоЛоту</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разнарядка по лоту</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВсегоПоЛоту</dataPath>
+			<field>ВсегоПоЛоту</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всего по лоту</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПутевыеЛистыБезЛотаВручную</dataPath>
+			<field>ПутевыеЛистыБезЛотаВручную</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путевые листы без лота вручную</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГарНомерТС</dataPath>
+			<field>ГарНомерТС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гар номер ТС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТС</dataPath>
+			<field>ТС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Документ</dataPath>
+			<field>Документ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Документ</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГарНомерТСРазнарядка</dataPath>
+			<field>ГарНомерТСРазнарядка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гар номер ТСРазнарядка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдЛота</dataPath>
+			<field>ИдЛота</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид лота</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИдРазнарядки</dataPath>
+			<field>ИдРазнарядки</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ид разнарядки</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>
+ВЫБРАТЬ
+		ПЛ.ДатаВыписки,
+		ПЛ.Ссылка КАК Ссылка,
+		ПЛ.ТранспортноеСредство КАК ТранспортноеСредство,
+		ПЛ.ИдентификаторРазнарядки КАК ИдентификаторРазнарядки
+поместить ПутевыеПоСвободнымТС
+	ИЗ
+		Документ.уатПутевойЛист КАК ПЛ
+	ГДЕ
+		ПЛ.ДатаВыезда МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ДатаРазнарядки, ДЕНЬ) И КОНЕЦПЕРИОДА(&amp;ДатаРазнарядки, ДЕНЬ)
+		И НЕ ПЛ.ПометкаУдаления
+			
+объединить
+
+ВЫБРАТЬ
+		ПЛ.Ссылка.ДатаВыписки,
+		ПЛ.Ссылка КАК Ссылка,
+		ПЛ.Ссылка.ТранспортноеСредство КАК ТранспортноеСредство,
+		ПЛ.ИдентификаторРазнарядки КАК ИдентификаторРазнарядки
+	ИЗ
+		Документ.уатПутевойЛист.Маршруты КАК ПЛ
+	ГДЕ
+		ПЛ.Ссылка.ДатаВыезда МЕЖДУ НАЧАЛОПЕРИОДА(&amp;ДатаРазнарядки, ДЕНЬ) И КОНЕЦПЕРИОДА(&amp;ДатаРазнарядки, ДЕНЬ)
+		И НЕ ПЛ.Ссылка.ПометкаУдаления
+;
+ВЫБРАТЬ
+		уатМестонахождениеТС.ТС КАК ТС,
+		уатМестонахождениеТС.Подразделение КАК Колонна
+	ПОМЕСТИТЬ ТипыТСИКолонны
+	ИЗ
+		РегистрСведений.уатМестонахождениеТС.СрезПоследних(&amp;ДатаРазнарядки, ) КАК уатМестонахождениеТС
+	ГДЕ
+		уатМестонахождениеТС.Подразделение &lt;&gt; ЗНАЧЕНИЕ(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)
+		И уатМестонахождениеТС.ТС &lt;&gt; ЗНАЧЕНИЕ(Справочник.уатТС.ПустаяСсылка)
+		И ВЫБОР КОГДА уатМестонахождениеТС.ТС.ТипТС &lt;&gt; ЗНАЧЕНИЕ(Справочник.уатТипыТС.ПустаяСсылка) ТОГДА НЕ уатМестонахождениеТС.ТС.ТипТС.НеВыводитьВТабельТС ИНАЧЕ ИСТИНА КОНЕЦ
+;
+	ВЫБРАТЬ
+		ТипыТСИКолонны.ТС КАК ТС,
+		ТипыТСИКолонны.ТС.ГаражныйНомер КАК ТСГаражныйНомер,
+		ТипыТСИКолонны.Колонна КАК Колонна
+	ПОМЕСТИТЬ ТСПоМестуРаботы
+	ИЗ
+	ТипыТСИКолонны КАК ТипыТСИКолонны
+	;
+ВЫБРАТЬ
+	ДополнительныеСведенияЗаявок.ИдентификаторСтрокиЛота КАК ИдентификаторСтрокиЛота,
+	ДополнительныеСведенияЗаявок.ДокументЛота КАК ДокументЛота
+ПОМЕСТИТЬ ОтсторнированныеДокументы
+ИЗ
+	РегистрНакопления.ДополнительныеСведенияЗаявок КАК ДополнительныеСведенияЗаявок
+ГДЕ
+	ДополнительныеСведенияЗаявок.ДокументЛота &lt;&gt; ЗНАЧЕНИЕ(Документ.юкЛот.ПустаяСсылка)
+	И ДополнительныеСведенияЗаявок.ДокументЛота &lt;&gt; ДополнительныеСведенияЗаявок.Регистратор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	ВЫБОР
+		КОГДА НЕ ПутевыеПоСвободнымТС.Ссылка ЕСТЬ NULL
+			ТОГДА ПутевыеПоСвободнымТС.Ссылка.Контрагент
+		ИНАЧЕ ЕСТЬNULL(СведенияРасширенные.Контрагент, ЗНАЧЕНИЕ(Справочник.Контрагенты.ПустаяСсылка))
+	КОНЕЦ КАК Контрагент,
+	СведенияРасширенные.Регистратор как Документ,
+	ЕСТЬNULL(ПутевыеПоСвободнымТС.Ссылка.ТранспортноеСредство.ТипТС, ЕСТЬNULL(Разнарядка.ТС.ТипТС, ЕСТЬNULL(СведенияРасширенные.ТипТС, """"))) КАК ТипТС,
+	ВЫБОР КОГДА СведенияРасширенные.ИдентификаторСтрокиЛота &lt;&gt; "" ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК ВсегоПоЛоту,
+	ВЫБОР КОГДА СведенияРасширенные.ИдентификаторСтрокиЗаявки &lt;&gt; "" И СведенияРасширенные.ИдентификаторСтрокиЛота = "" ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК ЗаявкаБезЛота,
+	ВЫБОР КОГДА естьNull(Разнарядка.ТС, ЗНАЧЕНИЕ(Справочник.уатТС.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(Справочник.уатТС.ПустаяСсылка) И СведенияРасширенные.ИдентификаторСтрокиЛота &lt;&gt; "" ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК РазнарядкаПоЛоту,
+	ВЫБОР КОГДА естьNull(Разнарядка.ТС, ЗНАЧЕНИЕ(Справочник.уатТС.ПустаяСсылка)) &lt;&gt; ЗНАЧЕНИЕ(Справочник.уатТС.ПустаяСсылка) И СведенияРасширенные.ИдентификаторСтрокиЛота = "" ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК РазнарядкаБезЛота,
+	ВЫБОР КОГДА ПутевыеПоСвободнымТС.ИдентификаторРазнарядки &lt;&gt; "" И естьnull(СведенияРасширенные.ИдентификаторСтрокиЛота, "") &lt;&gt; "" ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК ПутевыеЛистыПоЛоту,
+	ВЫБОР КОГДА ПутевыеПоСвободнымТС.ИдентификаторРазнарядки &lt;&gt; "" И естьnull(СведенияРасширенные.ИдентификаторСтрокиЛота, "") = "" ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК ПутевыеЛистыПоЗаявкеБезЛота,
+	ВЫБОР КОГДА ПутевыеПоСвободнымТС.ИдентификаторРазнарядки = "" ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК ПутевыеЛистыБезЛотаВручную,
+	ВЫБОР КОГДА НЕ ПутевыеПоСвободнымТС.Ссылка ЕСТЬ NULL ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК ПутевыеЛистыВсего,
+	ВЫБОР КОГДА ПутевыеПоСвободнымТС.ссылка есть Null И СведенияРасширенные.ИдентификаторСтрокиЛота &lt;&gt; "" ТОГДА 1 ИНАЧЕ 0 КОНЕЦ НеЗакрытоПоЛоту,
+	ЕСТЬNULL(ПутевыеПоСвободнымТС.Ссылка.ТранспортноеСредство.ГаражныйНомер, Разнарядка.ТС.ГаражныйНомер) КАК ГарНомерТС,
+	Разнарядка.ТС.ГаражныйНомер КАК ГарНомерТСРазнарядка,
+	ЕСТЬNULL(ПутевыеПоСвободнымТС.Ссылка.ТранспортноеСредство, Разнарядка.ТС) КАК ТС,
+	естьNull(ТипыТСИКолонны.Колонна, "Колонна неизвестна") КАК Колонна,
+	ВЫБОР КОГДА НЕ ПечатьПЛ.ПутевойЛист ЕСТЬ NULL ТОГДА 1 ИНАЧЕ 0 КОНЕЦ КАК Распечатано,
+	СведенияРасширенные.ИдентификаторСтрокиЛота КАК ИдЛота,
+	СведенияРасширенные.ИдентификаторСтрокиЗаявки КАК ИдРазнарядки
+	поместить ПредварительнаяВыборка
+ИЗ
+	ПутевыеПоСвободнымТС КАК ПутевыеПоСвободнымТС
+	полное соединение РегистрНакопления.ДополнительныеСведенияЗаявок.Обороты(НАЧАЛОПЕРИОДА(&amp;ДатаРазнарядки, ДЕНЬ), КОНЕЦПЕРИОДА(&amp;ДатаРазнарядки, ДЕНЬ), День, ) КАК ДополнительныеСведенияЗаявокОбороты
+		ПО ПутевыеПоСвободнымТС.ИдентификаторРазнарядки = ДополнительныеСведенияЗаявокОбороты.ИдентификаторСтрокиЗаявки
+	ЛЕВОЕ СОЕДИНЕНИЕ РегистрНакопления.ДополнительныеСведенияЗаявок КАК СведенияРасширенные
+		ПО ДополнительныеСведенияЗаявокОбороты.ИдентификаторСтрокиЗаявки = СведенияРасширенные.ИдентификаторСтрокиЗаявки
+		И ДополнительныеСведенияЗаявокОбороты.Период = СведенияРасширенные.Период
+		И (ВЫБОР
+			КОГДА СведенияРасширенные.ИдентификаторСтрокиЛота В
+					(ВЫБРАТЬ ОтсторнированныеДокументы.ИдентификаторСтрокиЛота
+					ИЗ ОтсторнированныеДокументы КАК ОтсторнированныеДокументы)
+			ТОГДА НЕ СведенияРасширенные.ДокументЛота В
+					(ВЫБРАТЬ ОтсторнированныеДокументы.ДокументЛота
+					ИЗ ОтсторнированныеДокументы КАК ОтсторнированныеДокументы)
+			ИНАЧЕ ИСТИНА
+			КОНЕЦ)
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.ПечатьПЛ КАК ПечатьПЛ
+		ПО ПечатьПЛ.ПутевойЛист = ПутевыеПоСвободнымТС.Ссылка
+		ЛЕВОЕ СОЕДИНЕНИЕ РегистрСведений.Разнарядка КАК Разнарядка
+		по Разнарядка.ИдентификаторСтрокиЗаявки = СведенияРасширенные.ИдентификаторСтрокиЗаявки
+			И Разнарядка.Дата между НАЧАЛОПЕРИОДА(&amp;ДатаРазнарядки, ДЕНЬ) и КОНЕЦПЕРИОДА(&amp;ДатаРазнарядки, ДЕНЬ) 
+		левое соединение ТипыТСИКолонны
+			по ТипыТСИКолонны.ТС = ЕСТЬNULL(ПутевыеПоСвободнымТС.Ссылка.ТранспортноеСредство, Разнарядка.ТС)
+
+;
+
+ВЫБРАТЬ
+	ПредварительнаяВыборка.Документ,
+	ПредварительнаяВыборка.ИдЛота,
+	ПредварительнаяВыборка.ИдРазнарядки,
+	ПредварительнаяВыборка.Контрагент,
+	ПредварительнаяВыборка.ТипТС,
+	ПредварительнаяВыборка.Колонна,
+	ПредварительнаяВыборка.ТС,
+	ПредварительнаяВыборка.ГарНомерТС,
+	ПредварительнаяВыборка.ГарНомерТСРазнарядка,
+	ПредварительнаяВыборка.ВсегоПоЛоту,
+	ПредварительнаяВыборка.ЗаявкаБезЛота,
+	ПредварительнаяВыборка.РазнарядкаПоЛоту,
+	ПредварительнаяВыборка.РазнарядкаБезЛота,
+	ПредварительнаяВыборка.ПутевыеЛистыПоЛоту,
+	ПредварительнаяВыборка.ПутевыеЛистыПоЗаявкеБезЛота,
+	ПредварительнаяВыборка.ПутевыеЛистыБезЛотаВручную,
+	ПредварительнаяВыборка.ПутевыеЛистыВсего,
+	ПредварительнаяВыборка.НеЗакрытоПоЛоту
+ИЗ
+	ПредварительнаяВыборка КАК ПредварительнаяВыборка</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ВсегоПоЛоту</dataPath>
+		<expression>Сумма(ВсегоПоЛоту)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЗаявкаБезЛота</dataPath>
+		<expression>Сумма(ЗаявкаБезЛота)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазнарядкаПоЛоту</dataPath>
+		<expression>Сумма(РазнарядкаПоЛоту)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>РазнарядкаБезЛота</dataPath>
+		<expression>Сумма(РазнарядкаБезЛота)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПутевыеЛистыПоЛоту</dataPath>
+		<expression>Сумма(ПутевыеЛистыПоЛоту)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПутевыеЛистыПоЗаявкеБезЛота</dataPath>
+		<expression>Сумма(ПутевыеЛистыПоЗаявкеБезЛота)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПутевыеЛистыБезЛотаВручную</dataPath>
+		<expression>Сумма(ПутевыеЛистыБезЛотаВручную)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ПутевыеЛистыВсего</dataPath>
+		<expression>Сумма(ПутевыеЛистыВсего)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НеЗакрытоПоЛоту</dataPath>
+		<expression>Сумма(НеЗакрытоПоЛоту)</expression>
+	</totalField>
+	<parameter>
+		<name>НачалоПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Начало периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>КонецПериода</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Конец периода</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДатаРазнарядки</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дата разнарядки</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+		<use>Always</use>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВсегоПоЛоту</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаявкаБезЛота</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разнарядка</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РазнарядкаПоЛоту</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>по лоту</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РазнарядкаБезЛота</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>без лота</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПЛ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПутевыеЛистыПоЛоту</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>по лоту</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПутевыеЛистыПоЗаявкеБезЛота</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>заявка без лота</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПутевыеЛистыБезЛотаВручную</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>без лота (вручную)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПутевыеЛистыВсего</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>всего</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НеЗакрытоПоЛоту</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаРазнарядки</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>32e4a553-1fc0-488b-bf12-b77cd80c4f25</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата отчета</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Колонна</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ТипТС</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ТС</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ГарНомерТС</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ГарНомерТСРазнарядка</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+	<settingsVariant>
+		<dcsset:name>СИдентификаторами</dcsset:name>
+		<dcsset:presentation xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>С идентификаторами</v8:content>
+			</v8:item>
+		</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВсегоПоЛоту</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ЗаявкаБезЛота</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разнарядка</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РазнарядкаПоЛоту</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>по лоту</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>РазнарядкаБезЛота</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>без лота</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПЛ</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПутевыеЛистыПоЛоту</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>по лоту</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПутевыеЛистыПоЗаявкеБезЛота</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>заявка без лота</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПутевыеЛистыБезЛотаВручную</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>без лота (вручную)</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ПутевыеЛистыВсего</dcsset:field>
+						<dcsset:lwsTitle>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>всего</v8:content>
+							</v8:item>
+						</dcsset:lwsTitle>
+					</dcsset:item>
+					<dcsset:placement>Horizontally</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НеЗакрытоПоЛоту</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Документ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдЛота</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИдРазнарядки</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ДатаРазнарядки</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+					<dcsset:userSettingID>32e4a553-1fc0-488b-bf12-b77cd80c4f25</dcsset:userSettingID>
+					<dcsset:userSettingPresentation xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата отчета</v8:content>
+						</v8:item>
+					</dcsset:userSettingPresentation>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Море</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>АвтоПозицияРесурсов</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionResourcesAutoPosition">DontUse</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Колонна</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Контрагент</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ТипТС</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ТС</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ГарНомерТС</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemField">
+									<dcsset:field>ГарНомерТСРазнарядка</dcsset:field>
+								</dcsset:item>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

@@ -1,0 +1,430 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="СписокКомпоновщикНастроекПользовательскиеНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пользовательских настроек</v8:content>
+				</v8:item>
+			</Title>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="СписокКомпоновщикНастроекПользовательскиеНастройкиРасширеннаяПодсказка" id="2"/>
+		</UsualGroup>
+		<Table name="Список" id="3">
+			<Representation>List</Representation>
+			<CommandBarLocation>None</CommandBarLocation>
+			<DefaultItem>true</DefaultItem>
+			<UseAlternationRowColor>true</UseAlternationRowColor>
+			<InitialTreeView>ExpandTopLevel</InitialTreeView>
+			<EnableStartDrag>true</EnableStartDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Список</DataPath>
+			<RowPictureDataPath>Список.DefaultPicture</RowPictureDataPath>
+			<AutoRefresh>false</AutoRefresh>
+			<AutoRefreshPeriod>60</AutoRefreshPeriod>
+			<Period>
+				<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+				<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+				<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+			</Period>
+			<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+			<RestoreCurrentRow>false</RestoreCurrentRow>
+			<TopLevelParent xsi:nil="true"/>
+			<ShowRoot>true</ShowRoot>
+			<AllowRootChoice>false</AllowRootChoice>
+			<UpdateOnDataChange>Auto</UpdateOnDataChange>
+			<UserSettingsGroup>СписокКомпоновщикНастроекПользовательскиеНастройки</UserSettingsGroup>
+			<ContextMenu name="СписокКонтекстноеМеню" id="4"/>
+			<AutoCommandBar name="СписокКоманднаяПанель" id="5">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокРасширеннаяПодсказка" id="6"/>
+			<SearchStringAddition name="СписокСтрокаПоиска" id="7">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСтрокаПоискаКонтекстноеМеню" id="8"/>
+				<ExtendedTooltip name="СписокСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокСостояниеПросмотра" id="10">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокСостояниеПросмотраКонтекстноеМеню" id="11"/>
+				<ExtendedTooltip name="СписокСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокУправлениеПоиском" id="13">
+				<AdditionSource>
+					<Item>Список</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="14"/>
+				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<ColumnGroup name="Группа1" id="46">
+					<Width>3</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="47"/>
+					<ChildItems>
+						<LabelField name="НомерПачки" id="34">
+							<DataPath>Список.НомерПачки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>№ пчк</v8:content>
+								</v8:item>
+							</Title>
+							<Width>3</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>3</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="НомерПачкиКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="НомерПачкиРасширеннаяПодсказка" id="36"/>
+						</LabelField>
+						<CheckBoxField name="Проведен" id="43">
+							<DataPath>Список.Posted</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="ПроведенКонтекстноеМеню" id="44"/>
+							<ExtendedTooltip name="ПроведенРасширеннаяПодсказка" id="45"/>
+						</CheckBoxField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="Номер" id="19">
+					<DataPath>Список.Number</DataPath>
+					<ContextMenu name="НомерКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="21"/>
+				</LabelField>
+				<ColumnGroup name="Группа2" id="48">
+					<Width>9</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<LabelField name="ДатаВыезда" id="28">
+							<DataPath>Список.ДатаВыезда</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выезд</v8:content>
+								</v8:item>
+							</Title>
+							<Width>9</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=dd.MM.yyyy</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаВыездаКонтекстноеМеню" id="29"/>
+							<ExtendedTooltip name="ДатаВыездаРасширеннаяПодсказка" id="30"/>
+						</LabelField>
+						<LabelField name="ДатаВозвращения" id="25">
+							<DataPath>Список.ДатаВозвращения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Возврат</v8:content>
+								</v8:item>
+							</Title>
+							<Width>9</Width>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=dd.MM.yyyy</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаВозвращенияКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ДатаВозвращенияРасширеннаяПодсказка" id="27"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="Группа3" id="56">
+					<Width>6</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="57"/>
+					<ChildItems>
+						<LabelField name="ДатаВыезда1" id="50">
+							<DataPath>Список.ДатаВыезда</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>время</v8:content>
+								</v8:item>
+							</Title>
+							<Width>6</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>4</MaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=чч:мм</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаВыезда1КонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ДатаВыезда1РасширеннаяПодсказка" id="52"/>
+						</LabelField>
+						<LabelField name="ДатаВозвращения1" id="53">
+							<DataPath>Список.ДатаВозвращения</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>время</v8:content>
+								</v8:item>
+							</Title>
+							<Width>6</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=чч:мм</v8:content>
+								</v8:item>
+							</Format>
+							<ContextMenu name="ДатаВозвращения1КонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ДатаВозвращения1РасширеннаяПодсказка" id="55"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ТранспортноеСредствоГаражныйНомер" id="58">
+					<DataPath>Список.ТранспортноеСредство.ГаражныйНомер</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гар.номер</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ТранспортноеСредствоГаражныйНомерКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="ТранспортноеСредствоГаражныйНомерРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<ColumnGroup name="Группа10" id="121">
+					<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="122"/>
+					<ChildItems>
+						<LabelField name="Водитель1" id="22">
+							<DataPath>Список.Водитель1</DataPath>
+							<ContextMenu name="Водитель1КонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="Водитель1РасширеннаяПодсказка" id="24"/>
+						</LabelField>
+						<LabelField name="ТранспортноеСредство" id="67">
+							<DataPath>Список.ТранспортноеСредство</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ТС</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТранспортноеСредствоКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ТранспортноеСредствоРасширеннаяПодсказка" id="69"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="Группа4" id="70">
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<LabelField name="ТранспортноеСредствоГосударственныйНомер" id="61">
+							<DataPath>Список.ТранспортноеСредство.ГосударственныйНомер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гос.номер</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ТранспортноеСредствоГосударственныйНомерКонтекстноеМеню" id="62"/>
+							<ExtendedTooltip name="ТранспортноеСредствоГосударственныйНомерРасширеннаяПодсказка" id="63"/>
+						</LabelField>
+						<LabelField name="Месторождение" id="64">
+							<DataPath>Список.Месторождение</DataPath>
+							<ContextMenu name="МесторождениеКонтекстноеМеню" id="65"/>
+							<ExtendedTooltip name="МесторождениеРасширеннаяПодсказка" id="66"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="Группа5" id="72">
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="73"/>
+					<ChildItems>
+						<LabelField name="Контрагент" id="31">
+							<DataPath>Список.Контрагент</DataPath>
+							<ContextMenu name="КонтрагентКонтекстноеМеню" id="32"/>
+							<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="33"/>
+						</LabelField>
+						<LabelField name="ЦехКонтрагента" id="40">
+							<DataPath>Список.ЦехКонтрагента</DataPath>
+							<ContextMenu name="ЦехКонтрагентаКонтекстноеМеню" id="41"/>
+							<ExtendedTooltip name="ЦехКонтрагентаРасширеннаяПодсказка" id="42"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ВсегоЧасов" id="77">
+					<DataPath>Список.ВсегоЧасов</DataPath>
+					<ContextMenu name="ВсегоЧасовКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="ВсегоЧасовРасширеннаяПодсказка" id="79"/>
+				</LabelField>
+				<LabelField name="ЧасыДиспа" id="74">
+					<DataPath>Список.ЧасыДиспа</DataPath>
+					<ContextMenu name="ЧасыДиспаКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="ЧасыДиспаРасширеннаяПодсказка" id="76"/>
+				</LabelField>
+				<ColumnGroup name="Группа6" id="98">
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="99"/>
+					<ChildItems>
+						<LabelField name="РасходФакт" id="80">
+							<DataPath>Список.РасходФакт</DataPath>
+							<ContextMenu name="РасходФактКонтекстноеМеню" id="81"/>
+							<ExtendedTooltip name="РасходФактРасширеннаяПодсказка" id="82"/>
+						</LabelField>
+						<LabelField name="РасходНорма" id="83">
+							<DataPath>Список.РасходНорма</DataPath>
+							<ContextMenu name="РасходНормаКонтекстноеМеню" id="84"/>
+							<ExtendedTooltip name="РасходНормаРасширеннаяПодсказка" id="85"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="Группа7" id="100">
+					<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="101"/>
+					<ChildItems>
+						<LabelField name="ВыданоГСМ" id="86">
+							<DataPath>Список.ВыданоГСМ</DataPath>
+							<ContextMenu name="ВыданоГСМКонтекстноеМеню" id="87"/>
+							<ExtendedTooltip name="ВыданоГСМРасширеннаяПодсказка" id="88"/>
+						</LabelField>
+						<LabelField name="ВыданоГСМ1" id="89">
+							<DataPath>Список.ВыданоГСМ1</DataPath>
+							<ContextMenu name="ВыданоГСМ1КонтекстноеМеню" id="90"/>
+							<ExtendedTooltip name="ВыданоГСМ1РасширеннаяПодсказка" id="91"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ОстатокТопливаВыезд" id="92">
+					<DataPath>Список.ОстатокТопливаВыезд</DataPath>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ОстатокТопливаВыездКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="ОстатокТопливаВыездРасширеннаяПодсказка" id="94"/>
+				</LabelField>
+				<LabelField name="ОстатокТопливаВозврат" id="95">
+					<DataPath>Список.ОстатокТопливаВозврат</DataPath>
+					<Width>5</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ОстатокТопливаВозвратКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="ОстатокТопливаВозвратРасширеннаяПодсказка" id="97"/>
+				</LabelField>
+				<ColumnGroup name="Группа8" id="108">
+					<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="109"/>
+					<ChildItems>
+						<LabelField name="СпидометрВыезда" id="102">
+							<DataPath>Список.СпидометрВыезда</DataPath>
+							<ContextMenu name="СпидометрВыездаКонтекстноеМеню" id="103"/>
+							<ExtendedTooltip name="СпидометрВыездаРасширеннаяПодсказка" id="104"/>
+						</LabelField>
+						<LabelField name="СпидометрВозвращения" id="105">
+							<DataPath>Список.СпидометрВозвращения</DataPath>
+							<ContextMenu name="СпидометрВозвращенияКонтекстноеМеню" id="106"/>
+							<ExtendedTooltip name="СпидометрВозвращенияРасширеннаяПодсказка" id="107"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="Группа9" id="110">
+					<Width>3</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="111"/>
+					<ChildItems>
+						<LabelField name="ОстатокТопливаВыезд1" id="112">
+							<DataPath>Список.ОстатокТопливаВыезд1</DataPath>
+							<Width>3</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ОстатокТопливаВыезд1КонтекстноеМеню" id="113"/>
+							<ExtendedTooltip name="ОстатокТопливаВыезд1РасширеннаяПодсказка" id="114"/>
+						</LabelField>
+						<LabelField name="ОстатокТопливаВозврат1" id="115">
+							<DataPath>Список.ОстатокТопливаВозврат1</DataPath>
+							<Width>3</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>false</HorizontalStretch>
+							<ContextMenu name="ОстатокТопливаВозврат1КонтекстноеМеню" id="116"/>
+							<ExtendedTooltip name="ОстатокТопливаВозврат1РасширеннаяПодсказка" id="117"/>
+						</LabelField>
+					</ChildItems>
+				</ColumnGroup>
+				<LabelField name="ИНфоЧасыВод" id="118">
+					<DataPath>Список.ИНфоЧасыВод</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инфо часы вод</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ИНфоЧасыВодКонтекстноеМеню" id="119"/>
+					<ExtendedTooltip name="ИНфоЧасыВодРасширеннаяПодсказка" id="120"/>
+				</LabelField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Список" id="1">
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<UseAlways>
+				<Field>Список.Date</Field>
+				<Field>Список.DeletionMark</Field>
+				<Field>Список.Number</Field>
+				<Field>Список.Posted</Field>
+				<Field>Список.Ref</Field>
+				<Field>Список.Водитель1</Field>
+				<Field>Список.ВсегоЧасов</Field>
+				<Field>Список.ВыданоГСМ</Field>
+				<Field>Список.ВыданоГСМ1</Field>
+				<Field>Список.ДатаВозвращения</Field>
+				<Field>Список.ДатаВыезда</Field>
+				<Field>Список.ИНфоЧасыВод</Field>
+				<Field>Список.Контрагент</Field>
+				<Field>Список.НомерПачки</Field>
+				<Field>Список.ОстатокТопливаВозврат</Field>
+				<Field>Список.ОстатокТопливаВозврат1</Field>
+				<Field>Список.ОстатокТопливаВыезд</Field>
+				<Field>Список.ОстатокТопливаВыезд1</Field>
+				<Field>Список.РасходНорма</Field>
+				<Field>Список.РасходФакт</Field>
+				<Field>Список.СпидометрВозвращения</Field>
+				<Field>Список.СпидометрВыезда</Field>
+				<Field>Список.ТранспортноеСредство</Field>
+				<Field>Список.ЦехКонтрагента</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Document.уатПутевойЛист</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+</Form>

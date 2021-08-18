@@ -1,0 +1,1832 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<ScalingMode>Compact</ScalingMode>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="53">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">ДатаПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>15</Width>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="фГод" id="288">
+					<DataPath>Объект.НачалоПериодаДокумента</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Год</v8:content>
+						</v8:item>
+					</Title>
+					<SpinButton>true</SpinButton>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=гггг</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="фГодКонтекстноеМеню" id="289"/>
+					<ExtendedTooltip name="фГодРасширеннаяПодсказка" id="290"/>
+					<Events>
+						<Event name="OnChange">фГодПриИзменении</Event>
+					</Events>
+				</InputField>
+				<Button name="ЗагрузкаИзExcel" id="373">
+					<Type>UsualButton</Type>
+					<Representation>PictureAndText</Representation>
+					<CommandName>Form.Command.ЗагрузкаИзExcel</CommandName>
+					<Picture>
+						<xr:Ref>CommonPicture.ПиктограммаФайла_Excel</xr:Ref>
+						<xr:LoadTransparent>true</xr:LoadTransparent>
+					</Picture>
+					<ExtendedTooltip name="ЗагрузкаИзExcelРасширеннаяПодсказка" id="374"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="55">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="56"/>
+			<ChildItems>
+				<InputField name="Контрагент" id="7">
+					<DataPath>Объект.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<CheckBoxField name="ЗаписыватьВРазнарядку" id="429">
+					<DataPath>Объект.ЗаписыватьВРазнарядку</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ЗаписыватьВРазнарядкуКонтекстноеМеню" id="430"/>
+					<ExtendedTooltip name="ЗаписыватьВРазнарядкуРасширеннаяПодсказка" id="431"/>
+				</CheckBoxField>
+				<InputField name="МестоРаботы" id="432">
+					<DataPath>Объект.МестоРаботы</DataPath>
+					<ContextMenu name="МестоРаботыКонтекстноеМеню" id="433"/>
+					<ExtendedTooltip name="МестоРаботыРасширеннаяПодсказка" id="434"/>
+				</InputField>
+				<InputField name="ОграничениеПоВозрастуТС" id="285">
+					<DataPath>Объект.ОграничениеПоВозрастуТС</DataPath>
+					<ContextMenu name="ОграничениеПоВозрастуТСКонтекстноеМеню" id="286"/>
+					<ExtendedTooltip name="ОграничениеПоВозрастуТСРасширеннаяПодсказка" id="287"/>
+					<Events>
+						<Event name="OnChange">ОграничениеПоВозрастуТСПриИзменении</Event>
+					</Events>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="57">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="58"/>
+			<ChildItems>
+				<UsualGroup name="Группа5" id="61">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="62"/>
+					<ChildItems>
+						<UsualGroup name="Группа6" id="247">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="248"/>
+							<ChildItems>
+								<InputField name="Договор" id="10">
+									<DataPath>Объект.Договор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ChoiceParameterLinks>
+										<xr:Link>
+											<xr:Name>Отбор.Владелец</xr:Name>
+											<xr:DataPath xsi:type="xs:string">Объект.Контрагент</xr:DataPath>
+											<xr:ValueChange>Clear</xr:ValueChange>
+										</xr:Link>
+									</ChoiceParameterLinks>
+									<ChoiceParameters>
+										<app:item name="Отбор.ПометкаУдаления">
+											<app:value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation/>
+												<Value xsi:type="xs:boolean">false</Value>
+											</app:value>
+										</app:item>
+									</ChoiceParameters>
+									<ContextMenu name="ДоговорКонтекстноеМеню" id="11"/>
+									<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="12"/>
+								</InputField>
+								<LabelDecoration name="СсылкаКорректировки" id="421">
+									<TextColor>#F17446</TextColor>
+									<Font ref="style:NormalTextFont" height="10" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Корректировки</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>На данный документ введены корректировки. Редактирование документа запрещено.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Hyperlink>true</Hyperlink>
+									<ContextMenu name="СсылкаКорректировкиКонтекстноеМеню" id="422"/>
+									<ExtendedTooltip name="СсылкаКорректировкиРасширеннаяПодсказка" id="423"/>
+									<Events>
+										<Event name="Click">СсылкаКорректировкиНажатие</Event>
+									</Events>
+								</LabelDecoration>
+								<LabelDecoration name="Распорка" id="252">
+									<Width>900</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="РаспоркаКонтекстноеМеню" id="253"/>
+									<ExtendedTooltip name="РаспоркаРасширеннаяПодсказка" id="254"/>
+								</LabelDecoration>
+								<UsualGroup name="Группа7" id="255">
+									<HorizontalStretch>true</HorizontalStretch>
+									<VerticalStretch>false</VerticalStretch>
+									<Group>Horizontal</Group>
+									<HorizontalSpacing>None</HorizontalSpacing>
+									<VerticalSpacing>None</VerticalSpacing>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="256"/>
+									<ChildItems>
+										<Button name="СменаМесяцаМинус" id="257">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<GroupHorizontalAlign>Left</GroupHorizontalAlign>
+											<CommandName>Form.Command.СменаМесяцаМинус</CommandName>
+											<BorderColor>#F4DF8C</BorderColor>
+											<Picture>
+												<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="СменаМесяцаМинусРасширеннаяПодсказка" id="258"/>
+										</Button>
+										<LabelDecoration name="фНадписьМесяц" id="249">
+											<Width>21</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>21</MaxWidth>
+											<Height>1</Height>
+											<HorizontalStretch>true</HorizontalStretch>
+											<VerticalStretch>true</VerticalStretch>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Ф надпись месяц</v8:content>
+												</v8:item>
+											</Title>
+											<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+											<GroupVerticalAlign>Center</GroupVerticalAlign>
+											<HorizontalAlign>Center</HorizontalAlign>
+											<VerticalAlign>Center</VerticalAlign>
+											<BorderColor>#F4DF8C</BorderColor>
+											<Border width="1">
+												<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+											</Border>
+											<ContextMenu name="фНадписьМесяцКонтекстноеМеню" id="250"/>
+											<ExtendedTooltip name="фНадписьМесяцРасширеннаяПодсказка" id="251"/>
+										</LabelDecoration>
+										<Button name="СменаМесяцаПлюс" id="259">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+											<CommandName>Form.Command.СменаМесяцаПлюс</CommandName>
+											<BorderColor>#F4DF8C</BorderColor>
+											<Picture>
+												<xr:Ref>StdPicture.MoveRight</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="СменаМесяцаПлюсРасширеннаяПодсказка" id="260"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<LabelDecoration name="Распорка2" id="291">
+									<Width>12</Width>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HorizontalStretch>false</HorizontalStretch>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content> </v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="Распорка2КонтекстноеМеню" id="292"/>
+									<ExtendedTooltip name="Распорка2РасширеннаяПодсказка" id="293"/>
+								</LabelDecoration>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="ГруппаСтраницы" id="333">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа страницы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="334"/>
+					<ChildItems>
+						<Page name="СтраницаСостав" id="59">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Состав лота</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница состав</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаСоставРасширеннаяПодсказка" id="60"/>
+							<ChildItems>
+								<Table name="ТаблицаМесяца" id="63">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<HeaderHeight>2</HeaderHeight>
+									<Footer>true</Footer>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>Объект.ТаблицаЛотов</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаМесяцаКонтекстноеМеню" id="64"/>
+									<AutoCommandBar name="ТаблицаМесяцаКоманднаяПанель" id="65">
+										<ChildItems>
+											<Button name="ТаблицаМесяцаРазбивка" id="424">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<SkipOnInput>true</SkipOnInput>
+												<CommandName>Form.Command.Разбивка</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.ActivateTask</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ТаблицаМесяцаРазбивкаРасширеннаяПодсказка" id="425"/>
+											</Button>
+											<Button name="ТаблицаМесяцаПоискЗадания" id="435">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ПоискЗадания</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.ShowData</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ТаблицаМесяцаПоискЗаданияРасширеннаяПодсказка" id="436"/>
+											</Button>
+											<Button name="ТаблицаМесяцаОтменаПоиска" id="437">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ОтменаПоиска</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.CancelSearch</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ТаблицаМесяцаОтменаПоискаРасширеннаяПодсказка" id="438"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаМесяцаРасширеннаяПодсказка" id="66"/>
+									<SearchStringAddition name="ТаблицаМесяцаСтрокаПоиска" id="67">
+										<AdditionSource>
+											<Item>ТаблицаМесяца</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаМесяцаСтрокаПоискаКонтекстноеМеню" id="68"/>
+										<ExtendedTooltip name="ТаблицаМесяцаСтрокаПоискаРасширеннаяПодсказка" id="69"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаМесяцаСостояниеПросмотра" id="70">
+										<AdditionSource>
+											<Item>ТаблицаМесяца</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаМесяцаСостояниеПросмотраКонтекстноеМеню" id="71"/>
+										<ExtendedTooltip name="ТаблицаМесяцаСостояниеПросмотраРасширеннаяПодсказка" id="72"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаМесяцаУправлениеПоиском" id="73">
+										<AdditionSource>
+											<Item>ТаблицаМесяца</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаМесяцаУправлениеПоискомКонтекстноеМеню" id="74"/>
+										<ExtendedTooltip name="ТаблицаМесяцаУправлениеПоискомРасширеннаяПодсказка" id="75"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnEditEnd">ТаблицаМесяцаПриОкончанииРедактирования</Event>
+										<Event name="OnStartEdit">ТаблицаМесяцаПриНачалеРедактирования</Event>
+										<Event name="RefreshRequestProcessing">ТаблицаМесяцаОбработкаЗапросаОбновления</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="ТаблицаМесяцаНомерСтроки" id="261">
+											<DataPath>Объект.ТаблицаЛотов.LineNumber</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>3</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>3</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаНомерСтрокиКонтекстноеМеню" id="262"/>
+											<ExtendedTooltip name="ТаблицаМесяцаНомерСтрокиРасширеннаяПодсказка" id="263"/>
+										</LabelField>
+										<InputField name="ТаблицаМесяцаИдентификаторСтрокиЛота" id="426">
+											<DataPath>Объект.ТаблицаЛотов.ИдентификаторСтрокиЛота</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаМесяцаИдентификаторСтрокиЛотаКонтекстноеМеню" id="427"/>
+											<ExtendedTooltip name="ТаблицаМесяцаИдентификаторСтрокиЛотаРасширеннаяПодсказка" id="428"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаРежимРаботы" id="267">
+											<DataPath>Объект.ТаблицаЛотов.РежимРаботы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Режим
+работы</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>6</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>6</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаРежимРаботыКонтекстноеМеню" id="268"/>
+											<ExtendedTooltip name="ТаблицаМесяцаРежимРаботыРасширеннаяПодсказка" id="269"/>
+											<Events>
+												<Event name="OnChange">ТаблицаМесяцаРежимРаботыПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаМесяцаТипТС" id="264">
+											<DataPath>Объект.ТаблицаЛотов.ТипТС</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>15</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>16</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаТипТСКонтекстноеМеню" id="265"/>
+											<ExtendedTooltip name="ТаблицаМесяцаТипТСРасширеннаяПодсказка" id="266"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаГрупповойТип" id="400">
+											<DataPath>Объект.ТаблицаЛотов.ГрупповойТип</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаМесяцаГрупповойТипКонтекстноеМеню" id="401"/>
+											<ExtendedTooltip name="ТаблицаМесяцаГрупповойТипРасширеннаяПодсказка" id="402"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаНаименованиеТипаКонтрагента" id="378">
+											<DataPath>Объект.ТаблицаЛотов.НаименованиеТипаКонтрагента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование типа
+(контрагента)</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>25</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>25</MaxWidth>
+											<ContextMenu name="ТаблицаМесяцаНаименованиеТипаКонтрагентаКонтекстноеМеню" id="379"/>
+											<ExtendedTooltip name="ТаблицаМесяцаНаименованиеТипаКонтрагентаРасширеннаяПодсказка" id="380"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаЦехКонтрагента" id="375">
+											<DataPath>Объект.ТаблицаЛотов.МесторождениеСтрокой</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цех / Месторождение</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>12</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаЦехКонтрагентаКонтекстноеМеню" id="376"/>
+											<ExtendedTooltip name="ТаблицаМесяцаЦехКонтрагентаРасширеннаяПодсказка" id="377"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаОграничениеПоВозрастуТС" id="418">
+											<DataPath>Объект.ТаблицаЛотов.ОграничениеПоВозрастуТС</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Возраст</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>5</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>5</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаОграничениеПоВозрастуТСКонтекстноеМеню" id="419"/>
+											<ExtendedTooltip name="ТаблицаМесяцаОграничениеПоВозрастуТСРасширеннаяПодсказка" id="420"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаТарифЧасовой" id="270">
+											<DataPath>Объект.ТаблицаЛотов.ТарифЧасовой</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тариф
+час</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ТаблицаМесяцаТарифЧасовойКонтекстноеМеню" id="271"/>
+											<ExtendedTooltip name="ТаблицаМесяцаТарифЧасовойРасширеннаяПодсказка" id="272"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаТарифПробег" id="273">
+											<DataPath>Объект.ТаблицаЛотов.ТарифПробег</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тариф
+пробег</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ТаблицаМесяцаТарифПробегКонтекстноеМеню" id="274"/>
+											<ExtendedTooltip name="ТаблицаМесяцаТарифПробегРасширеннаяПодсказка" id="275"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаТарифУслуга1" id="276">
+											<DataPath>Объект.ТаблицаЛотов.ТарифУслуга1</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тариф</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ТаблицаМесяцаТарифУслуга1КонтекстноеМеню" id="277"/>
+											<ExtendedTooltip name="ТаблицаМесяцаТарифУслуга1РасширеннаяПодсказка" id="278"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаТарифУслуга2" id="361">
+											<DataPath>Объект.ТаблицаЛотов.ТарифУслуга2</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>тариф</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ТаблицаМесяцаТарифУслуга2КонтекстноеМеню" id="362"/>
+											<ExtendedTooltip name="ТаблицаМесяцаТарифУслуга2РасширеннаяПодсказка" id="363"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаТарифУслуга3" id="364">
+											<DataPath>Объект.ТаблицаЛотов.ТарифУслуга3</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>тариф</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=2</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ЧДЦ=3</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ТаблицаМесяцаТарифУслуга3КонтекстноеМеню" id="365"/>
+											<ExtendedTooltip name="ТаблицаМесяцаТарифУслуга3РасширеннаяПодсказка" id="366"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаЧасыРаботы" id="279">
+											<DataPath>Объект.ТаблицаЛотов.ЧасыРаботы</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Часы
+работы</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>7</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаЧасыРаботыКонтекстноеМеню" id="280"/>
+											<ExtendedTooltip name="ТаблицаМесяцаЧасыРаботыРасширеннаяПодсказка" id="281"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Пробег" id="103">
+											<DataPath>Объект.ТаблицаЛотов.Пробег</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пробег</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>7</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаЛотов1ПробегКонтекстноеМеню" id="104"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ПробегРасширеннаяПодсказка" id="105"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаЧасыУслуга1" id="282">
+											<DataPath>Объект.ТаблицаЛотов.КоличествоУслуга1</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>колво</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаЧасыУслуга1КонтекстноеМеню" id="283"/>
+											<ExtendedTooltip name="ТаблицаМесяцаЧасыУслуга1РасширеннаяПодсказка" id="284"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаЧасыУслуга2" id="367">
+											<DataPath>Объект.ТаблицаЛотов.КоличествоУслуга2</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>колво</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаЧасыУслуга2КонтекстноеМеню" id="368"/>
+											<ExtendedTooltip name="ТаблицаМесяцаЧасыУслуга2РасширеннаяПодсказка" id="369"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаЧасыУслуга3" id="370">
+											<DataPath>Объект.ТаблицаЛотов.КоличествоУслуга3</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>колво</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<ContextMenu name="ТаблицаМесяцаЧасыУслуга3КонтекстноеМеню" id="371"/>
+											<ExtendedTooltip name="ТаблицаМесяцаЧасыУслуга3РасширеннаяПодсказка" id="372"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС" id="100">
+											<DataPath>Объект.ТаблицаЛотов.КоличествоТС</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Количество
+ТС</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalКоличествоТС</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТСКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТСРасширеннаяПодсказка" id="102"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность" id="109">
+											<DataPath>Объект.ТаблицаЛотов.Сменность</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сменность</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1СменностьКонтекстноеМеню" id="110"/>
+											<ExtendedTooltip name="ТаблицаЛотов1СменностьРасширеннаяПодсказка" id="111"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену1" id="106">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену1</DataPath>
+											<Visible>false</Visible>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дней
+в работе</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену1</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену1КонтекстноеМеню" id="107"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену1РасширеннаяПодсказка" id="108"/>
+											<Events>
+												<Event name="OnChange">ТаблицаЛотов1ДнейВРаботеЗаСмену1ПриИзменении</Event>
+											</Events>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС2" id="112">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС2КонтекстноеМеню" id="113"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС2РасширеннаяПодсказка" id="114"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену2" id="118">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену2</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену2</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену2КонтекстноеМеню" id="119"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену2РасширеннаяПодсказка" id="120"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность2" id="121">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность2КонтекстноеМеню" id="122"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность2РасширеннаяПодсказка" id="123"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС3" id="124">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС3КонтекстноеМеню" id="125"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС3РасширеннаяПодсказка" id="126"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену3" id="130">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену3</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену3</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену3КонтекстноеМеню" id="131"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену3РасширеннаяПодсказка" id="132"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность3" id="133">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность3КонтекстноеМеню" id="134"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность3РасширеннаяПодсказка" id="135"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС4" id="136">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС4КонтекстноеМеню" id="137"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС4РасширеннаяПодсказка" id="138"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену4" id="142">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену4</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену4</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену4КонтекстноеМеню" id="143"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену4РасширеннаяПодсказка" id="144"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность4" id="145">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность4КонтекстноеМеню" id="146"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность4РасширеннаяПодсказка" id="147"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС5" id="148">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС5КонтекстноеМеню" id="149"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС5РасширеннаяПодсказка" id="150"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену5" id="154">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену5</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену5</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену5КонтекстноеМеню" id="155"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену5РасширеннаяПодсказка" id="156"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность5" id="157">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность5КонтекстноеМеню" id="158"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность5РасширеннаяПодсказка" id="159"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС6" id="160">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС6КонтекстноеМеню" id="161"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС6РасширеннаяПодсказка" id="162"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену6" id="166">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену6</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену6</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену6КонтекстноеМеню" id="167"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену6РасширеннаяПодсказка" id="168"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность6" id="169">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность6КонтекстноеМеню" id="170"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность6РасширеннаяПодсказка" id="171"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС7" id="172">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС7КонтекстноеМеню" id="173"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС7РасширеннаяПодсказка" id="174"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену7" id="178">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену7</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену7</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену7КонтекстноеМеню" id="179"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену7РасширеннаяПодсказка" id="180"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность7" id="181">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность7КонтекстноеМеню" id="182"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность7РасширеннаяПодсказка" id="183"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС8" id="184">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС8КонтекстноеМеню" id="185"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС8РасширеннаяПодсказка" id="186"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену8" id="190">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену8</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену8</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену8КонтекстноеМеню" id="191"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену8РасширеннаяПодсказка" id="192"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность8" id="193">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность8КонтекстноеМеню" id="194"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность8РасширеннаяПодсказка" id="195"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС9" id="196">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС9КонтекстноеМеню" id="197"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС9РасширеннаяПодсказка" id="198"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену9" id="202">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену9</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену9</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену9КонтекстноеМеню" id="203"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену9РасширеннаяПодсказка" id="204"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность9" id="205">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность9КонтекстноеМеню" id="206"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность9РасширеннаяПодсказка" id="207"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС10" id="208">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС10КонтекстноеМеню" id="209"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС10РасширеннаяПодсказка" id="210"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену10" id="214">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену10</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену10</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену10КонтекстноеМеню" id="215"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену10РасширеннаяПодсказка" id="216"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность10" id="217">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность10КонтекстноеМеню" id="218"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность10РасширеннаяПодсказка" id="219"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС11" id="220">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС11КонтекстноеМеню" id="221"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС11РасширеннаяПодсказка" id="222"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену11" id="226">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену11</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену11</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену11КонтекстноеМеню" id="227"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену11РасширеннаяПодсказка" id="228"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность11" id="229">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность11КонтекстноеМеню" id="230"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность11РасширеннаяПодсказка" id="231"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1КоличествоТС12" id="232">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1КоличествоТС12КонтекстноеМеню" id="233"/>
+											<ExtendedTooltip name="ТаблицаЛотов1КоличествоТС12РасширеннаяПодсказка" id="234"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1ДнейВРаботеЗаСмену12" id="238">
+											<DataPath>Объект.ТаблицаЛотов.ДнейВРаботеЗаСмену12</DataPath>
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalДнейВРаботеЗаСмену12</FooterDataPath>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1ДнейВРаботеЗаСмену12КонтекстноеМеню" id="239"/>
+											<ExtendedTooltip name="ТаблицаЛотов1ДнейВРаботеЗаСмену12РасширеннаяПодсказка" id="240"/>
+										</InputField>
+										<InputField name="ТаблицаЛотов1Сменность12" id="241">
+											<Visible>false</Visible>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>8</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>8</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаЛотов1Сменность12КонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="ТаблицаЛотов1Сменность12РасширеннаяПодсказка" id="243"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого1" id="294">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого1</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма (Январь)</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого1</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого1КонтекстноеМеню" id="295"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого1РасширеннаяПодсказка" id="296"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого2" id="297">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого2</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого2</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого2КонтекстноеМеню" id="298"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого2РасширеннаяПодсказка" id="299"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого3" id="300">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого3</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого3</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого3КонтекстноеМеню" id="301"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого3РасширеннаяПодсказка" id="302"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого4" id="303">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого4</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого4</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого4КонтекстноеМеню" id="304"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого4РасширеннаяПодсказка" id="305"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого5" id="306">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого5</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого5</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого5КонтекстноеМеню" id="307"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого5РасширеннаяПодсказка" id="308"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого6" id="309">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого6</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого6</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого6КонтекстноеМеню" id="310"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого6РасширеннаяПодсказка" id="311"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого7" id="312">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого7</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого7</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого7КонтекстноеМеню" id="313"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого7РасширеннаяПодсказка" id="314"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого8" id="315">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого8</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого8</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого8КонтекстноеМеню" id="316"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого8РасширеннаяПодсказка" id="317"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого9" id="318">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого9</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого9</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого9КонтекстноеМеню" id="319"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого9РасширеннаяПодсказка" id="320"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого10" id="321">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого10</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого10</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого10КонтекстноеМеню" id="322"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого10РасширеннаяПодсказка" id="323"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого11" id="324">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого11</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого11</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого11КонтекстноеМеню" id="325"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого11РасширеннаяПодсказка" id="326"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаСуммаИтого12" id="327">
+											<DataPath>Объект.ТаблицаЛотов.СуммаИтого12</DataPath>
+											<Visible>false</Visible>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalСуммаИтого12</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<BackColor>#EEFCEB</BackColor>
+											<ContextMenu name="ТаблицаМесяцаСуммаИтого12КонтекстноеМеню" id="328"/>
+											<ExtendedTooltip name="ТаблицаМесяцаСуммаИтого12РасширеннаяПодсказка" id="329"/>
+										</InputField>
+										<InputField name="ТаблицаМесяцаИтогоВсего" id="330">
+											<DataPath>Объект.ТаблицаЛотов.ИтогоВсего</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Итого
+(год)</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterDataPath>Объект.ТаблицаЛотов.TotalИтогоВсего</FooterDataPath>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>15</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="ТаблицаМесяцаИтогоВсегоКонтекстноеМеню" id="331"/>
+											<ExtendedTooltip name="ТаблицаМесяцаИтогоВсегоРасширеннаяПодсказка" id="332"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="Группа10" id="381">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="382"/>
+									<ChildItems>
+										<LabelDecoration name="Декорация1" id="383">
+											<Width>999</Width>
+											<HorizontalStretch>true</HorizontalStretch>
+											<ContextMenu name="Декорация1КонтекстноеМеню" id="384"/>
+											<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="385"/>
+										</LabelDecoration>
+										<Button name="ОбновитьПИ" id="398">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ОбновитьПИ</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.Refresh</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ОбновитьПИРасширеннаяПодсказка" id="399"/>
+										</Button>
+										<InputField name="фКоличествоТСПромежуточныйИтог" id="389">
+											<DataPath>фКоличествоТСПромежуточныйИтог</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>12</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="фКоличествоТСПромежуточныйИтогКонтекстноеМеню" id="390"/>
+											<ExtendedTooltip name="фКоличествоТСПромежуточныйИтогРасширеннаяПодсказка" id="391"/>
+										</InputField>
+										<InputField name="фСуммаЗаМесяцПромежуточныйИтог" id="392">
+											<DataPath>фСуммаЗаМесяцПромежуточныйИтог</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>12</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="фСуммаЗаМесяцПромежуточныйИтогКонтекстноеМеню" id="393"/>
+											<ExtendedTooltip name="фСуммаЗаМесяцПромежуточныйИтогРасширеннаяПодсказка" id="394"/>
+										</InputField>
+										<InputField name="фСуммаИтогоПромежуточныйИтог" id="395">
+											<DataPath>фСуммаИтогоПромежуточныйИтог</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Width>12</Width>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<MaxWidth>12</MaxWidth>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+											<ContextMenu name="фСуммаИтогоПромежуточныйИтогКонтекстноеМеню" id="396"/>
+											<ExtendedTooltip name="фСуммаИтогоПромежуточныйИтогРасширеннаяПодсказка" id="397"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="СтраницаНастройки" id="335">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Настройки</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница настройки</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="СтраницаНастройкиРасширеннаяПодсказка" id="336"/>
+							<ChildItems>
+								<UsualGroup name="Группа4" id="355">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="356"/>
+									<ChildItems>
+										<CheckBoxField name="ИспользоватьУслуга1" id="337">
+											<DataPath>Объект.ИспользоватьУслуга1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьУслуга1КонтекстноеМеню" id="338"/>
+											<ExtendedTooltip name="ИспользоватьУслуга1РасширеннаяПодсказка" id="339"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииНастройкиУслуг</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="Номенклатура1" id="346">
+											<DataPath>Объект.Номенклатура1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование тарифа</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="Номенклатура1КонтекстноеМеню" id="347"/>
+											<ExtendedTooltip name="Номенклатура1РасширеннаяПодсказка" id="348"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииНастройкиУслуг</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа8" id="357">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="358"/>
+									<ChildItems>
+										<CheckBoxField name="ИспользоватьУслуга2" id="340">
+											<DataPath>Объект.ИспользоватьУслуга2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьУслуга2КонтекстноеМеню" id="341"/>
+											<ExtendedTooltip name="ИспользоватьУслуга2РасширеннаяПодсказка" id="342"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииНастройкиУслуг</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="Номенклатура2" id="349">
+											<DataPath>Объект.Номенклатура2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование тарифа</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="Номенклатура2КонтекстноеМеню" id="350"/>
+											<ExtendedTooltip name="Номенклатура2РасширеннаяПодсказка" id="351"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииНастройкиУслуг</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="Группа9" id="359">
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="360"/>
+									<ChildItems>
+										<CheckBoxField name="ИспользоватьУслуга3" id="343">
+											<DataPath>Объект.ИспользоватьУслуга3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьУслуга3КонтекстноеМеню" id="344"/>
+											<ExtendedTooltip name="ИспользоватьУслуга3РасширеннаяПодсказка" id="345"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииНастройкиУслуг</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="Номенклатура3" id="352">
+											<DataPath>Объект.Номенклатура3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<InputHint>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Наименование тарифа</v8:content>
+												</v8:item>
+											</InputHint>
+											<ContextMenu name="Номенклатура3КонтекстноеМеню" id="353"/>
+											<ExtendedTooltip name="Номенклатура3РасширеннаяПодсказка" id="354"/>
+											<Events>
+												<Event name="OnChange">ПриИзмененииНастройкиУслуг</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа11" id="403">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="404"/>
+			<ChildItems>
+				<UsualGroup name="Группа12" id="414">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="415"/>
+					<ChildItems>
+						<CheckBoxField name="Корректировочный" id="405">
+							<DataPath>Объект.Корректировочный</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="КорректировочныйКонтекстноеМеню" id="406"/>
+							<ExtendedTooltip name="КорректировочныйРасширеннаяПодсказка" id="407"/>
+							<Events>
+								<Event name="OnChange">КорректировочныйПриИзменении</Event>
+							</Events>
+						</CheckBoxField>
+						<InputField name="СторнируемыйЛот" id="411">
+							<DataPath>Объект.СторнируемыйЛот</DataPath>
+							<ClearButton>true</ClearButton>
+							<ContextMenu name="СторнируемыйЛотКонтекстноеМеню" id="412"/>
+							<ExtendedTooltip name="СторнируемыйЛотРасширеннаяПодсказка" id="413"/>
+							<Events>
+								<Event name="OnChange">СторнируемыйЛотПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="КомментарийКорректировки" id="408">
+							<DataPath>Объект.КомментарийКорректировки</DataPath>
+							<ContextMenu name="КомментарийКорректировкиКонтекстноеМеню" id="409"/>
+							<ExtendedTooltip name="КомментарийКорректировкиРасширеннаяПодсказка" id="410"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа13" id="416">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="417"/>
+					<ChildItems>
+						<InputField name="Комментарий" id="13">
+							<DataPath>Объект.Комментарий</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Комментарий (общий)</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="КомментарийКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="15"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.юкЛот</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.ТаблицаЛотов">
+					<Column name="ОтборПоиска" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отбор поиска</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:boolean</v8:Type>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="фМесяц" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фМесяцСтарый" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фСтруктураСтруктурДней" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф структура структур дней</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="фКоличествоТСПромежуточныйИтог" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во ТС (ПИ)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фСуммаЗаМесяцПромежуточныйИтог" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма за месяц (ПИ)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фСуммаИтогоПромежуточныйИтог" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма за год (ПИ)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фСторнируемыйЛот" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф сторнируемый лот</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.юкЛот</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фСписокКорректировок" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф список корректировок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фСтруктураПереносаРазбивки" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф структура переноса разбивки</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="фЗакрыватьСПараметром" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф закрывать с параметром</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СменаМесяцаПлюс" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена месяца плюс</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена месяца плюс</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СменаМесяцаПлюс</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СменаМесяцаМинус" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена месяца минус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Смена месяца минус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СменаМесяцаМинус</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗагрузкаИзExcel" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка из excel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузка из excel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузкаИзExcel</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОбновитьПИ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить ПИ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить ПИ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьПИ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Разбивка" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разбивка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Разбивка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Разбивка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПоискЗадания" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск задания</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поиск задания</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоискЗадания</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ОтменаПоиска" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена поиска</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена поиска</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменаПоиска</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><link href="v8help://service_book/service_style" type="text/css" rel="stylesheet"></link><meta content="MSHTML 6.00.2900.6058" name="GENERATOR"></meta></head><body>
+<h1 class=""><font color="#000080">Обработка "Расписание движения по маршрутам"</font></h1>
+<h3 class=""> </h3>
+<p class="MsoBodyTextIndent" style="MARGIN: 3pt 0cm 6pt"><span lang="RU"><font face="Times New Roman" size="3">В верхней части диалогового окна обработки показаны два справочника: справочник «Маршруты» и подчиненный ему справочник «Номера выходов». Под выходом понимается выпуск автобуса на линию. Каждый выход может состоять из одного или нескольких рейсов. В нижней части окна отображается информация о всех рейсах и расписании каждого рейса для выбранного выхода. Расписание вводится в разрезе пунктов следования по маршруту, которые заполняются из табличной части карточки маршрута «Пункты следования».</font></span></p>
+<p class="Usual"><font size="3"><span lang="RU" style="FONT-SIZE: 11pt; FONT-FAMILY: 'Times New Roman'; mso-bidi-font-size: 12.0pt; mso-fareast-font-family: 'Times New Roman'; mso-ansi-language: RU; mso-fareast-language: RU; mso-bidi-language: AR-SA">Например, на городском маршруте №2 каждый день работают 10 автобусов, каждый из них делает по 4 рейса в день. Это означает, что для рейса №2 в справочнике выходов должны быть внесены 10 выходов, а в справочнике рейсов - 4 рейса.</span><font face="Times New Roman">Например на городском маршруте №2 каждый день работают 10 автобусов, каждый из них делает по 4 рейса в день. Это означает что для рейса №2 в справочнике выходов должны быть внесены 10 выходов, а в справочнике рейсов - 4 рейса. Для каждого выхода можно составить расписание движения:</font></font></p>
+<p class="Usual"><font face="Times New Roman" size="3"></font> </p>
+<p class="Usual"><strong>Выход 1</strong></p>
+<p class="Usual"></p>
+<table style="WIDTH: 541pt; BORDER-COLLAPSE: collapse" cellspacing="0" cellpadding="0" width="721" border="0" x:str=""><colgroup><col style="WIDTH: 29pt; mso-width-source: userset; mso-width-alt: 1426" width="39"></col><col style="WIDTH: 140pt; mso-width-source: userset; mso-width-alt: 6802" width="186"></col><col style="WIDTH: 36pt; mso-width-source: userset; mso-width-alt: 1755" width="48"></col><col style="WIDTH: 48pt" span="7" width="64"></col></colgroup><tbody><tr style="HEIGHT: 12.75pt" height="17"><td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; WIDTH: 169pt; BORDER-BOTTOM: #d4d0c8; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" width="225" colspan="2" height="17">
+<p align="center"><font face="Arial" size="2"><strong>Пункт</strong></font></p></td>
+<td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext; WIDTH: 84pt; BORDER-BOTTOM: #d4d0c8; BACKGROUND-COLOR: transparent" width="112" colspan="2">
+<p align="center"><font face="Arial" size="2"><strong>Рейс 1</strong></font></p></td>
+<td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext; WIDTH: 96pt; BORDER-BOTTOM: #d4d0c8; BACKGROUND-COLOR: transparent" width="128" colspan="2">
+<p align="center"><font face="Arial" size="2"><strong>Рейс 2</strong></font></p></td>
+<td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext; WIDTH: 96pt; BORDER-BOTTOM: #d4d0c8; BACKGROUND-COLOR: transparent" width="128" colspan="2">
+<p align="center"><font face="Arial" size="2"><strong>Рейс 3</strong></font></p></td>
+<td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext; WIDTH: 96pt; BORDER-BOTTOM: #d4d0c8; BACKGROUND-COLOR: transparent" width="128" colspan="2">
+<p align="center"><font face="Arial" size="2"><strong>Рейс 4</strong></font></p></td></tr><tr style="HEIGHT: 13.5pt" height="18"><td class="xl26" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 13.5pt; BACKGROUND-COLOR: transparent" height="18"><font face="Arial" size="2">Номер</font></td>
+<td class="xl27" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Наименование</font></td>
+<td class="xl28" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. пр.</font></p></td>
+<td class="xl29" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. уб.</font></p></td>
+<td class="xl28" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. пр.</font></p></td>
+<td class="xl29" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. уб.</font></p></td>
+<td class="xl28" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. пр.</font></p></td>
+<td class="xl29" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. уб.</font></p></td>
+<td class="xl28" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. пр.</font></p></td>
+<td class="xl29" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. уб.</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl32" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">1</font></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Метро "Тушинская"</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:00</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:02</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:00</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:02</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:00</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:02</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:00</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:02</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl32" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">2</font></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">15-й автобусный парк</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:07</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:08</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:07</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:08</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:07</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:08</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:07</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:08</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl32" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">3</font></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Платформа "Трикотажная"</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:12</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:13</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:12</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:13</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:12</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:13</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:12</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:13</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl32" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">4</font></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Спас</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:16</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:18</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:16</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:18</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:16</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:18</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:16</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:18</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl32" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">5</font></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">1-й микрорайон Митина</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:22</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:23</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:22</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:23</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:22</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:23</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:22</font></p></td>
+<td class="xl30" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:23</font></p></td></tr><tr style="HEIGHT: 13.5pt" height="18"><td class="xl33" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 13.5pt; BACKGROUND-COLOR: transparent" height="18" x:num=""><font face="Arial" size="2">6</font></td>
+<td class="xl34" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Пятницкое шоссе 9</font></td>
+<td class="xl35" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:27</font></p></td>
+<td class="xl34" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:29</font></p></td>
+<td class="xl35" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:27</font></p></td>
+<td class="xl34" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:29</font></p></td>
+<td class="xl35" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:27</font></p></td>
+<td class="xl34" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:29</font></p></td>
+<td class="xl35" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:27</font></p></td>
+<td class="xl34" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:29</font></p></td></tr></tbody></table><p class="Usual"> </p>
+<p class="Usual"><strong>Выход 2</strong></p>
+<p class="Usual"></p>
+<table style="WIDTH: 541pt; BORDER-COLLAPSE: collapse" cellspacing="0" cellpadding="0" width="721" border="0" x:str=""><colgroup><col style="WIDTH: 29pt; mso-width-source: userset; mso-width-alt: 1426" width="39"></col><col style="WIDTH: 140pt; mso-width-source: userset; mso-width-alt: 6802" width="186"></col><col style="WIDTH: 36pt; mso-width-source: userset; mso-width-alt: 1755" width="48"></col><col style="WIDTH: 48pt" span="7" width="64"></col></colgroup><tbody><tr style="HEIGHT: 12.75pt" height="17"><td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext 1pt solid; WIDTH: 169pt; BORDER-BOTTOM: #d4d0c8; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" width="225" colspan="2" height="17">
+<p align="center"><font face="Arial" size="2"><strong>Пункт</strong></font></p></td>
+<td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext; WIDTH: 84pt; BORDER-BOTTOM: #d4d0c8; BACKGROUND-COLOR: transparent" width="112" colspan="2">
+<p align="center"><font face="Arial" size="2"><strong>Рейс 1</strong></font></p></td>
+<td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext; WIDTH: 96pt; BORDER-BOTTOM: #d4d0c8; BACKGROUND-COLOR: transparent" width="128" colspan="2">
+<p align="center"><font face="Arial" size="2"><strong>Рейс 2</strong></font></p></td>
+<td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext; WIDTH: 96pt; BORDER-BOTTOM: #d4d0c8; BACKGROUND-COLOR: transparent" width="128" colspan="2">
+<p align="center"><font face="Arial" size="2"><strong>Рейс 3</strong></font></p></td>
+<td class="xl25" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 1pt solid; BORDER-LEFT: windowtext; WIDTH: 96pt; BORDER-BOTTOM: #d4d0c8; BACKGROUND-COLOR: transparent" width="128" colspan="2">
+<p align="center"><font face="Arial" size="2"><strong>Рейс 4</strong></font></p></td></tr><tr style="HEIGHT: 13.5pt" height="18"><td class="xl26" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 1pt solid; BORDER-BOTTOM: windowtext 1pt solid; HEIGHT: 13.5pt; BACKGROUND-COLOR: transparent" height="18"><font face="Arial" size="2">Номер</font></td>
+<td class="xl27" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Наименование</font></td>
+<td class="xl28" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. пр.</font></p></td>
+<td class="xl29" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. уб.</font></p></td>
+<td class="xl28" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. пр.</font></p></td>
+<td class="xl29" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. уб.</font></p></td>
+<td class="xl28" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. пр.</font></p></td>
+<td class="xl29" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. уб.</font></p></td>
+<td class="xl28" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. пр.</font></p></td>
+<td class="xl29" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: windowtext 0.5pt solid; BORDER-LEFT: windowtext 0.5pt solid; BORDER-BOTTOM: windowtext 1pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">Вр. уб.</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl30" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">1</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Метро "Тушинская"</font></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:06</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:08</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:06</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:08</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:06</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:08</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:06</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:08</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl30" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">2</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">15-й автобусный парк</font></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:13</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:14</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:13</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:14</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:13</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:14</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:13</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:14</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl30" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">3</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Платформа "Трикотажная"</font></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:18</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:19</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:18</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:19</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:18</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:19</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:18</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:19</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl30" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">4</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Спас</font></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:22</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:24</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:22</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:24</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:22</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:24</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:22</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:24</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl30" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">5</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">1-й микрорайон Митина</font></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:28</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:29</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:28</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:29</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:28</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:29</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:28</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:29</font></p></td></tr><tr style="HEIGHT: 12.75pt" height="17"><td class="xl30" style="BORDER-RIGHT: #d4d0c8; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; HEIGHT: 12.75pt; BACKGROUND-COLOR: transparent" height="17" x:num=""><font face="Arial" size="2">6</font></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent"><font face="Arial" size="2">Пятницкое шоссе 9</font></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:33</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">06:35</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:33</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">08:35</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:33</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">10:35</font></p></td>
+<td class="xl32" style="BORDER-RIGHT: windowtext 0.5pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:33</font></p></td>
+<td class="xl31" style="BORDER-RIGHT: windowtext 1pt solid; BORDER-TOP: #d4d0c8; BORDER-LEFT: #d4d0c8; BORDER-BOTTOM: windowtext 0.5pt solid; BACKGROUND-COLOR: transparent">
+<p align="center"><font face="Arial" size="2">12:35</font></p></td></tr></tbody></table><p class="Usual">  </p>
+<p class="Usual"> </p>
+<p class="Usual"> </p>
+<p class="Usual">Данные справочника используются при составлении расписания движения по маршрутам. </p>
+<p class="Usual">Справочник является подчиненным справочнику "Маршруты". </p>
+<p class="Usual">Относится к подсистеме <a href="Subsystem.уатУправлениеАвтотранспортом/Help">"Управление Транспортом"</a>.</p>
+<p class=""></p>
+<h3 class="">Параметры</h3>
+<p class="Usual">Длина кода: 5, тип кода: Число. </p>
+<p class="Usual">Длина наименования: 25.</p>
+<p class="Usual">Не иерархический.</p>
+<p class=""></p>
+<h3 class="">Формы</h3>
+<ul><li><strong>Форма списка</strong>. Основная форма списка. Используется для отображения списка элементов. 
+</li><li><strong>Форма элемента</strong>. Основная форма объекта. Используется для заполнения обязательных реквизитов. </li></ul></body></html>

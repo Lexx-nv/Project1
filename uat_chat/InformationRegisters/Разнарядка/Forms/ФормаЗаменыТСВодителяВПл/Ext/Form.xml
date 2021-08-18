@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="16">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<InputField name="ТС" id="1">
+					<DataPath>фТС</DataPath>
+					<Width>25</Width>
+					<ContextMenu name="ТСКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ТСРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="ТСГаражныйНомер" id="18">
+					<DataPath>фТС.ГаражныйНомер</DataPath>
+					<Width>8</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТСГаражныйНомерКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ТСГаражныйНомерРасширеннаяПодсказка" id="20"/>
+				</InputField>
+				<InputField name="ТСГосударственныйНомер" id="21">
+					<DataPath>фТС.ГосударственныйНомер</DataPath>
+					<Width>8</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="ТСГосударственныйНомерКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ТСГосударственныйНомерРасширеннаяПодсказка" id="23"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа3" id="30">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<InputField name="Водитель1" id="4">
+					<DataPath>фВодитель1</DataPath>
+					<Width>25</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="Водитель1КонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="Водитель1РасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="фВодитель1Код" id="24">
+					<DataPath>фВодитель1.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таб.номер</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="фВодитель1КодКонтекстноеМеню" id="25"/>
+					<ExtendedTooltip name="фВодитель1КодРасширеннаяПодсказка" id="26"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа4" id="32">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<InputField name="Водитель2" id="7">
+					<DataPath>фВодитель2</DataPath>
+					<Width>25</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="Водитель2КонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="Водитель2РасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="фВодитель2Код" id="27">
+					<DataPath>фВодитель2.Code</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Таб.номер</v8:content>
+						</v8:item>
+					</Title>
+					<Width>8</Width>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ContextMenu name="фВодитель2КодКонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="фВодитель2КодРасширеннаяПодсказка" id="29"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="14">
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="15"/>
+			<ChildItems>
+				<Button name="КомандаОК" id="12">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОК</CommandName>
+					<ExtendedTooltip name="КомандаОКРасширеннаяПодсказка" id="13"/>
+				</Button>
+				<Button name="КомандаОтмена" id="10">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОтмена</CommandName>
+					<ExtendedTooltip name="КомандаОтменаРасширеннаяПодсказка" id="11"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="фПутевойЛист" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф путевой лист</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DocumentRef.уатПутевойЛист</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фВодитель1" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Водитель 1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатСотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фВодитель2" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Водитель 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатСотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фТС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатТС</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="ТаблицаТС" id="7">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ТаблицаТС</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаТСКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="ТаблицаТСКоманднаяПанель" id="9">
+				<ChildItems>
+					<Button name="ТаблицаТСПереместитьВ" id="32">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПереместитьВ</CommandName>
+						<BackColor>#DDF5DF</BackColor>
+						<Picture>
+							<xr:Ref>StdPicture.MoveRight</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="ТаблицаТСПереместитьВРасширеннаяПодсказка" id="33"/>
+					</Button>
+					<Button name="ТаблицаТСУдалить" id="34">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Item.ТаблицаТС.StandardCommand.Delete</CommandName>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="ТаблицаТСУдалитьРасширеннаяПодсказка" id="35"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаТСРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="ТаблицаТССтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>ТаблицаТС</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаТССтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ТаблицаТССтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаТССостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>ТаблицаТС</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаТССостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТаблицаТССостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаТСУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>ТаблицаТС</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаТСУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТаблицаТСУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТаблицаТСНомерСтроки" id="20">
+					<DataPath>Объект.ТаблицаТС.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаТСНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ТаблицаТСНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<LabelField name="ТаблицаТСТСГаражныйНомер" id="26">
+					<DataPath>Объект.ТаблицаТС.ТС.ГаражныйНомер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаТСТСГаражныйНомерКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТаблицаТСТСГаражныйНомерРасширеннаяПодсказка" id="28"/>
+				</LabelField>
+				<LabelField name="ТаблицаТСТСГосударственныйНомер" id="29">
+					<DataPath>Объект.ТаблицаТС.ТС.ГосударственныйНомер</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаТСТСГосударственныйНомерКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТаблицаТСТСГосударственныйНомерРасширеннаяПодсказка" id="31"/>
+				</LabelField>
+				<InputField name="ТаблицаТСТС" id="23">
+					<DataPath>Объект.ТаблицаТС.ТС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаТСТСКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТаблицаТСТСРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.юкГруппыТС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПереместитьВ" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить В</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить В</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереместитьВ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

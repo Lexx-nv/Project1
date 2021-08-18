@@ -1,0 +1,469 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидРасчета</dataPath>
+			<field>ВидРасчета</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид расчета</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сотрудник</dataPath>
+			<field>Сотрудник</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Сумма</dataPath>
+			<field>Сумма</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Часы</dataPath>
+			<field>Часы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Период</dataPath>
+			<field>Период</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">ДФ='MMMM yyyy'</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>СуммаТБ</dataPath>
+			<field>СуммаТБ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыТБ</dataPath>
+			<field>ЧасыТБ</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>НольЧасы</dataPath>
+			<field>НольЧасы</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы без оплаты</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>//Уникальные дни
+SELECT 
+   РаботаВодителейОбороты.Водитель,
+   РаботаВодителейОбороты.ВидРасчета,
+   ДатаРаботы,
+   MIN(Регистратор) Регистратор
+INTO врУник
+FROM  РегистрНакопления.РаботаВодителей КАК РаботаВодителейОбороты
+ГДЕ
+   РаботаВодителейОбороты.ПериодРаботы &gt;= &amp;Дт
+   И РаботаВодителейОбороты.ПериодРаботы &lt; &amp;Дт1
+   и ВидРасчета в (Значение(ПланВидовРасчета.уатОсновныеНачисления.Вахта),Значение(ПланВидовРасчета.уатОсновныеНачисления.Вахта))
+GROUP BY  
+   РаботаВодителейОбороты.Водитель,
+   РаботаВодителейОбороты.ВидРасчета,
+   ДатаРаботы
+;
+/////////////////////////////////////////////
+ВЫБРАТЬ
+	уатТарифыСотрудниковСрезПоследних.Сотрудник,
+	уатТарифыСотрудниковСрезПоследних.ЭтоОклад,
+	уатТарифыСотрудниковСрезПоследних.Период
+INTO врТбл
+ИЗ
+	РегистрСведений.уатТарифыСотрудников.СрезПоследних(&amp;Дт) КАК уатТарифыСотрудниковСрезПоследних
+	
+UNION ALL
+
+ВЫБРАТЬ
+	уатТарифыСотрудников.Сотрудник,
+	уатТарифыСотрудников.ЭтоОклад,
+	уатТарифыСотрудников.Период
+ИЗ
+	РегистрСведений.уатТарифыСотрудников КАК уатТарифыСотрудников
+WHERE 
+	Период &gt;= &amp;Дт и период &lt; &amp;Дт1
+;
+/////////////////////////////////////////////
+ВЫбрать
+Тбл.Сотрудник,
+Тбл.ЭтоОклад,
+ТБл.Период Дт,
+Тбл.Период изначДт,
+MIN(ISNULL(Т1.Период,&amp;Дт1)) ДтКон
+
+INTO врТбл1
+из  врТбл Тбл
+LEFT OUTER JOIN врТбл Т1 ON Т1.Сотрудник = Тбл.Сотрудник и Тбл.Период&lt;Т1.Период
+GROUP BY
+Тбл.Сотрудник,
+Тбл.ЭтоОклад,
+ТБл.Период
+;
+//////////////////////////////////////////////
+ВЫбрать
+Тбл.Сотрудник,
+Тбл.ЭтоОклад,
+ТБл.Дт,
+ТБл.ДтКон
+INTO врОклад
+ИЗ ВрТбл1 Тбл
+INNER JOIN 
+			(SELECT
+ 				Сотрудник,
+ 				Дт,
+ 				MAX(изначДТ) изначДт
+			 FROM врТбл1  Т
+			GROUP BY Сотрудник, Дт
+) Т1 ON Тбл.Сотрудник = Т1.Сотрудник и Тбл.Дт = Т1.изначДт и Тбл.ДТ = Т1.дт
+WHERE ЭтоОклад = Ложь
+;
+//////////////////////////////////////////////
+
+
+SELEct
+	Сотрудник,
+	ВидРасчета,
+	Период,
+    СуммаТБ,
+    ЧасыТБ,
+    Сумма,
+    Часы,
+    НольЧасы
+FROM
+(
+SELECT
+	Сотрудник,
+	ВидРасчета,
+	Период,
+	Сумма(СуммаТБ) СуммаТБ,
+	Сумма(ЧасыТБ)  ЧасыТБ,
+	Сумма(Сумма)   Сумма,
+	Сумма(Часы)    Часы,
+	Сумма(НольЧасы)   НольЧасы
+
+FROM
+(
+ВЫБРАТЬ
+	ТабельКСНачисления.Сотрудник,
+	ТабельКСНачисления.ВидРасчета,
+	ТабельКСНачисления.Сумма СуммаТБ,
+	ТабельКСНачисления.Часы ЧасыТБ,
+	0 Сумма,
+	0 Часы,
+	0 НольЧасы,
+	НачалоПериода(Ссылка.Дата,Месяц) Период
+ИЗ
+	Документ.ТабельКС.Начисления КАК ТабельКСНачисления
+ГДЕ Ссылка.Дата &gt;= &amp;Дт
+и Ссылка.Дата &lt;&amp;дт1
+и Ссылка.ПометкаУдаления = ложь
+и ВидРасчета &lt;&gt; Значение(ПланВидовРасчета.уатОсновныеНачисления.Сверхурочные)
+	
+UNION ALL
+
+ВЫБРАТЬ
+	РаботаВодителейОбороты.Водитель,
+	РаботаВодителейОбороты.ВидРасчета,
+	0 Сумма,
+	0 Часы,
+	РаботаВодителейОбороты.Сумма СуммаОборот,
+	РаботаВодителейОбороты.Количество КоличествоОборот,
+	0 НольСумма,
+	НачалоПериода(РаботаВодителейОбороты.ПериодРаботы,Месяц)
+ИЗ
+	РегистрНакопления.РаботаВодителей КАК РаботаВодителейОбороты
+LEFT OUTER JOIN врУник тбУник ON тбУник.ВидРасчета = РаботаВодителейОбороты.ВидРасчета
+                               и тбУник.ДатаРаботы = РаботаВодителейОбороты.ДатаРаботы
+                               и тбУник.Водитель   = РаботаВодителейОбороты.Водитель
+                               
+ГДЕ
+   РаботаВодителейОбороты.ПериодРаботы &gt;= &amp;Дт
+   И РаботаВодителейОбороты.ПериодРаботы &lt; &amp;дт1
+   и РаботаВодителейОбороты.Регистратор = ISNULL(тбУник.Регистратор,РаботаВодителейОбороты.Регистратор)
+
+	
+UNION ALL
+
+ВЫбрать
+	Водитель,
+	ВидРасчета,
+	0 Сумма,
+	0 Часы,
+	0 СуммаОборот,
+	0 КоличествоОборот,
+	Количество,
+	ПериодРаботы
+
+ИЗ
+(
+ВЫБРАТЬ
+	РаботаВодителей.Водитель,
+	РаботаВодителей.ВидРасчета,
+	CASE WHEN КПутевомуЛисту = Значение(Документ.уатПутевойЛист.ПустаяСсылка) THEN РаботаВодителей.Регистратор ELSE КПутевомуЛисту END Регистратор,
+	НачалоПериода(РаботаВодителей.ПериодРаботы,Месяц) ПериодРаботы,
+	СУММА(РаботаВодителей.Количество) КАК Количество,
+	СУММА(РаботаВодителей.Сумма) КАК Сумма
+ИЗ
+	РегистрНакопления.РаботаВодителей КАК РаботаВодителей
+INNER JOIN врОклад тбОклад ON тбОклад.Сотрудник = РаботаВодителей.Водитель
+                            и РаботаВодителей.Период &gt;= тбОклад.Дт 
+                            и РаботаВодителей.Период &lt;  тбОклад.ДтКон
+
+WHERE РаботаВодителей.Период &gt;= &amp;Дт и РаботаВодителей.Период &lt; &amp;Дт1
+СГРУППИРОВАТЬ ПО
+	РаботаВодителей.Водитель,
+	РаботаВодителей.ВидРасчета,
+	НачалоПериода(РаботаВодителей.ПериодРаботы,Месяц),
+	CASE WHEN КПутевомуЛисту = Значение(Документ.уатПутевойЛист.ПустаяСсылка) THEN РаботаВодителей.Регистратор ELSE КПутевомуЛисту END
+) Тбл1
+WHERE Сумма=0
+) Тбл
+
+GROUP BY
+	Сотрудник,
+	ВидРасчета,
+	Период
+) Т
+ГДЕ  Сумма &lt;&gt; СуммаТБ или Часы &lt;&gt; ЧасыТБ  или НольЧасы&lt;&gt;0</query>
+	</dataSet>
+	<totalField>
+		<dataPath>Часы</dataPath>
+		<expression>Сумма(Часы)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>СуммаТБ</dataPath>
+		<expression>Сумма(СуммаТБ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Сумма</dataPath>
+		<expression>Сумма(Сумма)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЧасыТБ</dataPath>
+		<expression>Сумма(ЧасыТБ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>НольЧасы</dataPath>
+		<expression>Сумма(НольЧасы)</expression>
+	</totalField>
+	<parameter>
+		<name>Дт</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дт</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">2013-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>дт1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дт1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">2013-02-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидРасчета</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путевые листы</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Часы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>Сумма</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Табель</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЧасыТБ</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>СуммаТБ</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>НольЧасы</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:dataParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Дт</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>дт1</dcscor:parameter>
+					<dcscor:value xsi:type="xs:dateTime">0001-01-01T00:00:00</dcscor:value>
+				</dcscor:item>
+			</dcsset:dataParameters>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Сотрудник</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВидРасчета</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеРасположениеОбщихИтогов</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTotalPlacement">None</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Заголовок</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType"/>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemTable">
+				<dcsset:column>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Период</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+				</dcsset:column>
+				<dcsset:row>
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>Сотрудник</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>ВидРасчета</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+					</dcsset:item>
+				</dcsset:row>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

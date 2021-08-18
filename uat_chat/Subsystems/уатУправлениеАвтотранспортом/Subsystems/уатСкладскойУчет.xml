@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="aa7bf295-1f5f-409c-9ca4-28ea1b8f258b">
+		<Properties>
+			<Name>уатСкладскойУчет</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Складской учет</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(уат)</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатДоверенность</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатИнвентаризацияТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатОприходованиеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатПеремещениеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатПоступлениеТоваровУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатРеализацияУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатСписаниеТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатСчетНаОплатуПокупателю</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатВедомостьДвиженияМатериалов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатМинимальныеОстаткиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатМинимальныеОстаткиНоменклатуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатЦеныНоменклатурыКонтрагентов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатПартииТоваровНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатПричиныСписанияАгрегатов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатРейтингПричинСписанияАгрегатов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатСчетНаОплатуПоставщика</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатПакетныйВводАгрегатов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОстаткиТоваровНаСкладах</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатВозвратТоваров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DocumentJournal.уатСкладскиеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.уатМ8</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Температуры</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

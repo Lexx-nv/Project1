@@ -1,0 +1,301 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Width>30</Width>
+	<AutoTitle>false</AutoTitle>
+	<AutoURL>false</AutoURL>
+	<ChildrenAlign>ItemsLeftTitlesRight</ChildrenAlign>
+	<HorizontalSpacing>Half</HorizontalSpacing>
+	<VerticalSpacing>Single</VerticalSpacing>
+	<AutoFillCheck>false</AutoFillCheck>
+	<Customizable>false</Customizable>
+	<CommandBarLocation>None</CommandBarLocation>
+	<ScalingMode>Compact</ScalingMode>
+	<ConversationsRepresentation>DontShow</ConversationsRepresentation>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>Close</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<ShowTitle>false</ShowTitle>
+	<ShowCloseButton>false</ShowCloseButton>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа3" id="30">
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="31"/>
+			<ChildItems>
+				<CheckBoxField name="Контрагент" id="1">
+					<DataPath>Контрагент</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="КонтрагентКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КонтрагентРасширеннаяПодсказка" id="3">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Пока контрагент в строках одини  тот же, заполнение будет продолжаться</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">УсловияПрочихПолейПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="Цех" id="10">
+					<DataPath>Цех</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="ЦехКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ЦехРасширеннаяПодсказка" id="12">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Косвенно принимается в расчет и контрагент, так как Цеха разбиты по контрагентам</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+					<Events>
+						<Event name="OnChange">УсловияПрочихПолейПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ТипТС" id="4">
+					<DataPath>ТипТС</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="ТипТСКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ТипТСРасширеннаяПодсказка" id="6"/>
+					<Events>
+						<Event name="OnChange">УсловияПрочихПолейПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="ВремяПодачи" id="7">
+					<DataPath>ВремяПодачи</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>CheckBox</CheckBoxType>
+					<ContextMenu name="ВремяПодачиКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ВремяПодачиРасширеннаяПодсказка" id="9"/>
+					<Events>
+						<Event name="OnChange">УсловияПрочихПолейПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="28">
+			<Visible>false</Visible>
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<CheckBoxField name="ОстановкаПриНесовпадении" id="25">
+					<DataPath>ОстановкаПриНесовпадении</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОстановкаПриНесовпаденииКонтекстноеМеню" id="26"/>
+					<ExtendedTooltip name="ОстановкаПриНесовпаденииРасширеннаяПодсказка" id="27"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОстановитьсяНаЗаполненном" id="19">
+					<DataPath>ОстановитьсяНаЗаполненном</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОстановитьсяНаЗаполненномКонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="ОстановитьсяНаЗаполненномРасширеннаяПодсказка" id="21">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнение остановится, если в строке указана колонна</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</CheckBoxField>
+				<CheckBoxField name="ВсеНезаполненные" id="22">
+					<DataPath>ВсеНезаполненные</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВсеНезаполненныеКонтекстноеМеню" id="23"/>
+					<ExtendedTooltip name="ВсеНезаполненныеРасширеннаяПодсказка" id="24">
+						<Title formatted="false">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить все строки, где значение не указано</v8:content>
+							</v8:item>
+						</Title>
+					</ExtendedTooltip>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа1" id="17">
+			<EnableContentChange>true</EnableContentChange>
+			<HorizontalStretch>false</HorizontalStretch>
+			<VerticalStretch>false</VerticalStretch>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="18"/>
+			<ChildItems>
+				<Button name="КомандаОК" id="13">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОК</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ОК</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомандаОКРасширеннаяПодсказка" id="14"/>
+				</Button>
+				<Button name="КомандаОтмена" id="15">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.КомандаОтмена</CommandName>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отмена</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомандаОтменаРасширеннаяПодсказка" id="16"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Контрагент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По одинаковым контрагентам</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипТС" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По однаковым типам ТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВремяПодачи" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По одинаковому времени подачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Цех" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>По одинаковому цеху</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОстановитьсяНаЗаполненном" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановиться на заполненном</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВсеНезаполненные" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все незаполненные</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОстановкаПриНесовпадении" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановка при несовпадении</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фПараметрыЗаполнения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф параметры заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаОК" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда ОК</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОтмена" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отмена</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда отмена</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаОтмена</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

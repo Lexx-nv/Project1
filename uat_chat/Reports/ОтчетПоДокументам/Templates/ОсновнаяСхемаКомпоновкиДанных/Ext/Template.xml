@@ -1,0 +1,943 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТС</dataPath>
+			<field>ТС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект (Сотр/ТС)</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаОкончания</dataPath>
+			<field>ДатаОкончания</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ДатаВыдачи</dataPath>
+			<field>ДатаВыдачи</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВидДокумента</dataPath>
+			<field>ВидДокумента</field>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Подразделение</dataPath>
+			<field>Подразделение</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Cut</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Дней</dataPath>
+			<field>Дней</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дней</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ГоризонтальноеПоложение</dcscor:parameter>
+					<dcscor:value xsi:type="v8ui:HorizontalAlign">Center</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Инд</dataPath>
+			<field>Инд</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уровень</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГаражныйНомер</dataPath>
+			<field>ГаражныйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гар.(Таб.) №</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Состояние</dataPath>
+			<field>Состояние</field>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Cut</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>МаксимальнаяШирина</dcscor:parameter>
+					<dcscor:value xsi:type="xs:decimal">25</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ГосударственныйНомер</dataPath>
+			<field>ГосударственныйНомер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Гос. номер</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Размещение</dcscor:parameter>
+					<dcscor:value xsi:type="dcscor:DataCompositionTextPlacementType">Cut</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Категория1</dataPath>
+			<field>Категория1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Категория</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Номер</dataPath>
+			<field>Номер</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:dimension>true</dcscom:dimension>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>имяТС</dataPath>
+			<field>имяТС</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя ТС</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Группа</dataPath>
+			<field>Группа</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ответсвенные</dataPath>
+			<field>Ответсвенные</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответсвенные</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контрагент</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Комментарий</dataPath>
+			<field>Комментарий</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>
+SELECT 
+	  ТС,уатДокументыТС.ВидДокумента,  CASE WHEN ДатаОкончания=ДатаВремя(1,1,1) THEN ДатаОкончания ELSE NULL END дтКон,  MAX(ДатаОкончания) дтМакс
+INTO врУатДокументыТС0	   
+FROM РегистрСведений.уатДокументыТС КАК уатДокументыТС
+LEFT OUTER JOIN  РегистрСведений.ДокументыИсключения.СрезПоследних(,ВидДокумента = &amp;ВидДок или &amp;ВидДок = Значение(Справочник.уатВидыДДД.ПустаяСсылка)) РегИскл ON РегИскл.ВидДОкумента = уатДокументыТС.ВидДОкумента и РегИскл.ОбъектДок = уатДокументыТС.ТС и РегИскл.Исключить = Истина
+
+LEFT OUTER JOIN Справочник.уатВидыДДД.ИсключаемыеОбъектыКонтроля исклСпр ON исклСпр.ОбъектКонтроля = ТС
+
+
+WHERE (уатДокументыТС.ВидДокумента = &amp;ВидДок или &amp;ВидДок = Значение(Справочник.уатВидыДДД.ПустаяСсылка))
+    и РегИскл.ОбъектДок IS NULL
+    и исклСпр.ОбъектКонтроля IS NULL
+    и (ТС = &amp;фильтрТССотр or &amp;ЕстьфильтрТССотр = ложь )
+GROUP BY  ТС,уатДокументыТС.ВидДокумента,CASE WHEN ДатаОкончания=ДатаВремя(1,1,1) THEN ДатаОкончания ELSE NULL END
+;
+
+SELECT
+	уатДокументыТС.ТС,
+	уатДокументыТС.ВидДокумента, 
+	уатДокументыТС.Комментарий Как Комментарий, 
+	Значение(Справочник.Контрагенты.ПустаяСсылка) Контрагент,
+	MAX(уатДокументыТС.Серия) Серия, 
+	MAX(уатДокументыТС.Номер) Номер, 
+	MAX(ДатаВыдачи) ДатаВыдачи, 
+	MAX(ДатаОкончания) ДатаОкончания,
+	РАЗНОСТЬДАТ(&amp;ДТ, CASE WHEN  MAX(ДатаОкончания) = ДатаВремя(1,1,1) THEN ДатаВремя(2050,1,1) ELSE MAX(ДатаОкончания) END, ДЕНЬ) КАК Дней
+	
+INTO врУатДокументыТС1
+FROM РегистрСведений.уатДокументыТС КАК уатДокументыТС
+
+INNER JOIN врУатДокументыТС0 ТБл ON Тбл.ТС = уатДокументыТС.ТС
+								  и Тбл.ВидДокумента = уатДокументыТС.ВидДокумента
+								  и ISNULL(Тбл.дтКон,Тбл.дтМакс) = уатДокументыТС.ДатаОкончания
+								   
+GROUP BY
+уатДокументыТС.ТС,
+уатДокументыТС.ВидДокумента,
+уатДокументыТС.Комментарий
+
+//Добавим топливные карты
+UNION ALL
+
+SELECT
+ТопливныеКартыСрезПоследних.ТС,
+Значение(Справочник.уатВидыДДД.ТопливныеКарты) ВидДокумента,
+"" Комментарий,
+СпрКарт.КемВыдана Контрагент,
+"" Серия,
+СпрКарт.Код Номер,
+ТопливныеКартыСрезПоследних.Период ДатаВыдачи,
+ДатаВремя(1,1,1) ДатаОкончания,
+РАЗНОСТЬДАТ(&amp;ДТ, CASE WHEN  ДатаОкончания = ДатаВремя(1,1,1) THEN ДатаВремя(2050,1,1) ELSE ДатаОкончания END, ДЕНЬ) КАК Дней
+
+FROM РегистрСведений.ТопливныеКарты.СрезПоследних КАК ТопливныеКартыСрезПоследних
+INNER JOIN Справочник.уатПластиковыеКарты спрКарт ON СпрКАрт.ссылка = ТопливныеКартыСрезПоследних.Карта
+WHERE ТопливныеКартыСрезПоследних.ТС &lt;&gt; Значение(Справочник.уатТС.ПустаяСсылка)
+
+;
+
+SELECT
+	спрТС.Ссылка ТС,
+	спрТС.Наименование имяТС,
+	ISNULL(уатДокументыТС.ВидДокумента,СпрДДД.ссылка) ВидДокумента, 
+	ISNULL(уатДокументыТС.Контрагент,Значение(Справочник.Контрагенты.ПустаяСсылка)) Контрагент,
+	ISNULL(уатДокументыТС.Комментарий,"") Комментарий,
+	уатДокументыТС.Серия, 
+	уатДокументыТС.Номер, 
+	спрТС.ГаражныйНомер,
+	спрТС.ГосударственныйНомер,
+	уатМестонахождениеТССрезПоследних.Состояние,
+	уатМестонахождениеТССрезПоследних.Подразделение,
+	уатДокументыТС.ДатаВыдачи, 
+	уатДокументыТС.ДатаОкончания,
+	ISNULL(уатДокументыТС.Дней,0) Дней 
+	
+INTO врУатДокументыТС
+FROM Справочник.уатТС спрТС 
+	                              
+ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.уатМестонахождениеТС.СрезПоследних КАК уатМестонахождениеТССрезПоследних
+		ПО спрТС.Ссылка = уатМестонахождениеТССрезПоследних.ТС
+		 и уатМестонахождениеТССрезПоследних.Состояние.ЗапретитьВыпискуПЛ = Ложь 
+
+INNER JOIN Справочник.уатВидыДДД СпрДДД ON  СпрДДД.ДляТС = Истина 
+                                         и (СпрДДД.ссылка = &amp;ВидДок или &amp;ВидДок = Значение(Справочник.уатВидыДДД.ПустаяСсылка))
+	                              
+LEFT OUTER JOIN врУатДокументыТС1 КАК уатДокументыТС ON уатДокументыТС.ТС = спрТС.ссылка 
+                                                      и уатДокументыТС.ВидДокумента = СпрДДД.ссылка
+
+LEFT OUTER JOIN Справочник.уатВидыДДД.ПодразделенияФильтр СпрПодрФ ON СпрПодрФ.Ссылка        = СпрДДД.ссылка
+                                                                    и СпрПодрФ.Подразделение = уатМестонахождениеТССрезПоследних.Подразделение
+
+LEFT OUTER JOIN Справочник.уатВидыДДД.ИсключаемыеОбъектыКонтроля исклСпр ON исклСпр.ОбъектКонтроля = спрТС.ссылка
+
+
+WHERE (спрТС.ДатаВыбытия &gt;= &amp;ДТ или спрТС.ДатаВыбытия = ДатаВремя(1,1,1)  )
+и ( СпрДДД.ОбязательныйДляВсех = Истина OR уатДокументыТС.ТС IS NOT NULL  )
+и (уатМестонахождениеТССрезПоследних.Состояние&lt;&gt;Значение(Справочник.уатСостояниеТС.Привлеченный) или уатДокументыТС.ТС IS NOT NULL)
+
+и (  (СпрДДД.ОбязательноеПодразделениеЕсть = Истина и СпрПодрФ.Исключить = Ложь) or СпрДДД.ОбязательноеПодразделениеЕсть = FALSE или уатДокументыТС.ТС IS NOT NULL )
+и ISNULL(СпрПодрФ.Исключить,FALSE) = FALSE
+ 	
+и  исклСпр.ОбъектКонтроля IS NULL
+
+и (спрТС.Ссылка = &amp;фильтрТССотр or &amp;ЕстьфильтрТССотр = ложь )
+;
+//======С0трудники=========================
+
+SELECT 
+	  Сотрудник ,уатДокументыВодителей.ВидДокумента,  CASE WHEN ДатаОкончания=ДатаВремя(1,1,1) THEN ДатаОкончания ELSE NULL END дтКон,  MAX(ДатаОкончания) дтМакс
+INTO врУатДокументыСотр0	   
+FROM РегистрСведений.уатДокументыВодителей КАК уатДокументыВодителей
+LEFT OUTER JOIN  РегистрСведений.ДокументыИсключения.СрезПоследних(,ВидДокумента = &amp;ВидДок или &amp;ВидДок = Значение(Справочник.уатВидыДДД.ПустаяСсылка)) РегИскл ON РегИскл.ВидДОкумента = уатДокументыВодителей.ВидДОкумента и РегИскл.ОбъектДок = уатДокументыВодителей.Сотрудник и РегИскл.Исключить = Истина
+
+LEFT OUTER JOIN Справочник.уатВидыДДД.ИсключаемыеОбъектыКонтроля исклСпр ON исклСпр.ОбъектКонтроля = Сотрудник
+
+WHERE (уатДокументыВодителей.ВидДокумента = &amp;ВидДок или &amp;ВидДок = Значение(Справочник.уатВидыДДД.ПустаяСсылка))
+    и РегИскл.ОбъектДок IS NULL
+    и исклСпр.ОбъектКонтроля IS NULL
+    и (Сотрудник = &amp;фильтрТССотр or &amp;ЕстьфильтрТССотр = ложь)
+GROUP BY  Сотрудник,уатДокументыВодителей.ВидДокумента,CASE WHEN ДатаОкончания=ДатаВремя(1,1,1) THEN ДатаОкончания ELSE NULL END
+;
+
+SELECT
+	уатДокументыВодителей.Сотрудник ТС,
+	уатДокументыВодителей.ВидДокумента,
+	уатДокументыВодителей.Комментарий,
+	Значение(Справочник.Контрагенты.ПустаяСсылка) Контрагент, 
+	MAX(уатДокументыВодителей.Серия) Серия, 
+	MAX(уатДокументыВодителей.Номер) Номер, 
+	MAX(ДатаВыдачи) ДатаВыдачи, 
+	MAX(ДатаОкончания) ДатаОкончания,
+	РАЗНОСТЬДАТ(&amp;ДТ, CASE WHEN  MAX(ДатаОкончания) = ДатаВремя(1,1,1) THEN ДатаВремя(2050,1,1) ELSE MAX(ДатаОкончания) END, ДЕНЬ) КАК Дней
+	
+INTO врУатДокументыСотр1
+FROM РегистрСведений.уатДокументыВодителей КАК уатДокументыВодителей
+
+INNER JOIN врУатДокументыСотр0 ТБл ON Тбл.Сотрудник = уатДокументыВодителей.Сотрудник
+								  и Тбл.ВидДокумента = уатДокументыВодителей.ВидДокумента
+								  и ISNULL(Тбл.дтКон,Тбл.дтМакс) = уатДокументыВодителей.ДатаОкончания
+								   
+	
+GROUP BY 	
+    уатДокументыВодителей.Сотрудник,
+	уатДокументыВодителей.ВидДокумента, 
+    уатДокументыВодителей.Комментарий
+
+//Добавим топливные карты
+UNION ALL
+
+SELECT
+ТопливныеКартыСрезПоследних.Сотрудник ТС,
+Значение(Справочник.уатВидыДДД.ТопливныеКарты) ВидДокумента,
+"" Комментарий,
+СпрКарт.КемВыдана Контрагент,
+"" Серия,
+СпрКарт.Код Номер,
+ТопливныеКартыСрезПоследних.Период ДатаВыдачи,
+ДатаВремя(1,1,1) ДатаОкончания,
+РАЗНОСТЬДАТ(&amp;ДТ, CASE WHEN  ДатаОкончания = ДатаВремя(1,1,1) THEN ДатаВремя(2050,1,1) ELSE ДатаОкончания END, ДЕНЬ) КАК Дней
+
+FROM РегистрСведений.ТопливныеКарты.СрезПоследних КАК ТопливныеКартыСрезПоследних
+INNER JOIN Справочник.уатПластиковыеКарты спрКарт ON СпрКАрт.ссылка = ТопливныеКартыСрезПоследних.Карта
+WHERE ТопливныеКартыСрезПоследних.Сотрудник &lt;&gt; Значение(Справочник.уатСотрудники.ПустаяСсылка)
+
+
+;
+
+SELECT
+	спрСотр.ссылка ТС,
+	спрСотр.Наименование ИмяТС,
+	ISNULL(уатДокументыВодителей.ВидДокумента,СпрДДД.ссылка) ВидДокумента,
+	ISNULL(уатДокументыВодителей.Контрагент,Значение(Справочник.Контрагенты.ПустаяСсылка)) Контрагент, 
+	ISNULL(уатДокументыВодителей.Комментарий,"") Комментарий, 
+	уатДокументыВодителей.Серия, 
+	уатДокументыВодителей.Номер, 
+	спрСотр.Код ГаражныйНомер,
+	"" ГосударственныйНомер,
+	уатСведенияОСотрудниках.Должность Состояние,
+	уатСведенияОСотрудниках.ПодразделениеОрганизации Подразделение,
+	уатДокументыВодителей.ДатаВыдачи, 
+	уатДокументыВодителей.ДатаОкончания,
+	ISNULL(уатДокументыВодителей.Дней,0) Дней
+	
+INTO врУатДокументыСотр
+FROM Справочник.уатСотрудники спрСотр 
+	                              
+INNER JOIN РегистрСведений.уатСведенияОСотрудниках.СрезПоследних КАК уатСведенияОСотрудниках ПО спрСотр.ссылка = уатСведенияОСотрудниках.Сотрудник
+																							  и уатСведенияОСотрудниках.ПодразделениеОрганизации &lt;&gt; Значение(Справочник.ПодразделенияОрганизаций.ПустаяСсылка) 
+
+INNER JOIN Справочник.уатВидыДДД СпрДДД ON  СпрДДД.ДляСотр = Истина 
+                                         и (СпрДДД.ссылка = &amp;ВидДок или &amp;ВидДок = Значение(Справочник.уатВидыДДД.ПустаяСсылка))
+                                              
+LEFT OUTER JOIN врУатДокументыСотр1 КАК уатДокументыВодителей  ON уатДокументыВодителей.ТС = спрСотр.ссылка
+                                                                и уатДокументыВодителей.ВидДокумента = СпрДДД.ссылка
+
+LEFT OUTER JOIN Справочник.уатВидыДДД.ПодразделенияФильтр СпрПодрФ ON СпрПодрФ.Ссылка        = СпрДДД.ссылка
+                                                                    и СпрПодрФ.Подразделение = уатСведенияОСотрудниках.ПодразделениеОрганизации
+
+LEFT OUTER JOIN Справочник.уатВидыДДД.ИсключаемыеОбъектыКонтроля исклСпр ON исклСпр.ОбъектКонтроля = спрСотр.ссылка
+
+
+WHERE (спрСотр.ДатаУвольнения &gt;= &amp;ДТ или спрСотр.ДатаУвольнения = ДатаВремя(1,1,1)  )								   
+и ( СпрДДД.ОбязательныйДляВсех = Истина OR уатДокументыВодителей.ТС IS NOT NULL  )
+
+и (  (СпрДДД.ОбязательноеПодразделениеЕсть = Истина и СпрПодрФ.Исключить = Ложь) or СпрДДД.ОбязательноеПодразделениеЕсть = FALSE OR уатДокументыВодителей.ТС IS NOT NULL )
+и ISNULL(СпрПодрФ.Исключить,FALSE) = FALSE
+
+и  исклСпр.ОбъектКонтроля IS NULL
+ 	
+и (спрСотр.Ссылка = &amp;фильтрТССотр or &amp;ЕстьфильтрТССотр = ложь)
+;
+ВЫБРАТЬ
+	уатДокументыТС.ГаражныйНомер,
+	уатДокументыТС.ГосударственныйНомер,
+	уатДокументыТС.имяТС,
+	уатДокументыТС.ТС,
+	СпрДДД.Родитель Группа,
+	СпрДДД.стрОтветсвенные Ответсвенные,
+	уатДокументыТС.ВидДокумента,
+	уатДокументыТС.Комментарий,
+	уатДокументыТС.Контрагент,
+	уатДокументыТС.Серия+уатДокументыТС.Номер Номер,
+	уатДокументыТС.ДатаВыдачи,
+	уатДокументыТС.ДатаОкончания,
+	уатДокументыТС.Дней,
+	CASE WHEN Дней &lt; 5  THEN "Критический" 
+	     WHEN Дней &lt; 30 THEN "Заканчивается"
+	                    ELSE "Норма" END Инд,   
+	"--ТС--" Категория1,        
+	уатДокументыТС.Состояние,
+	уатДокументыТС.Подразделение
+ИЗ
+	врУатДокументыТС КАК уатДокументыТС
+LEFT OUTER JOIN Справочник.уатВидыДДД СпрДДД ON СпрДДД.ссылка = уатДокументыТС.ВидДокумента
+WHERE (Дней &lt;= &amp;Дней или &amp;Дней = 0)
+    и (уатДокументыТС.Подразделение в иерархии(&amp;Подр) или &amp;Подр = Значение(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) 
+ 
+     
+   
+UNION ALL
+
+ВЫБРАТЬ
+	уатДокументыТС.ГаражныйНомер,
+	уатДокументыТС.ГосударственныйНомер,
+	уатДокументыТС.имяТС,
+	уатДокументыТС.ТС,
+	СпрДДД.Родитель Группа,
+	СпрДДД.стрОтветсвенные Ответсвенные,
+	уатДокументыТС.ВидДокумента,
+	уатДокументыТС.Комментарий,
+	уатДокументыТС.Контрагент,
+	уатДокументыТС.Серия+уатДокументыТС.Номер Номер,
+	уатДокументыТС.ДатаВыдачи,
+	уатДокументыТС.ДатаОкончания,
+	уатДокументыТС.Дней,
+	CASE WHEN Дней &lt; 5  THEN "Критический" 
+	     WHEN Дней &lt; 30 THEN "Заканчивается"
+	                    ELSE "Норма" END Инд,   
+	        
+	"--Сотрудники--" Категория1,        
+	уатДокументыТС.Состояние,
+	уатДокументыТС.Подразделение
+ИЗ
+	врУатДокументыСотр КАК уатДокументыТС
+LEFT OUTER JOIN Справочник.уатВидыДДД СпрДДД ON СпрДДД.ссылка = уатДокументыТС.ВидДокумента
+WHERE (Дней &lt;= &amp;Дней или &amp;Дней = 0) 
+    и (уатДокументыТС.Подразделение в иерархии(&amp;Подр) или &amp;Подр = Значение(Справочник.ПодразделенияОрганизаций.ПустаяСсылка)) 
+    и (уатДокументыТС.ВидДокумента.ПометкаУдаления = Ложь) 
+	
+	
+	
+</query>
+	</dataSet>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ДТ</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>ДТ</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ВидДок</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Вид док</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.уатВидыДДД</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Дней</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дней</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:decimal</v8:Type>
+			<v8:NumberQualifiers>
+				<v8:Digits>0</v8:Digits>
+				<v8:FractionDigits>0</v8:FractionDigits>
+				<v8:AllowedSign>Any</v8:AllowedSign>
+			</v8:NumberQualifiers>
+		</valueType>
+		<value xsi:type="xs:decimal">0</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Подр</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Подр</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>фильтрТССотр</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Фильтр ТССотр</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.уатТС</v8:Type>
+			<v8:Type xmlns:d4p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d4p1:CatalogRef.уатСотрудники</v8:Type>
+		</valueType>
+		<value xsi:nil="true"/>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<parameter>
+		<name>ЕстьфильтрТССотр</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Естьфильтр ТССотр</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:boolean</v8:Type>
+		</valueType>
+		<value xsi:type="xs:boolean">false</value>
+		<useRestriction>true</useRestriction>
+	</parameter>
+	<template>
+		<name>Макет1</name>
+		<template xmlns:dcsat="http://v8.1c.ru/8.1/data-composition-system/area-template" xsi:type="dcsat:AreaTemplate">
+			<dcsat:item xsi:type="dcsat:TableRow">
+				<dcsat:tableCell>
+					<dcsat:item xsi:type="dcsat:Field">
+						<dcsat:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>777</v8:content>
+							</v8:item>
+						</dcsat:value>
+					</dcsat:item>
+				</dcsat:tableCell>
+			</dcsat:item>
+		</template>
+	</template>
+	<groupTemplate>
+		<groupField>Инд</groupField>
+		<templateType>OverallHeader</templateType>
+		<template>Макет1</template>
+	</groupTemplate>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВидДокумента</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Подразделение</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГаражныйНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ТС</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ГосударственныйНомер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Состояние</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Номер</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаВыдачи</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ДатаОкончания</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Дней</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Ответсвенные</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>Контрагент</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Комментарий</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТС</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.уатТС.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТС</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.уатСотрудники.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ВидДокумента</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Категория1</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>имяТС</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ТС.ГаражныйНомер</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Дней</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаОкончания</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Дней</dcsset:left>
+							<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FF0000</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Дней</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ДатаОкончания</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Дней</dcsset:left>
+							<dcsset:comparisonType>LessOrEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">30</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Дней</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">web:Gold</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>Дней</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДатаОкончания</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:right xsi:type="v8:StandardBeginningDate">
+								<v8:variant xsi:type="v8:StandardBeginningDateVariant">Custom</v8:variant>
+								<v8:date>0001-01-01T00:00:00</v8:date>
+							</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Текст</dcscor:parameter>
+							<dcscor:value xsi:type="v8:LocalStringType">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>---</v8:content>
+								</v8:item>
+							</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:outputParameters>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>МакетОформления</dcscor:parameter>
+					<dcscor:value xsi:type="xs:string">Зеленый</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">Output</dcscor:value>
+				</dcscor:item>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>ВыводитьПараметрыДанных</dcscor:parameter>
+					<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+				</dcscor:item>
+			</dcsset:outputParameters>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:use>false</dcsset:use>
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Группа</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ВидДокумента</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:outputParameters>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:use>false</dcscor:use>
+							<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+							<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+						</dcscor:item>
+					</dcsset:outputParameters>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:use>false</dcsset:use>
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Подразделение</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:groupItems>
+								<dcsset:item xsi:type="dcsset:GroupItemField">
+									<dcsset:field>Категория1</dcsset:field>
+									<dcsset:groupType>Items</dcsset:groupType>
+									<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+									<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+									<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+								</dcsset:item>
+							</dcsset:groupItems>
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+							<dcsset:item xsi:type="dcsset:StructureItemGroup">
+								<dcsset:use>false</dcsset:use>
+								<dcsset:groupItems>
+									<dcsset:item xsi:type="dcsset:GroupItemField">
+										<dcsset:field>ТС</dcsset:field>
+										<dcsset:groupType>Items</dcsset:groupType>
+										<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+										<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+										<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+									</dcsset:item>
+								</dcsset:groupItems>
+								<dcsset:order>
+									<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+								</dcsset:order>
+								<dcsset:selection>
+									<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+								</dcsset:selection>
+								<dcsset:item xsi:type="dcsset:StructureItemGroup">
+									<dcsset:groupItems>
+										<dcsset:item xsi:type="dcsset:GroupItemField">
+											<dcsset:field>Инд</dcsset:field>
+											<dcsset:groupType>Items</dcsset:groupType>
+											<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+											<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+											<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+										</dcsset:item>
+									</dcsset:groupItems>
+									<dcsset:order>
+										<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+									</dcsset:order>
+									<dcsset:selection>
+										<dcsset:item xsi:type="dcsset:SelectedItemField">
+											<dcsset:field>Инд</dcsset:field>
+										</dcsset:item>
+									</dcsset:selection>
+									<dcsset:outputParameters>
+										<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+											<dcscor:use>false</dcscor:use>
+											<dcscor:parameter>МакетОформления</dcscor:parameter>
+											<dcscor:value xsi:type="xs:string">БезОформления</dcscor:value>
+										</dcscor:item>
+										<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+											<dcscor:use>false</dcscor:use>
+											<dcscor:parameter>ВыводитьЗаголовок</dcscor:parameter>
+											<dcscor:value xsi:type="dcsset:DataCompositionTextOutputType">DontOutput</dcscor:value>
+										</dcscor:item>
+										<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+											<dcscor:use>false</dcscor:use>
+											<dcscor:parameter>Заголовок</dcscor:parameter>
+											<dcscor:value xsi:type="v8:LocalStringType">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>" "</v8:content>
+												</v8:item>
+											</dcscor:value>
+										</dcscor:item>
+									</dcsset:outputParameters>
+									<dcsset:item xsi:type="dcsset:StructureItemGroup">
+										<dcsset:order>
+											<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+										</dcsset:order>
+										<dcsset:selection>
+											<dcsset:item xsi:type="dcsset:SelectedItemField">
+												<dcsset:field>СистемныеПоля.НомерПоПорядкуВГруппировке</dcsset:field>
+											</dcsset:item>
+											<dcsset:item xsi:type="dcsset:SelectedItemField">
+												<dcsset:field>ВидДокумента</dcsset:field>
+											</dcsset:item>
+											<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+											<dcsset:item xsi:type="dcsset:SelectedItemField">
+												<dcsset:field>Подразделение</dcsset:field>
+											</dcsset:item>
+										</dcsset:selection>
+									</dcsset:item>
+								</dcsset:item>
+							</dcsset:item>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

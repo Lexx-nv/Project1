@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="5c971f14-ed86-4374-8e97-1e807759730d">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.уатВидыУчетаВремени" category="Ref">
+				<xr:TypeId>3b19d5d9-e8ec-4e8d-a0b4-7e449b3b04a6</xr:TypeId>
+				<xr:ValueId>6985f748-8897-4e3b-80af-6b5afa984304</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.уатВидыУчетаВремени" category="Manager">
+				<xr:TypeId>4f50270c-b11f-4b4c-ad85-ffdd2b218641</xr:TypeId>
+				<xr:ValueId>eb8da25b-e802-49e2-949e-31a27dc1d1c4</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.уатВидыУчетаВремени" category="List">
+				<xr:TypeId>06425d7e-e598-4b03-ae0d-b316470b87d1</xr:TypeId>
+				<xr:ValueId>0ceacb26-0165-4fce-8ad6-9ae29d731257</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>уатВидыУчетаВремени</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды учета времени (уат)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(уат)</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="846d43ac-97d4-453a-bab8-e8d493074988">
+				<Properties>
+					<Name>ПоДням</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По дням</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="624a945d-0477-4fd5-b8c8-3f34d01eed4e">
+				<Properties>
+					<Name>ПоЧасам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По часам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2e6891e8-8c12-4e25-8b99-fd2f9451fe5c">
+				<Properties>
+					<Name>ПоВечернимЧасам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По вечерним часам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="48259212-277a-4c5c-a395-1a428df9086a">
+				<Properties>
+					<Name>ПоНочнымЧасам</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>По ночным часам</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>(Общ)</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

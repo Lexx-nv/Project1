@@ -1,0 +1,961 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="http://schemas.xmlsoap.org/wsdl/"
+		xmlns:soap12bind="http://schemas.xmlsoap.org/wsdl/soap12/"
+		xmlns:soapbind="http://schemas.xmlsoap.org/wsdl/soap/"
+		xmlns:tns="http://www.zanzara.ru/"
+		xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy"
+		xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:xsd1="http://www.zanzara.ru/"
+		targetNamespace="http://www.zanzara.ru/">
+	<types>
+		<s:schema xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+				xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/"
+				xmlns:s="http://www.w3.org/2001/XMLSchema"
+				xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+				xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/"
+				xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"
+				xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/"
+				xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+				elementFormDefault="qualified"
+				targetNamespace="http://www.zanzara.ru/">
+			<s:element name="HelloWorld">
+				<s:complexType/>
+			</s:element>
+			<s:element name="HelloWorldResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="HelloWorldResult"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="transport_state_app">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="lgn"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="pwd"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="application"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="version"
+								type="s:string"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="transport_state_appResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="transport_state_appResult"
+								type="xsd1:TPermissionResponse"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="TPermissionResponse">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="Description"
+							type="s:string"/>
+				</s:sequence>
+				<s:attribute name="ResCode"
+						type="s:int"
+						use="required"/>
+			</s:complexType>
+			<s:element name="transport_state">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_UserInfo">
+				<s:attribute name="usr"
+						type="s:string"/>
+				<s:attribute name="pwd"
+						type="s:string"/>
+				<s:attribute name="appinfo"
+						type="s:string"/>
+				<s:attribute name="pv"
+						type="s:int"/>
+			</s:complexType>
+			<s:element name="transport_stateResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="transport_stateResult"
+								type="xsd1:Z_result"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_result">
+				<s:attribute name="res"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="description"
+						type="s:string"/>
+			</s:complexType>
+			<s:element name="sms_send">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+						<s:element minOccurs="0"
+								maxOccurs="unbounded"
+								name="sms"
+								type="xsd1:Z_sendSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_sendSms">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="message"
+							type="s:string"/>
+				</s:sequence>
+				<s:attribute name="sms_id"
+						type="s:string"/>
+				<s:attribute name="source_number"
+						type="s:string"/>
+				<s:attribute name="number"
+						type="s:string"/>
+				<s:attribute name="ttl"
+						type="s:long"/>
+				<s:attribute name="schedule_delivery_time"
+						type="s:dateTime"/>
+				<s:attribute name="port"
+						type="s:int"/>
+				<s:attribute name="email"
+						type="s:string"/>
+			</s:complexType>
+			<s:element name="sms_sendResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="sms_sendResult"
+								type="xsd1:Z_result_sendSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_result_sendSms"
+					mixed="false">
+				<s:complexContent mixed="false">
+					<s:extension base="xsd1:Z_result">
+						<s:sequence>
+							<s:element minOccurs="0"
+									maxOccurs="unbounded"
+									name="sendres"
+									type="xsd1:Z_resultPush"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="Z_resultPush">
+				<s:attribute name="sms_id"
+						type="s:string"/>
+				<s:attribute name="push_id"
+						type="s:long"/>
+				<s:attribute name="description"
+						type="s:string"/>
+				<s:attribute name="res"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="sms_count"
+						type="s:int"/>
+			</s:complexType>
+			<s:element name="sms_send_common">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+						<s:element minOccurs="0"
+								maxOccurs="unbounded"
+								name="sms"
+								type="xsd1:Z_sendSms"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="common"
+								type="xsd1:Z_commonParam"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_commonParam">
+				<s:sequence>
+					<s:element minOccurs="0"
+							maxOccurs="1"
+							name="message"
+							type="s:string"/>
+				</s:sequence>
+				<s:attribute name="source_number"
+						type="s:string"/>
+				<s:attribute name="ttl"
+						type="s:long"/>
+				<s:attribute name="schedule_delivery_time"
+						type="s:dateTime"/>
+				<s:attribute name="port"
+						type="s:int"/>
+			</s:complexType>
+			<s:element name="sms_send_commonResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="sms_send_commonResult"
+								type="xsd1:Z_result_sendSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="VCARD_send">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+						<s:element minOccurs="0"
+								maxOccurs="unbounded"
+								name="sms"
+								type="xsd1:Z_sendSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="VCARD_sendResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="VCARD_sendResult"
+								type="xsd1:Z_result_sendSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="VCARD_send_common">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+						<s:element minOccurs="0"
+								maxOccurs="unbounded"
+								name="sms"
+								type="xsd1:Z_sendSms"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="common"
+								type="xsd1:Z_commonParam"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="VCARD_send_commonResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="VCARD_send_commonResult"
+								type="xsd1:Z_result_sendSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="sms_status">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+						<s:element minOccurs="0"
+								maxOccurs="unbounded"
+								name="status"
+								type="xsd1:Z_statusSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_statusSms">
+				<s:attribute name="push_id"
+						type="s:long"
+						use="required"/>
+			</s:complexType>
+			<s:element name="sms_statusResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="sms_statusResult"
+								type="xsd1:Z_result_statusSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_result_statusSms"
+					mixed="false">
+				<s:complexContent mixed="false">
+					<s:extension base="xsd1:Z_result">
+						<s:sequence>
+							<s:element minOccurs="0"
+									maxOccurs="unbounded"
+									name="statusres"
+									type="xsd1:Z_resultStatus"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="Z_resultStatus">
+				<s:attribute name="push_id"
+						type="s:long"
+						use="required"/>
+				<s:attribute name="description"
+						type="s:string"/>
+				<s:attribute name="status"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="statustime"
+						type="s:dateTime"
+						use="required"/>
+				<s:attribute name="SMS_sent"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="SMS_dlvr"
+						type="s:int"
+						use="required"/>
+			</s:complexType>
+			<s:element name="sms_receive">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="req_sms"
+								type="xsd1:Z_receiveSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_receiveSms">
+				<s:attribute name="request_id"
+						type="s:string"/>
+				<s:attribute name="count"
+						type="s:int"/>
+			</s:complexType>
+			<s:element name="sms_receiveResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="sms_receiveResult"
+								type="xsd1:Z_result_receiveSms"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_result_receiveSms"
+					mixed="false">
+				<s:complexContent mixed="false">
+					<s:extension base="xsd1:Z_result">
+						<s:sequence>
+							<s:element minOccurs="0"
+									maxOccurs="unbounded"
+									name="receive"
+									type="xsd1:Z_resultreceiveSms"/>
+						</s:sequence>
+						<s:attribute name="sms_count"
+								type="s:int"
+								use="required"/>
+						<s:attribute name="sms_remains"
+								type="s:int"
+								use="required"/>
+						<s:attribute name="request_id"
+								type="s:string"/>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="Z_resultreceiveSms">
+				<s:attribute name="response_id"
+						type="s:long"
+						use="required"/>
+				<s:attribute name="src_number"
+						type="s:string"/>
+				<s:attribute name="number"
+						type="s:string"/>
+				<s:attribute name="text"
+						type="s:string"/>
+				<s:attribute name="request_time"
+						type="s:dateTime"
+						use="required"/>
+			</s:complexType>
+			<s:element name="get_sourceaddress">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="get_sourceaddressResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="get_sourceaddressResult"
+								type="xsd1:Z_result_SourceAddress"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_result_SourceAddress"
+					mixed="false">
+				<s:complexContent mixed="false">
+					<s:extension base="xsd1:Z_result">
+						<s:sequence>
+							<s:element minOccurs="0"
+									maxOccurs="unbounded"
+									name="sourceaddress"
+									type="s:string"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:element name="get_statictic">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="userinfo"
+								type="xsd1:Z_UserInfo"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="source_address"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="category"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="beg_time"
+								type="s:string"/>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="end_time"
+								type="s:string"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="group_by_time"
+								type="s:int"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="group_by_source"
+								type="s:boolean"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="divide_by_category"
+								type="s:boolean"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="sub_client"
+								type="s:boolean"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="only_top_client"
+								type="s:boolean"/>
+						<s:element minOccurs="1"
+								maxOccurs="1"
+								name="show_empty"
+								type="s:boolean"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:element name="get_staticticResponse">
+				<s:complexType>
+					<s:sequence>
+						<s:element minOccurs="0"
+								maxOccurs="1"
+								name="get_staticticResult"
+								type="xsd1:Z_result_statistic"/>
+					</s:sequence>
+				</s:complexType>
+			</s:element>
+			<s:complexType name="Z_result_statistic"
+					mixed="false">
+				<s:complexContent mixed="false">
+					<s:extension base="xsd1:Z_result">
+						<s:sequence>
+							<s:element minOccurs="0"
+									maxOccurs="unbounded"
+									name="stat"
+									type="xsd1:Z_statistic_item"/>
+						</s:sequence>
+					</s:extension>
+				</s:complexContent>
+			</s:complexType>
+			<s:complexType name="Z_statistic_item">
+				<s:attribute name="dealer_name"
+						type="s:string"/>
+				<s:attribute name="client_name"
+						type="s:string"/>
+				<s:attribute name="src_addr"
+						type="s:string"/>
+				<s:attribute name="snd_cnt"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="dlv_cnt"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="rcv_cnt"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="beg_time"
+						type="s:string"/>
+				<s:attribute name="end_time"
+						type="s:string"/>
+				<s:attribute name="category"
+						type="s:string"/>
+				<s:attribute name="dealer_id"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="client_id"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="is_dealer"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="client_status"
+						type="s:int"
+						use="required"/>
+				<s:attribute name="source_status"
+						type="s:int"
+						use="required"/>
+			</s:complexType>
+		</s:schema>
+	</types>
+	<message name="HelloWorldSoapIn">
+		<part name="parameters"
+				element="tns:HelloWorld"/>
+	</message>
+	<message name="HelloWorldSoapOut">
+		<part name="parameters"
+				element="tns:HelloWorldResponse"/>
+	</message>
+	<message name="transport_state_appSoapIn">
+		<part name="parameters"
+				element="tns:transport_state_app"/>
+	</message>
+	<message name="transport_state_appSoapOut">
+		<part name="parameters"
+				element="tns:transport_state_appResponse"/>
+	</message>
+	<message name="transport_stateSoapIn">
+		<part name="parameters"
+				element="tns:transport_state"/>
+	</message>
+	<message name="transport_stateSoapOut">
+		<part name="parameters"
+				element="tns:transport_stateResponse"/>
+	</message>
+	<message name="sms_sendSoapIn">
+		<part name="parameters"
+				element="tns:sms_send"/>
+	</message>
+	<message name="sms_sendSoapOut">
+		<part name="parameters"
+				element="tns:sms_sendResponse"/>
+	</message>
+	<message name="sms_send_commonSoapIn">
+		<part name="parameters"
+				element="tns:sms_send_common"/>
+	</message>
+	<message name="sms_send_commonSoapOut">
+		<part name="parameters"
+				element="tns:sms_send_commonResponse"/>
+	</message>
+	<message name="VCARD_sendSoapIn">
+		<part name="parameters"
+				element="tns:VCARD_send"/>
+	</message>
+	<message name="VCARD_sendSoapOut">
+		<part name="parameters"
+				element="tns:VCARD_sendResponse"/>
+	</message>
+	<message name="VCARD_send_commonSoapIn">
+		<part name="parameters"
+				element="tns:VCARD_send_common"/>
+	</message>
+	<message name="VCARD_send_commonSoapOut">
+		<part name="parameters"
+				element="tns:VCARD_send_commonResponse"/>
+	</message>
+	<message name="sms_statusSoapIn">
+		<part name="parameters"
+				element="tns:sms_status"/>
+	</message>
+	<message name="sms_statusSoapOut">
+		<part name="parameters"
+				element="tns:sms_statusResponse"/>
+	</message>
+	<message name="sms_receiveSoapIn">
+		<part name="parameters"
+				element="tns:sms_receive"/>
+	</message>
+	<message name="sms_receiveSoapOut">
+		<part name="parameters"
+				element="tns:sms_receiveResponse"/>
+	</message>
+	<message name="get_sourceaddressSoapIn">
+		<part name="parameters"
+				element="tns:get_sourceaddress"/>
+	</message>
+	<message name="get_sourceaddressSoapOut">
+		<part name="parameters"
+				element="tns:get_sourceaddressResponse"/>
+	</message>
+	<message name="get_staticticSoapIn">
+		<part name="parameters"
+				element="tns:get_statictic"/>
+	</message>
+	<message name="get_staticticSoapOut">
+		<part name="parameters"
+				element="tns:get_staticticResponse"/>
+	</message>
+	<portType name="ZanzaraSMSServiceSoap">
+		<operation name="HelloWorld">
+			<input name="HelloWorldRequest"
+					message="tns:HelloWorldSoapIn"/>
+			<output name="HelloWorldResponse"
+					message="tns:HelloWorldSoapOut"/>
+		</operation>
+		<operation name="transport_state_app">
+			<documentation>Checks permissions.</documentation>
+			<input name="transport_state_appRequest"
+					message="tns:transport_state_appSoapIn"/>
+			<output name="transport_state_appResponse"
+					message="tns:transport_state_appSoapOut"/>
+		</operation>
+		<operation name="transport_state">
+			<documentation>Check service accessibility.</documentation>
+			<input name="transport_stateRequest"
+					message="tns:transport_stateSoapIn"/>
+			<output name="transport_stateResponse"
+					message="tns:transport_stateSoapOut"/>
+		</operation>
+		<operation name="sms_send">
+			<documentation>Sending sms (max 100).</documentation>
+			<input name="sms_sendRequest"
+					message="tns:sms_sendSoapIn"/>
+			<output name="sms_sendResponse"
+					message="tns:sms_sendSoapOut"/>
+		</operation>
+		<operation name="sms_send_common">
+			<documentation>Sending sms (max 100) with some common parameters </documentation>
+			<input name="sms_send_commonRequest"
+					message="tns:sms_send_commonSoapIn"/>
+			<output name="sms_send_commonResponse"
+					message="tns:sms_send_commonSoapOut"/>
+		</operation>
+		<operation name="VCARD_send">
+			<documentation>Sending VCARD (max 100).</documentation>
+			<input name="VCARD_sendRequest"
+					message="tns:VCARD_sendSoapIn"/>
+			<output name="VCARD_sendResponse"
+					message="tns:VCARD_sendSoapOut"/>
+		</operation>
+		<operation name="VCARD_send_common">
+			<documentation>Sending VCARD (max 100) with some common parameters</documentation>
+			<input name="VCARD_send_commonRequest"
+					message="tns:VCARD_send_commonSoapIn"/>
+			<output name="VCARD_send_commonResponse"
+					message="tns:VCARD_send_commonSoapOut"/>
+		</operation>
+		<operation name="sms_status">
+			<documentation>Request sms status (max 100).</documentation>
+			<input name="sms_statusRequest"
+					message="tns:sms_statusSoapIn"/>
+			<output name="sms_statusResponse"
+					message="tns:sms_statusSoapOut"/>
+		</operation>
+		<operation name="sms_receive">
+			<documentation>Request receive Sms(max 100).</documentation>
+			<input name="sms_receiveRequest"
+					message="tns:sms_receiveSoapIn"/>
+			<output name="sms_receiveResponse"
+					message="tns:sms_receiveSoapOut"/>
+		</operation>
+		<operation name="get_sourceaddress">
+			<documentation>Request of alowed source addresses</documentation>
+			<input name="get_sourceaddressRequest"
+					message="tns:get_sourceaddressSoapIn"/>
+			<output name="get_sourceaddressResponse"
+					message="tns:get_sourceaddressSoapOut"/>
+		</operation>
+		<operation name="get_statictic">
+			<documentation>Request of statistic</documentation>
+			<input name="get_staticticRequest"
+					message="tns:get_staticticSoapIn"/>
+			<output name="get_staticticResponse"
+					message="tns:get_staticticSoapOut"/>
+		</operation>
+	</portType>
+	<binding name="ZanzaraSMSServiceSoap"
+			type="tns:ZanzaraSMSServiceSoap">
+		<soapbind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="HelloWorld">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/HelloWorld"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="transport_state_app">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/transport_state_app"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="transport_state">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/transport_state"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sms_send">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/sms_send"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sms_send_common">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/sms_send_common"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="VCARD_send">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/VCARD_send"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="VCARD_send_common">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/VCARD_send_common"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sms_status">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/sms_status"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sms_receive">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/sms_receive"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="get_sourceaddress">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/get_sourceaddress"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="get_statictic">
+			<soapbind:operation style="document"
+					soapAction="http://www.zanzara.ru/get_statictic"/>
+			<input>
+				<soapbind:body use="literal"/>
+			</input>
+			<output>
+				<soapbind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<binding name="ZanzaraSMSServiceSoap12"
+			type="tns:ZanzaraSMSServiceSoap">
+		<soap12bind:binding style="document"
+				transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="HelloWorld">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/HelloWorld"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="transport_state_app">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/transport_state_app"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="transport_state">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/transport_state"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sms_send">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/sms_send"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sms_send_common">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/sms_send_common"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="VCARD_send">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/VCARD_send"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="VCARD_send_common">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/VCARD_send_common"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sms_status">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/sms_status"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="sms_receive">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/sms_receive"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="get_sourceaddress">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/get_sourceaddress"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+		<operation name="get_statictic">
+			<soap12bind:operation style="document"
+					soapAction="http://www.zanzara.ru/get_statictic"/>
+			<input>
+				<soap12bind:body use="literal"/>
+			</input>
+			<output>
+				<soap12bind:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="ZanzaraSMSService">
+		<port name="ZanzaraSMSServiceSoap"
+				binding="tns:ZanzaraSMSServiceSoap">
+			<soapbind:address location="https://www.contentum-it.ru/ws/zservice.asmx"/>
+		</port>
+		<port name="ZanzaraSMSServiceSoap12"
+				binding="tns:ZanzaraSMSServiceSoap12">
+			<soap12bind:address location="https://www.contentum-it.ru/ws/zservice.asmx"/>
+		</port>
+	</service>
+</definitions>

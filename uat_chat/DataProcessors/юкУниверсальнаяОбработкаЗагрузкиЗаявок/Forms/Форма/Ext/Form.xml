@@ -1,0 +1,930 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Универсальная форма загрузки заявок</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЗагрузка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загрузка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа загрузка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЗагрузкаРасширеннаяПодсказка" id="5"/>
+			<ChildItems>
+				<InputField name="ИмяФайла" id="1">
+					<DataPath>Объект.ИмяФайла</DataPath>
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<ChoiceButton>true</ChoiceButton>
+					<OpenButton>true</OpenButton>
+					<ContextMenu name="ИмяФайлаКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="ИмяФайлаРасширеннаяПодсказка" id="3"/>
+					<Events>
+						<Event name="StartChoice">ИмяФайлаНачалоВыбора</Event>
+					</Events>
+				</InputField>
+				<Button name="Загрузить" id="36">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Загрузить</CommandName>
+					<BackColor>#F5B139</BackColor>
+					<ExtendedTooltip name="ЗагрузитьРасширеннаяПодсказка" id="37"/>
+				</Button>
+				<Button name="Выгрузить" id="53">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.Выгрузить</CommandName>
+					<ExtendedTooltip name="ВыгрузитьРасширеннаяПодсказка" id="54"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="Заявки" id="8">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Заявки</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ЗаявкиКонтекстноеМеню" id="9"/>
+			<AutoCommandBar name="ЗаявкиКоманднаяПанель" id="10"/>
+			<ExtendedTooltip name="ЗаявкиРасширеннаяПодсказка" id="11"/>
+			<SearchStringAddition name="ЗаявкиСтрокаПоиска" id="12">
+				<AdditionSource>
+					<Item>Заявки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиСтрокаПоискаКонтекстноеМеню" id="13"/>
+				<ExtendedTooltip name="ЗаявкиСтрокаПоискаРасширеннаяПодсказка" id="14"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ЗаявкиСостояниеПросмотра" id="15">
+				<AdditionSource>
+					<Item>Заявки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиСостояниеПросмотраКонтекстноеМеню" id="16"/>
+				<ExtendedTooltip name="ЗаявкиСостояниеПросмотраРасширеннаяПодсказка" id="17"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ЗаявкиУправлениеПоиском" id="18">
+				<AdditionSource>
+					<Item>Заявки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ЗаявкиУправлениеПоискомКонтекстноеМеню" id="19"/>
+				<ExtendedTooltip name="ЗаявкиУправлениеПоискомРасширеннаяПодсказка" id="20"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ЗаявкиПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ЗаявкиНомерСтроки" id="21">
+					<DataPath>Объект.Заявки.LineNumber</DataPath>
+					<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<VerticalAlign>Top</VerticalAlign>
+					<EditMode>EnterOnInput</EditMode>
+					<Width>2</Width>
+					<ContextMenu name="ЗаявкиНомерСтрокиКонтекстноеМеню" id="22"/>
+					<ExtendedTooltip name="ЗаявкиНомерСтрокиРасширеннаяПодсказка" id="23"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаТипТС" id="55">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа тип ТС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа тип ТС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТипТСРасширеннаяПодсказка" id="56"/>
+					<ChildItems>
+						<InputField name="ЗаявкиТипТС" id="24">
+							<DataPath>Объект.Заявки.ТипТС</DataPath>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>40</Width>
+							<Font ref="style:TextFont" kind="StyleItem"/>
+							<ContextMenu name="ЗаявкиТипТСКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="ЗаявкиТипТСРасширеннаяПодсказка" id="26"/>
+							<Events>
+								<Event name="OnChange">ЗаявкиТипТСПриИзменении</Event>
+							</Events>
+						</InputField>
+						<InputField name="ЗаявкиТипТСExcel" id="57">
+							<DataPath>Объект.Заявки.ТипТСExcel</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>40</Width>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="ЗаявкиТипТСExcelКонтекстноеМеню" id="58"/>
+							<ExtendedTooltip name="ЗаявкиТипТСExcelРасширеннаяПодсказка" id="59"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаЦехМаршрут" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа цех маршрут</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа цех маршрут</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>30</Width>
+					<ExtendedTooltip name="ГруппаЦехМаршрутРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<InputField name="ЗаявкиЦехМаршрут" id="27">
+							<DataPath>Объект.Заявки.ЦехМаршрут</DataPath>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<ContextMenu name="ЗаявкиЦехМаршрутКонтекстноеМеню" id="28"/>
+							<ExtendedTooltip name="ЗаявкиЦехМаршрутРасширеннаяПодсказка" id="29"/>
+						</InputField>
+						<InputField name="ЗаявкиЦехМаршрутExcel" id="62">
+							<DataPath>Объект.Заявки.ЦехМаршрутExcel</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="ЗаявкиЦехМаршрутExcelКонтекстноеМеню" id="63"/>
+							<ExtendedTooltip name="ЗаявкиЦехМаршрутExcelРасширеннаяПодсказка" id="64"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаРежимРаботы" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режим работы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа режим работы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>30</Width>
+					<ExtendedTooltip name="ГруппаРежимРаботыРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<InputField name="ЗаявкиРежимРаботы" id="30">
+							<DataPath>Объект.Заявки.РежимРаботы</DataPath>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>20</Width>
+							<ContextMenu name="ЗаявкиРежимРаботыКонтекстноеМеню" id="31"/>
+							<ExtendedTooltip name="ЗаявкиРежимРаботыРасширеннаяПодсказка" id="32"/>
+						</InputField>
+						<InputField name="ЗаявкиРежимРаботыExcel" id="67">
+							<DataPath>Объект.Заявки.РежимРаботыExcel</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>20</Width>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="ЗаявкиРежимРаботыExcelКонтекстноеМеню" id="68"/>
+							<ExtendedTooltip name="ЗаявкиРежимРаботыExcelРасширеннаяПодсказка" id="69"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаДнейРаботы" id="70">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Работа:</v8:content>
+						</v8:item>
+					</Title>
+					<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа дней работы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<TitleBackColor>#C5C3B2</TitleBackColor>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаДнейРаботыРасширеннаяПодсказка" id="71"/>
+					<ChildItems>
+						<ColumnGroup name="РаботаC" id="103">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Работа </v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Работа C</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="РаботаCРасширеннаяПодсказка" id="104"/>
+							<ChildItems>
+								<InputField name="ЗаявкиРаботаС" id="105">
+									<DataPath>Объект.Заявки.РаботаС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>c</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>13</Width>
+									<Format>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДЛФ=Д</v8:content>
+										</v8:item>
+									</Format>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДЛФ=Д</v8:content>
+										</v8:item>
+									</EditFormat>
+									<Font ref="style:TextFont" kind="StyleItem"/>
+									<ContextMenu name="ЗаявкиРаботаСКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ЗаявкиРаботаСРасширеннаяПодсказка" id="107"/>
+								</InputField>
+								<InputField name="ЗаявкиРаботаСExcel" id="110">
+									<DataPath>Объект.Заявки.РаботаСExcel</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>13</Width>
+									<TextColor>#808080</TextColor>
+									<ContextMenu name="ЗаявкиРаботаСExcelКонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ЗаявкиРаботаСExcelРасширеннаяПодсказка" id="112"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ДнейРаботы" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дней работы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дней работы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ДнейРаботыРасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<InputField name="ЗаявкиДнейРаботы" id="38">
+									<DataPath>Объект.Заявки.ДнейРаботы</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>дней работы</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>13</Width>
+									<ContextMenu name="ЗаявкиДнейРаботыКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ЗаявкиДнейРаботыРасширеннаяПодсказка" id="40"/>
+								</InputField>
+								<InputField name="ЗаявкиДнейРаботыExcel" id="72">
+									<DataPath>Объект.Заявки.ДнейРаботыExcel</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>13</Width>
+									<TextColor>#808080</TextColor>
+									<Font ref="style:TextFont" kind="StyleItem"/>
+									<ContextMenu name="ЗаявкиДнейРаботыExcelКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ЗаявкиДнейРаботыExcelРасширеннаяПодсказка" id="74"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="Смена" id="113">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Смена</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Смена</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>8</Width>
+							<ExtendedTooltip name="СменаРасширеннаяПодсказка" id="114"/>
+							<ChildItems>
+								<InputField name="ЗаявкиСмена" id="115">
+									<DataPath>Объект.Заявки.Смена</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>смена</v8:content>
+										</v8:item>
+									</Title>
+									<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>8</Width>
+									<Font ref="style:TextFont" kind="StyleItem"/>
+									<ContextMenu name="ЗаявкиСменаКонтекстноеМеню" id="116"/>
+									<ExtendedTooltip name="ЗаявкиСменаРасширеннаяПодсказка" id="117"/>
+								</InputField>
+								<InputField name="ЗаявкиСменаExcel" id="118">
+									<DataPath>Объект.Заявки.СменаExcel</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<HorizontalAlign>Right</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<Width>8</Width>
+									<TextColor>#808080</TextColor>
+									<ContextMenu name="ЗаявкиСменаExcelКонтекстноеМеню" id="119"/>
+									<ExtendedTooltip name="ЗаявкиСменаExcelРасширеннаяПодсказка" id="120"/>
+								</InputField>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаВремяПодачи" id="75">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа время подачи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа время подачи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>14</Width>
+					<ExtendedTooltip name="ГруппаВремяПодачиРасширеннаяПодсказка" id="76"/>
+					<ChildItems>
+						<InputField name="ЗаявкиВремяПодачи" id="41">
+							<DataPath>Объект.Заявки.ВремяПодачи</DataPath>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>14</Width>
+							<Format>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=ЧЧ:мм</v8:content>
+								</v8:item>
+							</Format>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ДФ=ЧЧ:мм</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="ЗаявкиВремяПодачиКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="ЗаявкиВремяПодачиРасширеннаяПодсказка" id="43"/>
+						</InputField>
+						<InputField name="ЗаявкиВремяПодачиExcel" id="77">
+							<DataPath>Объект.Заявки.ВремяПодачиExcel</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Left</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>14</Width>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="ЗаявкиВремяПодачиExcelКонтекстноеМеню" id="78"/>
+							<ExtendedTooltip name="ЗаявкиВремяПодачиExcelРасширеннаяПодсказка" id="79"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаКоличествоТС" id="80">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа количество ТС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа количество ТС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>15</Width>
+					<ExtendedTooltip name="ГруппаКоличествоТСРасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<InputField name="ЗаявкиКоличествоТС" id="33">
+							<DataPath>Объект.Заявки.КоличествоТС</DataPath>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>13</Width>
+							<ContextMenu name="ЗаявкиКоличествоТСКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ЗаявкиКоличествоТСРасширеннаяПодсказка" id="35"/>
+						</InputField>
+						<InputField name="ЗаявкиКоличествоТСExcel" id="82">
+							<DataPath>Объект.Заявки.КоличествоТСExcel</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>13</Width>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="ЗаявкиКоличествоТСExcelКонтекстноеМеню" id="83"/>
+							<ExtendedTooltip name="ЗаявкиКоличествоТСExcelРасширеннаяПодсказка" id="84"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаОтветственный" id="85">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ответственный</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ответственный</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>30</Width>
+					<ExtendedTooltip name="ГруппаОтветственныйРасширеннаяПодсказка" id="86"/>
+					<ChildItems>
+						<InputField name="ЗаявкиОтветственный" id="44">
+							<DataPath>Объект.Заявки.Ответственный</DataPath>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<ContextMenu name="ЗаявкиОтветственныйКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="ЗаявкиОтветственныйРасширеннаяПодсказка" id="46"/>
+						</InputField>
+						<InputField name="ЗаявкиОтветственныйExcel" id="87">
+							<DataPath>Объект.Заявки.ОтветственныйExcel</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="ЗаявкиОтветственныйExcelКонтекстноеМеню" id="88"/>
+							<ExtendedTooltip name="ЗаявкиОтветственныйExcelРасширеннаяПодсказка" id="89"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаСуточныйПробег" id="90">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа суточный пробег</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа суточный пробег</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>15</Width>
+					<ExtendedTooltip name="ГруппаСуточныйПробегРасширеннаяПодсказка" id="91"/>
+					<ChildItems>
+						<InputField name="ЗаявкиСуточныйПробег" id="47">
+							<DataPath>Объект.Заявки.СуточныйПробег</DataPath>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>13</Width>
+							<ContextMenu name="ЗаявкиСуточныйПробегКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="ЗаявкиСуточныйПробегРасширеннаяПодсказка" id="49"/>
+						</InputField>
+						<InputField name="ЗаявкиСуточныйПробегExcel" id="92">
+							<DataPath>Объект.Заявки.СуточныйПробегExcel</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<HorizontalAlign>Right</HorizontalAlign>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>13</Width>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="ЗаявкиСуточныйПробегExcelКонтекстноеМеню" id="93"/>
+							<ExtendedTooltip name="ЗаявкиСуточныйПробегExcelРасширеннаяПодсказка" id="94"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ГруппаМестоОказанияУслуг" id="95">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа место оказания услуг</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа место оказания услуг</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаМестоОказанияУслугРасширеннаяПодсказка" id="96"/>
+					<ChildItems>
+						<InputField name="ЗаявкиМестоОказанияУслуг" id="97">
+							<DataPath>Объект.Заявки.МестоОказанияУслуг</DataPath>
+							<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<ContextMenu name="ЗаявкиМестоОказанияУслугКонтекстноеМеню" id="98"/>
+							<ExtendedTooltip name="ЗаявкиМестоОказанияУслугРасширеннаяПодсказка" id="99"/>
+						</InputField>
+						<InputField name="ЗаявкиМестоОказанияУслугExcel" id="100">
+							<DataPath>Объект.Заявки.МестоОказанияУслугExcel</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>30</Width>
+							<TextColor>#808080</TextColor>
+							<ContextMenu name="ЗаявкиМестоОказанияУслугExcelКонтекстноеМеню" id="101"/>
+							<ExtendedTooltip name="ЗаявкиМестоОказанияУслугExcelРасширеннаяПодсказка" id="102"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ЗаявкиКомментарий" id="50">
+					<DataPath>Объект.Заявки.Комментарий</DataPath>
+					<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЗаявкиКомментарийКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ЗаявкиКомментарийРасширеннаяПодсказка" id="52"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.юкУниверсальнаяОбработкаЗагрузкиЗаявок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТабДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НомСтрЗаголовка" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки заголовка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="АналитикаПоиска" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Аналитика поиска</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Значение" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>250</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Объект" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЦехаКонтрагента</v8:Type>
+						<v8:Type>cfg:CatalogRef.уатРежимыРаботыТС</v8:Type>
+						<v8:Type>cfg:CatalogRef.уатТипыТС</v8:Type>
+						<v8:Type>cfg:CatalogRef.КонтактныеЛицаКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗТипыТС" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗ Типы ТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.уатТипыТС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>70</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗТС" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.уатТС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗЦехаКонтрагента" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗ Цеха контрагента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЦехаКонтрагента</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>150</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="БыстрыйВыбор" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Быстрый выбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТЗРежимыРаботыТС" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗРежимы работы ТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.уатРежимыРаботыТС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>25</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТЗКонтактныеЛицаКонтрагентов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ТЗКонтактные лица контрагентов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ссылка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ссылка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.КонтактныеЛицаКонтрагентов</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>100</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="фСтруктураДополнительныхКолонок" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф структура дополнительных колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="НомСтрЗаголовкаНиз" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Номер строки заголовка снизу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Загрузить" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Загрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Выгрузить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выгрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

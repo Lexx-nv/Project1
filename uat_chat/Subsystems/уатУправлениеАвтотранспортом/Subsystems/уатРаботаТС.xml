@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="fd30be81-797e-420d-a362-b336594ca107">
+		<Properties>
+			<Name>уатРаботаТС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Работа транспортных средств</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(уат)</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатВидыДДД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатВидыПеревозок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатГаражи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатКлассификаторВидыТранспортныхСредств</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатКолонны</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатМакетыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатМаршруты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатМоделиТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатОбъектыСтроительства</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатПараметрыВыработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатПрейскурантыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатПричиныДТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатПунктыНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатРегионы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатРежимыРаботыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСостояниеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатТарифыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатТипыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатУсловияРаботы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатВводНачальныхПоказаний</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатДиспозицияТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатДТП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатТТД</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатВидыОперацийЗаказНаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатВидыОперацийМаршрутныйЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатВидыПЛ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатВидыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатВидыТСТранспортныйНалог</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатГруппировкиТарифов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатКатегорииАТСЕЭКООН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатНаправлениеЗагрузкиТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатПредставлениеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатРежимыРасчетаВыработкиПЛ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатСтатусыЗаявокЗаказГрузоотправителя</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатТипыДвигателей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатТипыПунктовНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатТипыСчетчиковТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатТипыТочекМаршрута</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатТипыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатАнализЗаказаНаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатАнализЗаказовНаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатВедомостьПоЗаказамНаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатВедомостьТЭП</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатЖурналПутЛистов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатКарточкаРаботыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатКонтрольПЛПоОстаткамГСМНаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОтчетПоВыработкеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОтчетПоМоточасам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОтчетПоПробегу</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОтчетПоПростоям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОтчетПоТранспортнымУслугам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатДокументыТСиВодителей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатКалькуляторТарифов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатРасстоянияМеждуПунктами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатДокументыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатМестонахождениеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатНоменклатураГрузов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатРасстоянияМеждуПунктами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатРегионыДоставки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатРегистрацияОснованийДляЗаказовГрузоотправителей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатСоставТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатСостояниеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатСчетчикиТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатЭкипажТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатВыработкаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатВыработкаПоСтоимости</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатЗаказыНаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатПростои</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfAccounts.уатРегламентированный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатПланированиеРаботыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатПредоставленныеИВыставленныеУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатВводВЭксплуатациюТСиОборудования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатПеремещениеТСиОборудования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатВыбытиеТСиОборудования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатУстановкаПрейскурантовТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатКарточкаРаботыАккумулятора</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатПрейскурантыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатАктКС3_стм</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатВидыМоделейТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатПечатьЭСМ7заПериод</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.уатЭСМ7</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатСпособРасчетаПараметровВыработки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.уатКонструкторФормул</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатРаботаСФормулами</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатВыставленныеУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатПредоставленныеУслуги</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатПолучателиУслуг</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатИзменениеМестоположенияТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатВосстановлениеПоследовательностиПЛпоГСМиПоказаниямСпидометров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Температуры</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

@@ -1,0 +1,565 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<DocumentJournal uuid="fe5db23f-cb82-4567-980f-ac6c8af8e22f">
+		<InternalInfo>
+			<xr:GeneratedType name="DocumentJournalSelection.ПутевыеЛисты" category="Selection">
+				<xr:TypeId>e9d67515-6360-4963-a45e-4f9bb5de2c82</xr:TypeId>
+				<xr:ValueId>f3dbe282-a78d-4c1c-9c13-63ad8d27604a</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalList.ПутевыеЛисты" category="List">
+				<xr:TypeId>a0009709-7a20-4de6-a549-8dce61066775</xr:TypeId>
+				<xr:ValueId>36e25852-578e-44e3-adbf-371b6780842e</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="DocumentJournalManager.ПутевыеЛисты" category="Manager">
+				<xr:TypeId>afe7056d-a4fd-4eec-8526-012929c9f342</xr:TypeId>
+				<xr:ValueId>d2f2b077-726c-4605-bb82-70e111436843</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ПутевыеЛисты</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путевые листы</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<DefaultForm>DocumentJournal.ПутевыеЛисты.Form.ФормаКС</DefaultForm>
+			<AuxiliaryForm/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<RegisteredDocuments>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ</xr:Item>
+			</RegisteredDocuments>
+			<IncludeHelpInContents>false</IncludeHelpInContents>
+			<StandardAttributes>
+				<xr:StandardAttribute name="Type">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Ref">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Date">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Posted">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="DeletionMark">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+				<xr:StandardAttribute name="Number">
+					<xr:LinkByType/>
+					<xr:FillChecking>DontCheck</xr:FillChecking>
+					<xr:MultiLine>false</xr:MultiLine>
+					<xr:FillFromFillingValue>false</xr:FillFromFillingValue>
+					<xr:CreateOnInput>Auto</xr:CreateOnInput>
+					<xr:MaxValue xsi:nil="true"/>
+					<xr:ToolTip/>
+					<xr:ExtendedEdit>false</xr:ExtendedEdit>
+					<xr:Format/>
+					<xr:ChoiceForm/>
+					<xr:QuickChoice>Auto</xr:QuickChoice>
+					<xr:ChoiceHistoryOnInput>Auto</xr:ChoiceHistoryOnInput>
+					<xr:EditFormat/>
+					<xr:PasswordMode>false</xr:PasswordMode>
+					<xr:DataHistory>Use</xr:DataHistory>
+					<xr:MarkNegatives>false</xr:MarkNegatives>
+					<xr:MinValue xsi:nil="true"/>
+					<xr:Synonym/>
+					<xr:Comment/>
+					<xr:FullTextSearch>Use</xr:FullTextSearch>
+					<xr:ChoiceParameterLinks/>
+					<xr:FillValue xsi:nil="true"/>
+					<xr:Mask/>
+					<xr:ChoiceParameters/>
+				</xr:StandardAttribute>
+			</StandardAttributes>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+		</Properties>
+		<ChildObjects>
+			<Column uuid="f5b5ae34-350e-4005-a63f-06a4e4c51699">
+				<Properties>
+					<Name>ТранспортноеСредство</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Транспортное средство</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ТранспортноеСредство</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.ТС</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="78adb673-f295-43d0-8798-6c4e24b97646">
+				<Properties>
+					<Name>Водитель1</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Водитель1</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.Водитель1</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.Водитель</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="5a93afac-7293-413b-953b-00c619452b2a">
+				<Properties>
+					<Name>НомерПачки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Номер пачки</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.НомерПачки</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="903ee729-c9b4-445c-9a3d-7338ebc4aa95">
+				<Properties>
+					<Name>Контрагент</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.Контрагент</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.Склад</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="88c102f8-6471-476c-910f-26189b367e82">
+				<Properties>
+					<Name>ЦехКонтрагента</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цех контрагента</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ЦехКонтрагента</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.ПутевойЛист</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="75115160-ea71-44cd-9fba-c8d3f1b9f886">
+				<Properties>
+					<Name>ЧасыДиспа</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часы диспа</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ЧасыДиспа</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="39f5b1bf-9876-4e93-a702-1d3f59654aa2">
+				<Properties>
+					<Name>АЗС</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>АЗС</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.АЗС</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.АЗС</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="58eff162-7d42-4bc5-b6b1-1287d7b96f33">
+				<Properties>
+					<Name>ВсегоЧасов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Всего часов</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ВсегоЧасов</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="02c0e7c8-a2f6-4452-b0eb-c74cf86639f1">
+				<Properties>
+					<Name>РасходФакт</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расход факт</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.РасходФакт</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.Количество</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="6a8a1e62-2588-465f-af76-0f5ee46ecfac">
+				<Properties>
+					<Name>РасходНорма</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расход норма</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.РасходНорма</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.Количество</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="e3bc8857-d4ac-4e70-b9e6-8113b58eac89">
+				<Properties>
+					<Name>ВыданоГСМ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выдано ГСМ</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ВыданоГСМ</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="fdee0262-faf1-4a89-b8b1-a4705a034b14">
+				<Properties>
+					<Name>ВыданоГСМ1</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выдано ГСМ1</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ВыданоГСМ1</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="0493c6c5-7a1c-4256-a3f1-434ac2e52fe5">
+				<Properties>
+					<Name>ОстатокТопливаВыезд</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток топлива выезд</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ОстатокТопливаВыезд</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.ОстатокТопливаВыезд</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="bb8d1a31-5bbb-4cde-80fe-5720ad46b446">
+				<Properties>
+					<Name>ОстатокТопливаВозврат</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток топлива возврат</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ОстатокТопливаВозврат</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.ОстатокТопливаВозврат</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="9141637c-b462-433a-9865-b0170b0bcda7">
+				<Properties>
+					<Name>СпидометрВыезда</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Спидометр выезда</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.СпидометрВыезда</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="720d401e-7d2e-4041-8dca-fb95808f5a40">
+				<Properties>
+					<Name>СпидометрВозвращения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Спидометр возвращения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.СпидометрВозвращения</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="03f5074f-7aa6-438c-b329-9ea6eb7defec">
+				<Properties>
+					<Name>ОстатокТопливаВыезд1</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток топлива выезд1</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ОстатокТопливаВыезд1</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.ОстатокТопливаВыезд1</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="85d91602-157d-425e-9186-38d52d402b7d">
+				<Properties>
+					<Name>ОстатокТопливаВозврат1</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Остаток топлива возврат1</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ОстатокТопливаВозврат1</xr:Item>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатСливГСМ.Attribute.ОстатокТопливаВозврат1</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="e271ee75-3e22-4fb7-adcf-13f74ec7e915">
+				<Properties>
+					<Name>ДатаВозвращения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата возвращения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ДатаВозвращения</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="a4d09db1-aea6-4a01-b74d-6f7b4df00f41">
+				<Properties>
+					<Name>Месторождение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месторождение</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.Месторождение</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="863c5715-450f-4275-af70-564026eb22fc">
+				<Properties>
+					<Name>ДатаВыезда</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата выезда</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ДатаВыезда</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Column uuid="41095404-5146-4ff2-b4d2-fff7f7ac9c75">
+				<Properties>
+					<Name>Инфо</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инфо</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Indexing>DontIndex</Indexing>
+					<References>
+						<xr:Item xsi:type="xr:MDObjectRef">Document.уатПутевойЛист.Attribute.ИНфоЧасыВод</xr:Item>
+					</References>
+				</Properties>
+			</Column>
+			<Form>ФормаКС</Form>
+			<Form>ФормаСписка</Form>
+		</ChildObjects>
+	</DocumentJournal>
+</MetaDataObject>

@@ -1,0 +1,544 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыВодителей2</dataPath>
+			<field>ЧасыВодителей2</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы водителей2</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=10; ЧДЦ=1</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыВодителей1</dataPath>
+			<field>ЧасыВодителей1</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы водителей1</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=10; ЧДЦ=1</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Контрагент</dataPath>
+			<field>Контрагент</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыЗаказчикаПривл</dataPath>
+			<field>ЧасыЗаказчикаПривл</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Привлеч. трансп.</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=10; ЧДЦ=1</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПутевойЛист</dataPath>
+			<field>ПутевойЛист</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путевой лист</v8:content>
+				</v8:item>
+			</title>
+			<role>
+				<dcscom:periodNumber>1</dcscom:periodNumber>
+				<dcscom:periodType>Main</dcscom:periodType>
+			</role>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>КоличествоЧасовПоПЛ</dataPath>
+			<field>КоличествоЧасовПоПЛ</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Количество часов по ПЛ</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЧасыЗаказчикаСобств</dataPath>
+			<field>ЧасыЗаказчикаСобств</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Собствен. трансп.</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=10; ЧДЦ=1</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИтогоЧасыВодителей</dataPath>
+			<field>ИтогоЧасыВодителей</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Часы водителя</v8:content>
+				</v8:item>
+			</title>
+			<appearance>
+				<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+					<dcscor:use>false</dcscor:use>
+					<dcscor:parameter>Формат</dcscor:parameter>
+					<dcscor:value xsi:type="v8:LocalStringType">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ЧЦ=10; ЧДЦ=1</v8:content>
+						</v8:item>
+					</dcscor:value>
+				</dcscor:item>
+			</appearance>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Водитель</dataPath>
+			<field>Водитель</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Водитель</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ТранспортноеСредство</dataPath>
+			<field>ТранспортноеСредство</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспортное средство</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИтогоЧасыЗаказчика</dataPath>
+			<field>ИтогоЧасыЗаказчика</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ИТОГО</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ошибка</dataPath>
+			<field>Ошибка</field>
+			<title xsi:type="v8:LocalStringType">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибка</v8:content>
+				</v8:item>
+			</title>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	РаботаТС.Регистратор КАК ПутевойЛист,
+	СУММА(РаботаТС.КоличествоЧасов) КАК КоличествоЧасовПоПЛ,
+	РаботаТС.ПутевойЛист.ТранспортноеСредство КАК ТранспортноеСредство,
+	РаботаТС.ПутевойЛист.Водитель1 КАК Водитель
+ПОМЕСТИТЬ втРаботаТСПоПЛ
+ИЗ
+	РегистрНакопления.РаботаТС КАК РаботаТС
+ГДЕ
+	РаботаТС.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+	И РаботаТС.Период &gt;= &amp;дт1
+	И РаботаТС.Период &lt; &amp;дт2
+
+СГРУППИРОВАТЬ ПО
+	РаботаТС.Регистратор,
+	РаботаТС.ПутевойЛист.ТранспортноеСредство,
+	РаботаТС.ПутевойЛист.Водитель1
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РаботаТС.Регистратор КАК ПутевойЛист,
+	СУММА(ВЫБОР
+			КОГДА уатМестонахождениеТССрезПоследних.Состояние &lt;&gt; ЗНАЧЕНИЕ(Справочник.уатСостояниеТС.Привлеченный)
+				ТОГДА РаботаТС.КоличествоЧасов
+		КОНЕЦ) КАК ЧасыЗаказчикаСобств,
+	СУММА(ВЫБОР
+			КОГДА уатМестонахождениеТССрезПоследних.Состояние = ЗНАЧЕНИЕ(Справочник.уатСостояниеТС.Привлеченный)
+				ТОГДА РаботаТС.КоличествоЧасов
+		КОНЕЦ) КАК ЧасыЗаказчикаПривл,
+	РаботаТС.Контрагент
+ПОМЕСТИТЬ втРаботаТС
+ИЗ
+	РегистрНакопления.РаботаТС КАК РаботаТС
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ РегистрСведений.уатМестонахождениеТС.СрезПоследних(&amp;Дт2, ) КАК уатМестонахождениеТССрезПоследних
+		ПО РаботаТС.Регистратор.ТранспортноеСредство = уатМестонахождениеТССрезПоследних.ТС
+ГДЕ
+	РаботаТС.ВидДвижения = ЗНАЧЕНИЕ(ВидДвиженияНакопления.Приход)
+	И РаботаТС.Период &gt;= &amp;дт1
+	И РаботаТС.Период &lt; &amp;дт2
+
+СГРУППИРОВАТЬ ПО
+	РаботаТС.Регистратор,
+	РаботаТС.Контрагент
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	РаботаВодителей.Регистратор КАК ПутевойЛист,
+	СУММА(ВЫБОР
+			КОГДА РаботаВодителей.Водитель = РаботаВодителей.Регистратор.Водитель1
+				ТОГДА РаботаВодителей.Количество
+		КОНЕЦ) КАК ЧасыВодителей1,
+	СУММА(ВЫБОР
+			КОГДА РаботаВодителей.Водитель = РаботаВодителей.Регистратор.Водитель2
+				ТОГДА РаботаВодителей.Количество
+		КОНЕЦ) КАК ЧасыВодителей2
+ПОМЕСТИТЬ втРаботаВодителей
+ИЗ
+	РегистрНакопления.РаботаВодителей КАК РаботаВодителей
+ГДЕ
+	РаботаВодителей.Водитель = РаботаВодителей.Регистратор.Водитель1
+	И РаботаВодителей.Период МЕЖДУ &amp;дт1 И &amp;дт2
+	И (РаботаВодителей.ВидРасчета.ЭтоРабочиеЧасы
+			ИЛИ РаботаВодителей.ВидРасчета = ЗНАЧЕНИЕ(ПланВидовРасчета.уатОсновныеНачисления.ОплатаРазрыв))
+
+СГРУППИРОВАТЬ ПО
+	РаботаВодителей.Регистратор
+;
+
+////////////////////////////////////////////////////////////////////////////////
+ВЫБРАТЬ
+	втРаботаТС.Контрагент,
+	втРаботаТСПоПЛ.ПутевойЛист КАК ПутевойЛист,
+	ВЫРАЗИТЬ(втРаботаТСПоПЛ.КоличествоЧасовПоПЛ КАК ЧИСЛО(10, 1)) КАК КоличествоЧасовПоПЛ,
+	ВЫРАЗИТЬ(втРаботаТС.ЧасыЗаказчикаСобств КАК ЧИСЛО(10, 1)) КАК ЧасыЗаказчикаСобств,
+	ВЫРАЗИТЬ(втРаботаТС.ЧасыЗаказчикаПривл КАК ЧИСЛО(10, 1)) КАК ЧасыЗаказчикаПривл,
+	ВЫРАЗИТЬ(втРаботаВодителей.ЧасыВодителей1 КАК ЧИСЛО(10, 1)) КАК ЧасыВодителей1,
+	ВЫРАЗИТЬ(втРаботаВодителей.ЧасыВодителей2 КАК ЧИСЛО(10, 1)) КАК ЧасыВодителей2,
+	ВЫРАЗИТЬ(ЕСТЬNULL(втРаботаТС.ЧасыЗаказчикаСобств, 0) + ЕСТЬNULL(втРаботаТС.ЧасыЗаказчикаПривл, 0) КАК ЧИСЛО(10, 1)) КАК ИтогоЧасыЗаказчика,
+	ВЫРАЗИТЬ(ЕСТЬNULL(втРаботаВодителей.ЧасыВодителей1, 0) + ЕСТЬNULL(втРаботаВодителей.ЧасыВодителей2, 0) КАК ЧИСЛО(10, 1)) КАК ИтогоЧасыВодителей,
+	втРаботаТСПоПЛ.Водитель,
+	втРаботаТСПоПЛ.ТранспортноеСредство,
+	ВЫБОР
+		КОГДА (ВЫРАЗИТЬ(ЕСТЬNULL(втРаботаТС.ЧасыЗаказчикаСобств, 0) КАК ЧИСЛО(10, 1))) &lt;&gt; (ВЫРАЗИТЬ(ЕСТЬNULL(втРаботаВодителей.ЧасыВодителей1, 0) + ЕСТЬNULL(втРаботаВодителей.ЧасыВодителей2, 0) КАК ЧИСЛО(10, 1)))
+			ТОГДА 1
+		ИНАЧЕ 0
+	КОНЕЦ КАК Ошибка
+ИЗ
+	втРаботаТСПоПЛ КАК втРаботаТСПоПЛ
+		ЛЕВОЕ СОЕДИНЕНИЕ втРаботаТС КАК втРаботаТС
+		ПО втРаботаТСПоПЛ.ПутевойЛист = втРаботаТС.ПутевойЛист
+		ЛЕВОЕ СОЕДИНЕНИЕ втРаботаВодителей КАК втРаботаВодителей
+		ПО втРаботаТСПоПЛ.ПутевойЛист = втРаботаВодителей.ПутевойЛист</query>
+	</dataSet>
+	<totalField>
+		<dataPath>ЧасыВодителей2</dataPath>
+		<expression>Сумма(ЧасыВодителей2)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЧасыВодителей1</dataPath>
+		<expression>Сумма(ЧасыВодителей1)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>КоличествоЧасовПоПЛ</dataPath>
+		<expression>Сумма(КоличествоЧасовПоПЛ)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЧасыЗаказчикаПривл</dataPath>
+		<expression>Сумма(ЧасыЗаказчикаПривл)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ЧасыЗаказчикаСобств</dataPath>
+		<expression>Сумма(ЧасыЗаказчикаСобств)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИтогоЧасыВодителей</dataPath>
+		<expression>Сумма(ИтогоЧасыВодителей)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>ИтогоЧасыЗаказчика</dataPath>
+		<expression>Сумма(ИтогоЧасыЗаказчика)</expression>
+	</totalField>
+	<totalField>
+		<dataPath>Ошибка</dataPath>
+		<expression>Сумма(Ошибка)</expression>
+	</totalField>
+	<parameter>
+		<name>дт1</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дт1</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>дт2</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Дт2</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<parameter>
+		<name>Период</name>
+		<title xsi:type="v8:LocalStringType">
+			<v8:item>
+				<v8:lang>ru</v8:lang>
+				<v8:content>Период</v8:content>
+			</v8:item>
+		</title>
+		<valueType>
+			<v8:Type>xs:dateTime</v8:Type>
+			<v8:DateQualifiers>
+				<v8:DateFractions>DateTime</v8:DateFractions>
+			</v8:DateQualifiers>
+		</valueType>
+		<value xsi:type="xs:dateTime">0001-01-01T00:00:00</value>
+		<useRestriction>false</useRestriction>
+	</parameter>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ЧасыВодителей1</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:field>ЧасыВодителей2</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ИтогоЧасыВодителей</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>КоличествоЧасовПоПЛ</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemFolder">
+					<dcsset:lwsTitle>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часы, оплач. заказчиком</v8:content>
+						</v8:item>
+					</dcsset:lwsTitle>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЧасыЗаказчикаСобств</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ЧасыЗаказчикаПривл</dcsset:field>
+					</dcsset:item>
+					<dcsset:item xsi:type="dcsset:SelectedItemField">
+						<dcsset:field>ИтогоЧасыЗаказчика</dcsset:field>
+					</dcsset:item>
+					<dcsset:placement>Auto</dcsset:placement>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ПутевойЛист</dcsset:field>
+				</dcsset:item>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Контрагент</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.Контрагенты.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">ТранспортноеСредство</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.уатТС.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:FilterItemComparison">
+					<dcsset:use>false</dcsset:use>
+					<dcsset:left xsi:type="dcscor:Field">Водитель</dcsset:left>
+					<dcsset:comparisonType>Equal</dcsset:comparisonType>
+					<dcsset:right xsi:type="dcscor:DesignTimeValue">Справочник.уатСотрудники.ПустаяСсылка</dcsset:right>
+				</dcsset:item>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Контрагент.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ТранспортноеСредство</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Водитель.Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>ПутевойЛист.Дата</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ИтогоЧасыВодителей</dcsset:field>
+						</dcsset:item>
+						<dcsset:item>
+							<dcsset:field>ЧасыЗаказчикаСобств</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Ошибка</dcsset:left>
+							<dcsset:comparisonType>Greater</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+						</dcsset:item>
+					</dcsset:filter>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>ЦветФона</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Color">#FF98AE</dcscor:value>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+				<dcsset:item>
+					<dcsset:selection>
+						<dcsset:item>
+							<dcsset:field>ИтогоЧасыЗаказчика</dcsset:field>
+						</dcsset:item>
+					</dcsset:selection>
+					<dcsset:filter/>
+					<dcsset:appearance>
+						<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+							<dcscor:parameter>Шрифт</dcscor:parameter>
+							<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						</dcscor:item>
+					</dcsset:appearance>
+				</dcsset:item>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:groupItems>
+					<dcsset:item xsi:type="dcsset:GroupItemField">
+						<dcsset:field>Контрагент</dcsset:field>
+						<dcsset:groupType>Items</dcsset:groupType>
+						<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+						<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+						<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+					</dcsset:item>
+				</dcsset:groupItems>
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+				<dcsset:item xsi:type="dcsset:StructureItemGroup">
+					<dcsset:groupItems>
+						<dcsset:item xsi:type="dcsset:GroupItemField">
+							<dcsset:field>ТранспортноеСредство</dcsset:field>
+							<dcsset:groupType>Items</dcsset:groupType>
+							<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+							<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+							<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+						</dcsset:item>
+					</dcsset:groupItems>
+					<dcsset:order>
+						<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+					</dcsset:order>
+					<dcsset:selection>
+						<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+					</dcsset:selection>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Водитель</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+						<dcsset:order>
+							<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+						</dcsset:order>
+						<dcsset:selection>
+							<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+						</dcsset:selection>
+						<dcsset:item xsi:type="dcsset:StructureItemGroup">
+							<dcsset:order>
+								<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+							</dcsset:order>
+							<dcsset:selection>
+								<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+							</dcsset:selection>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:item>
+			</dcsset:item>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>

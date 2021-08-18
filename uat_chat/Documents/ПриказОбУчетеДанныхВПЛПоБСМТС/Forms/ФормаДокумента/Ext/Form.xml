@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Width>100</Width>
+	<Height>40</Height>
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаНомер" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ДФ=dd.MM.yyyy</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ПереченьТС" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.ПереченьТС</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ПереченьТСКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ПереченьТСКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="ПереченьТСРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ПереченьТССтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ПереченьТС</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПереченьТССтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ПереченьТССтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ПереченьТССостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>ПереченьТС</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ПереченьТССостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ПереченьТССостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ПереченьТСУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>ПереченьТС</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ПереченьТСУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ПереченьТСУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">ПереченьТСПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<LabelField name="ПереченьТСНомерСтроки" id="23">
+					<DataPath>Объект.ПереченьТС.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПереченьТСНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ПереченьТСНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаТС" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ТС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа ТС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>InCell</Group>
+					<ExtendedTooltip name="ГруппаТСРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<InputField name="ПереченьТСТС" id="26">
+							<DataPath>Объект.ПереченьТС.ТС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<Width>50</Width>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>50</MaxWidth>
+							<ContextMenu name="ПереченьТСТСКонтекстноеМеню" id="27"/>
+							<ExtendedTooltip name="ПереченьТСТСРасширеннаяПодсказка" id="28"/>
+							<Events>
+								<Event name="ChoiceProcessing">ПереченьТСТСОбработкаВыбора</Event>
+							</Events>
+						</InputField>
+						<InputField name="ПереченьТСГаражныйНомер" id="50">
+							<DataPath>Объект.ПереченьТС.ГаражныйНомер</DataPath>
+							<Enabled>false</Enabled>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПереченьТСГаражныйНомерКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="ПереченьТСГаражныйНомерРасширеннаяПодсказка" id="52"/>
+						</InputField>
+						<InputField name="ПереченьТСГосударственныйНомер" id="53">
+							<DataPath>Объект.ПереченьТС.ГосударственныйНомер</DataPath>
+							<Enabled>false</Enabled>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПереченьТСГосударственныйНомерКонтекстноеМеню" id="54"/>
+							<ExtendedTooltip name="ПереченьТСГосударственныйНомерРасширеннаяПодсказка" id="55"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ПереченьТСИспользоватьДанныеБСМТС" id="29">
+					<DataPath>Объект.ПереченьТС.ИспользоватьДанныеБСМТС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Отключить</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:boolean">false</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Использовать</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:boolean">true</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="ПереченьТСИспользоватьДанныеБСМТСКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ПереченьТСИспользоватьДанныеБСМТСРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<ColumnGroup name="ГруппаБСМТС" id="34">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа БСМТС</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа БСМТС</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаБСМТСРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<InputField name="ПереченьТСМодель" id="36">
+							<DataPath>Объект.ПереченьТС.Модель</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПереченьТСМодельКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="ПереченьТСМодельРасширеннаяПодсказка" id="38"/>
+						</InputField>
+						<InputField name="ПереченьТСКод" id="39">
+							<DataPath>Объект.ПереченьТС.Код</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПереченьТСКодКонтекстноеМеню" id="40"/>
+							<ExtendedTooltip name="ПереченьТСКодРасширеннаяПодсказка" id="41"/>
+						</InputField>
+						<InputField name="ПереченьТСIMEI" id="42">
+							<DataPath>Объект.ПереченьТС.IMEI</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПереченьТСIMEIКонтекстноеМеню" id="43"/>
+							<ExtendedTooltip name="ПереченьТСIMEIРасширеннаяПодсказка" id="44"/>
+						</InputField>
+						<InputField name="ПереченьТСПрошивка" id="45">
+							<DataPath>Объект.ПереченьТС.Прошивка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПереченьТСПрошивкаКонтекстноеМеню" id="46"/>
+							<ExtendedTooltip name="ПереченьТСПрошивкаРасширеннаяПодсказка" id="47"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="7">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаАвтор" id="56">
+			<Enabled>false</Enabled>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа автор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа автор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаАвторРасширеннаяПодсказка" id="57"/>
+			<ChildItems>
+				<LabelField name="Автор" id="58">
+					<DataPath>Объект.Автор</DataPath>
+					<ContextMenu name="АвторКонтекстноеМеню" id="59"/>
+					<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="60"/>
+				</LabelField>
+				<LabelField name="МоментСоздания" id="61">
+					<DataPath>Объект.МоментСоздания</DataPath>
+					<ContextMenu name="МоментСозданияКонтекстноеМеню" id="62"/>
+					<ExtendedTooltip name="МоментСозданияРасширеннаяПодсказка" id="63"/>
+				</LabelField>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ПриказОбУчетеДанныхВПЛПоБСМТС</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПереченьТСИспользоватьДанныеБСМТС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПереченьТС.ИспользоватьДанныеБСМТС</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Использовать</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ПереченьТСИспользоватьДанныеБСМТС</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ПереченьТС.ИспользоватьДанныеБСМТС</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">false</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Отключить</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

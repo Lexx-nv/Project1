@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Дата" id="1">
+			<DataPath>Запись.Дата</DataPath>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ИдентификаторСтрокиЗаявки" id="4">
+			<DataPath>Запись.ИдентификаторСтрокиЗаявки</DataPath>
+			<ContextMenu name="ИдентификаторСтрокиЗаявкиКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ИдентификаторСтрокиЗаявкиРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Колонна" id="7">
+			<DataPath>Запись.Колонна</DataPath>
+			<ContextMenu name="КолоннаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КолоннаРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ТС" id="10">
+			<DataPath>Запись.ТС</DataPath>
+			<ContextMenu name="ТСКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТСРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Водитель" id="13">
+			<DataPath>Запись.Водитель</DataPath>
+			<ContextMenu name="ВодительКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВодительРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="Водитель2" id="16">
+			<DataPath>Запись.Водитель2</DataPath>
+			<ContextMenu name="Водитель2КонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="Водитель2РасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ЛогИзмененияНачальникЭксплуатации" id="19">
+			<DataPath>Запись.ЛогИзмененияНачальникЭксплуатации</DataPath>
+			<ContextMenu name="ЛогИзмененияНачальникЭксплуатацииКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ЛогИзмененияНачальникЭксплуатацииРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ТипТС" id="22">
+			<DataPath>Запись.ТипТС</DataPath>
+			<ContextMenu name="ТипТСКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ТипТСРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ЦехМаршрут" id="25">
+			<DataPath>Запись.ЦехМаршрут</DataPath>
+			<ContextMenu name="ЦехМаршрутКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ЦехМаршрутРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="МестоОказанияУслуг" id="28">
+			<DataPath>Запись.МестоОказанияУслуг</DataPath>
+			<ContextMenu name="МестоОказанияУслугКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="МестоОказанияУслугРасширеннаяПодсказка" id="30"/>
+		</InputField>
+		<InputField name="Ответственный" id="31">
+			<DataPath>Запись.Ответственный</DataPath>
+			<ContextMenu name="ОтветственныйКонтекстноеМеню" id="32"/>
+			<ExtendedTooltip name="ОтветственныйРасширеннаяПодсказка" id="33"/>
+		</InputField>
+		<InputField name="ВремяПодачи" id="34">
+			<DataPath>Запись.ВремяПодачи</DataPath>
+			<ContextMenu name="ВремяПодачиКонтекстноеМеню" id="35"/>
+			<ExtendedTooltip name="ВремяПодачиРасширеннаяПодсказка" id="36"/>
+		</InputField>
+		<InputField name="Комментарий" id="37">
+			<DataPath>Запись.Комментарий</DataPath>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<InputField name="СтатусыОтказа" id="40">
+			<DataPath>Запись.СтатусыОтказа</DataPath>
+			<ContextMenu name="СтатусыОтказаКонтекстноеМеню" id="41"/>
+			<ExtendedTooltip name="СтатусыОтказаРасширеннаяПодсказка" id="42"/>
+		</InputField>
+		<InputField name="ЛогИзмененияНачальникАвтоколонны" id="43">
+			<DataPath>Запись.ЛогИзмененияНачальникАвтоколонны</DataPath>
+			<ContextMenu name="ЛогИзмененияНачальникАвтоколонныКонтекстноеМеню" id="44"/>
+			<ExtendedTooltip name="ЛогИзмененияНачальникАвтоколонныРасширеннаяПодсказка" id="45"/>
+		</InputField>
+		<CheckBoxField name="ИзмененоПослеСогласования" id="46">
+			<DataPath>Запись.ИзмененоПослеСогласования</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИзмененоПослеСогласованияКонтекстноеМеню" id="47"/>
+			<ExtendedTooltip name="ИзмененоПослеСогласованияРасширеннаяПодсказка" id="48"/>
+		</CheckBoxField>
+		<CheckBoxField name="ТСПринудительноСтерто" id="49">
+			<DataPath>Запись.ТСПринудительноСтерто</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ТСПринудительноСтертоКонтекстноеМеню" id="50"/>
+			<ExtendedTooltip name="ТСПринудительноСтертоРасширеннаяПодсказка" id="51"/>
+		</CheckBoxField>
+		<InputField name="ВремяВозврата" id="52">
+			<DataPath>Запись.ВремяВозврата</DataPath>
+			<ContextMenu name="ВремяВозвратаКонтекстноеМеню" id="53"/>
+			<ExtendedTooltip name="ВремяВозвратаРасширеннаяПодсказка" id="54"/>
+		</InputField>
+		<InputField name="Прицеп" id="55">
+			<DataPath>Запись.Прицеп</DataPath>
+			<ContextMenu name="ПрицепКонтекстноеМеню" id="56"/>
+			<ExtendedTooltip name="ПрицепРасширеннаяПодсказка" id="57"/>
+		</InputField>
+		<InputField name="Смена" id="58">
+			<DataPath>Запись.Смена</DataPath>
+			<ContextMenu name="СменаКонтекстноеМеню" id="59"/>
+			<ExtendedTooltip name="СменаРасширеннаяПодсказка" id="60"/>
+		</InputField>
+		<Button name="РеверсивнаяПривязкаКЛоту" id="61">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.РеверсивнаяПривязкаКЛоту</CommandName>
+			<ExtendedTooltip name="РеверсивнаяПривязкаКЛотуРасширеннаяПодсказка" id="62"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Запись" id="1">
+			<Type>
+				<v8:Type>cfg:InformationRegisterRecordManager.Разнарядка</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="фПозицияПП" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф позиция ПП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="РеверсивнаяПривязкаКЛоту" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реверсивная привязка к лоту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реверсивная привязка к лоту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РеверсивнаяПривязкаКЛоту</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

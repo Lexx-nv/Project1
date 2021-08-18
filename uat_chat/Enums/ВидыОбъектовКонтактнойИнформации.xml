@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="76e3b5cf-b100-4b5c-a6be-c480afc650a2">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.ВидыОбъектовКонтактнойИнформации" category="Ref">
+				<xr:TypeId>3e6e73fc-a110-4152-bb34-8d5489cc7eeb</xr:TypeId>
+				<xr:ValueId>8ff346ca-2175-4e82-aa94-395bb258341b</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.ВидыОбъектовКонтактнойИнформации" category="Manager">
+				<xr:TypeId>6122fd5d-e923-4cd4-bc21-e15ab3161d2a</xr:TypeId>
+				<xr:ValueId>71102ba5-c7c4-4b3a-be4f-3306256401c1</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.ВидыОбъектовКонтактнойИнформации" category="List">
+				<xr:TypeId>fdd202df-d796-42ad-80cb-ee71f4e3d599</xr:TypeId>
+				<xr:ValueId>c4acb9b1-fd7b-4cda-a811-5cdb021a4d50</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>ВидыОбъектовКонтактнойИнформации</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды объектов контактной информации</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>(Упр) Виды объектов контактной информации</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="c5a09e84-7fd3-402f-98dd-66a229cbc216">
+				<Properties>
+					<Name>Контрагенты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Контрагенты"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Справочник контрагентов</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9c6092d0-b0e6-4a69-919b-225cc9d2ce48">
+				<Properties>
+					<Name>КонтактныеЛица</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Контактные лица"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b200443e-c411-4e35-98f3-bb8ddec36856">
+				<Properties>
+					<Name>ФизическиеЛица</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Физические лица"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Справочник "Физические лица", контактные лица контрагентов, менеджеры</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9c8889e1-1706-41be-9c0b-0608250df953">
+				<Properties>
+					<Name>Организации</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Организации"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="16cc4b15-8d7c-4dc9-836a-325044a52431">
+				<Properties>
+					<Name>Пользователи</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Пользователи"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="be534a6a-cf20-459a-a156-09b46a6911a0">
+				<Properties>
+					<Name>КонтактныеЛицаКонтрагентов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Контактные лица контрагентов"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Справочник "Контактные лица контрагентов"</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="63577bdc-8bdb-49da-a34f-f7284e0ae0e5">
+				<Properties>
+					<Name>ЛичныеКонтакты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Личные контакты"</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

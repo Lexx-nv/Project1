@@ -1,0 +1,372 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<Enabled>false</Enabled>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Маршрут" id="59">
+			<ContextMenu name="МаршрутКонтекстноеМеню" id="60"/>
+			<ExtendedTooltip name="МаршрутРасширеннаяПодсказка" id="61"/>
+		</InputField>
+		<RadioButtonField name="ВидМаршрута" id="7">
+			<DataPath>Объект.ВидМаршрута</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Межпромысловый</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Междугородний</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Городской</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ВидМаршрутаКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВидМаршрутаРасширеннаяПодсказка" id="9"/>
+		</RadioButtonField>
+		<InputField name="СредняяСкорость" id="10">
+			<DataPath>Объект.СредняяСкорость</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СредняяСкоростьКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СредняяСкоростьРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ТипПокрытия" id="13">
+			<DataPath>Объект.ТипПокрытия</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипПокрытияКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТипПокрытияРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<InputField name="ДанныеОМостах" id="16">
+			<DataPath>Объект.ДанныеОМостах</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДанныеОМостахКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ДанныеОМостахРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ДанныеОЖДПереездах" id="19">
+			<DataPath>Объект.ДанныеОЖДПереездах</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДанныеОЖДПереездахКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ДанныеОЖДПереездахРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<InputField name="ДанныеОПереправах" id="22">
+			<DataPath>Объект.ДанныеОПереправах</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДанныеОПереправахКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ДанныеОПереправахРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<RadioButtonField name="ТипДанныхТЧ" id="68">
+			<DataPath>Объект.ТипДанныхТЧ</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табличные данные</v8:content>
+				</v8:item>
+			</Title>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Опасные участки</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дор.- клим. факторы</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Режим движения</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ТипДанныхТЧКонтекстноеМеню" id="69"/>
+			<ExtendedTooltip name="ТипДанныхТЧРасширеннаяПодсказка" id="70"/>
+			<Events>
+				<Event name="OnChange">ТипДанныхТЧПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<RadioButtonField name="ОдинВодитель" id="62">
+			<DataPath>Объект.ОдинВодитель</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кол-во водителей</v8:content>
+				</v8:item>
+			</Title>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Один водитель</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">0</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Два водителя</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="ОдинВодительКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="ОдинВодительРасширеннаяПодсказка" id="64"/>
+			<Events>
+				<Event name="OnChange">ОдинВодительПриИзменении</Event>
+			</Events>
+		</RadioButtonField>
+		<Table name="РежимДвижения" id="25">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.РежимДвижения</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="РежимДвиженияКонтекстноеМеню" id="26"/>
+			<AutoCommandBar name="РежимДвиженияКоманднаяПанель" id="27"/>
+			<ExtendedTooltip name="РежимДвиженияРасширеннаяПодсказка" id="28"/>
+			<SearchStringAddition name="РежимДвиженияСтрокаПоиска" id="29">
+				<AdditionSource>
+					<Item>РежимДвижения</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РежимДвиженияСтрокаПоискаКонтекстноеМеню" id="30"/>
+				<ExtendedTooltip name="РежимДвиженияСтрокаПоискаРасширеннаяПодсказка" id="31"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="РежимДвиженияСостояниеПросмотра" id="32">
+				<AdditionSource>
+					<Item>РежимДвижения</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="РежимДвиженияСостояниеПросмотраКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="РежимДвиженияСостояниеПросмотраРасширеннаяПодсказка" id="34"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="РежимДвиженияУправлениеПоиском" id="35">
+				<AdditionSource>
+					<Item>РежимДвижения</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="РежимДвиженияУправлениеПоискомКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="РежимДвиженияУправлениеПоискомРасширеннаяПодсказка" id="37"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">РежимДвиженияПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="РежимДвиженияОдинВодитель" id="65">
+					<DataPath>Объект.РежимДвижения.ОдинВодитель</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РежимДвиженияОдинВодительКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="РежимДвиженияОдинВодительРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="РежимДвиженияТипДанныхТЧ" id="71">
+					<DataPath>Объект.РежимДвижения.ТипДанныхТЧ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РежимДвиженияТипДанныхТЧКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="РежимДвиженияТипДанныхТЧРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<InputField name="РежимДвиженияНаименование" id="44">
+					<DataPath>Объект.РежимДвижения.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РежимДвиженияНаименованиеКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="РежимДвиженияНаименованиеРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="РежимДвиженияРасстояние" id="47">
+					<DataPath>Объект.РежимДвижения.Расстояние</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РежимДвиженияРасстояниеКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="РежимДвиженияРасстояниеРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="РежимДвиженияСкорость" id="50">
+					<DataPath>Объект.РежимДвижения.Скорость</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РежимДвиженияСкоростьКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="РежимДвиженияСкоростьРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="РежимДвиженияРасчВремя" id="53">
+					<DataPath>Объект.РежимДвижения.РасчВремя</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="РежимДвиженияРасчВремяКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="РежимДвиженияРасчВремяРасширеннаяПодсказка" id="55"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ПланыПоездок</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РежимДвиженияОдинВодитель</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РежимДвижения.ОдинВодитель</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Один водитель</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РежимДвиженияОдинВодитель</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.РежимДвижения.ОдинВодитель</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType">
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Два водителя</v8:content>
+							</v8:item>
+						</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>РежимДвиженияОдинВодитель</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>РежимДвиженияРасстояние</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>РежимДвиженияРасчВремя</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>РежимДвиженияСкорость</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ТипДанныхТЧ</dcsset:left>
+						<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">2</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Видимость</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+</Form>

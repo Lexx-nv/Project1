@@ -1,0 +1,423 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<VerticalSpacing>Single</VerticalSpacing>
+	<Customizable>false</Customizable>
+	<ScalingMode>Compact</ScalingMode>
+	<ShowTitle>false</ShowTitle>
+	<ShowCloseButton>false</ShowCloseButton>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="33">
+			<Group>Vertical</Group>
+			<VerticalSpacing>Half</VerticalSpacing>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="34"/>
+			<ChildItems>
+				<UsualGroup name="Группа4" id="39">
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<CheckBoxField name="фПечатьСразуНаПринтер" id="1">
+							<DataPath>фПечатьСразуНаПринтер</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фПечатьСразуНаПринтерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="фПечатьСразуНаПринтерРасширеннаяПодсказка" id="3"/>
+						</CheckBoxField>
+						<InputField name="фНастройкаУпорядочивания" id="12">
+							<DataPath>фНастройкаУпорядочивания</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Упорядочивание</v8:content>
+								</v8:item>
+							</Title>
+							<ListChoiceMode>true</ListChoiceMode>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Контрагент, Цех/Маршрут</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Гаражный номер</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Гос. номер</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">3</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Тип ТС</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">4</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Как в группе</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">5</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="фНастройкаУпорядочиванияКонтекстноеМеню" id="13"/>
+							<ExtendedTooltip name="фНастройкаУпорядочиванияРасширеннаяПодсказка" id="14"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="Декорация1" id="27">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="style:TextFont" height="4" kind="StyleItem"/>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
+					</Border>
+					<ContextMenu name="Декорация1КонтекстноеМеню" id="28"/>
+					<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="29"/>
+				</LabelDecoration>
+				<UsualGroup name="Группа2" id="35">
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<CheckBoxField name="фОтображениеКолонна" id="7">
+							<DataPath>фОтображениеКолонна</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фОтображениеКолоннаКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="фОтображениеКолоннаРасширеннаяПодсказка" id="9"/>
+						</CheckBoxField>
+						<CheckBoxField name="фОтображатьДанныеЗагрузки" id="21">
+							<DataPath>фОтображатьДанныеЗагрузки</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отображать данные загрузки (Excel)</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фОтображатьДанныеЗагрузкиКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="фОтображатьДанныеЗагрузкиРасширеннаяПодсказка" id="23"/>
+						</CheckBoxField>
+						<CheckBoxField name="фОтображениеПрицеп" id="18">
+							<DataPath>фОтображениеПрицеп</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отображать колонку "Прицеп"</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фОтображениеПрицепКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="фОтображениеПрицепРасширеннаяПодсказка" id="20"/>
+						</CheckBoxField>
+						<CheckBoxField name="фОтображениеДат" id="15">
+							<DataPath>фОтображениеДат</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Отображать колонки дат</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фОтображениеДатКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="фОтображениеДатРасширеннаяПодсказка" id="17"/>
+						</CheckBoxField>
+						<CheckBoxField name="фОтображениеПозицияПП" id="4">
+							<DataPath>фОтображениеПозицияПП</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фОтображениеПозицияППКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="фОтображениеПозицияППРасширеннаяПодсказка" id="6"/>
+						</CheckBoxField>
+						<CheckBoxField name="фОтображатьВодитель2ВРежимеМаршрутов" id="41">
+							<DataPath>фОтображатьВодитель2ВРежимеМаршрутов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>'Водитель 2' в режиме Маршрутов</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фОтображатьВодитель2ВРежимеМаршрутовКонтекстноеМеню" id="42"/>
+							<ExtendedTooltip name="фОтображатьВодитель2ВРежимеМаршрутовРасширеннаяПодсказка" id="43"/>
+						</CheckBoxField>
+						<CheckBoxField name="фДатаВозвратаВРежимеМаршрутов" id="44">
+							<DataPath>фДатаВозвратаВРежимеМаршрутов</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата возврата в режиме маршрутов</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фДатаВозвратаВРежимеМаршрутовКонтекстноеМеню" id="45"/>
+							<ExtendedTooltip name="фДатаВозвратаВРежимеМаршрутовРасширеннаяПодсказка" id="46"/>
+						</CheckBoxField>
+						<CheckBoxField name="фОтображатьТипТСПЛ" id="50">
+							<DataPath>фОтображатьТипТСПЛ</DataPath>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фОтображатьТипТСПЛКонтекстноеМеню" id="51"/>
+							<ExtendedTooltip name="фОтображатьТипТСПЛРасширеннаяПодсказка" id="52"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<LabelDecoration name="Декорация2" id="30">
+					<HorizontalStretch>true</HorizontalStretch>
+					<Font ref="style:TextFont" height="4" kind="StyleItem"/>
+					<Border width="1">
+						<v8ui:style xsi:type="v8ui:ControlBorderType">Underline</v8ui:style>
+					</Border>
+					<ContextMenu name="Декорация2КонтекстноеМеню" id="31"/>
+					<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="32"/>
+				</LabelDecoration>
+				<UsualGroup name="Группа3" id="37">
+					<Group>Vertical</Group>
+					<VerticalSpacing>Single</VerticalSpacing>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="38"/>
+					<ChildItems>
+						<CheckBoxField name="фНеКопироватьПоПризнакуВыходнойПраздник" id="47">
+							<DataPath>фНеКопироватьПоПризнакуВыходнойПраздник</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не копировать по признаку выходной/праздник (заполнение разнарядки)</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фНеКопироватьПоПризнакуВыходнойПраздникКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="фНеКопироватьПоПризнакуВыходнойПраздникРасширеннаяПодсказка" id="49"/>
+						</CheckBoxField>
+						<CheckBoxField name="фКопироватьВремяСПредыдущегоПЛ" id="24">
+							<DataPath>фКопироватьВремяСПредыдущегоПЛ</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Копировать время с
+предыдущего ПЛ (создание ПЛ)</v8:content>
+								</v8:item>
+							</Title>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фКопироватьВремяСПредыдущегоПЛКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="фКопироватьВремяСПредыдущегоПЛРасширеннаяПодсказка" id="26"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="ЗакрытьФорму" id="10">
+			<Type>UsualButton</Type>
+			<DefaultButton>true</DefaultButton>
+			<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+			<ExtendedTooltip name="ЗакрытьФормуРасширеннаяПодсказка" id="11"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="фПечатьСразуНаПринтер" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Печать сразу на принтер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фОтображениеКолонна" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать колонку "Колонна"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фОтображениеПозицияПП" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать колонку "Позиция ПП"</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фНастройкаУпорядочивания" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф настройка упорядочивания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фОтображениеДат" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф отображение дат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фОтображениеПрицеп" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф отображение прицеп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фОтображатьДанныеЗагрузки" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф отображать данные загрузки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фКопироватьВремяСПредыдущегоПЛ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать время (выезд, возврат) с предыдущего ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фОтображатьВодитель2ВРежимеМаршрутов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф отображать водитель2 в режиме маршрутов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фДатаВозвратаВРежимеМаршрутов" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф дата возврата в режиме маршрутов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фНеКопироватьПоПризнакуВыходнойПраздник" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф не копировать по признаку выходной праздник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фОтображатьТипТСПЛ" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отображать тип ТС ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗакрытьФорму" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОК</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

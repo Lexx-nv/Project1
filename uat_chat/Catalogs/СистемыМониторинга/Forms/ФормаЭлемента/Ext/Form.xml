@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОсновная" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="52"/>
+			<ChildItems>
+				<CheckBoxField name="ФлагПриоритетнаяСистема" id="31">
+					<DataPath>Объект.ФлагПриоритетнаяСистема</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Не перезаписывать при получении ID другой системы мониторинга</v8:content>
+						</v8:item>
+					</Title>
+					<TitleTextColor>style:SpecialTextColor</TitleTextColor>
+					<TitleFont ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ФлагПриоритетнаяСистемаКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="ФлагПриоритетнаяСистемаРасширеннаяПодсказка" id="33"/>
+					<Events>
+						<Event name="OnChange">ФлагПриоритетнаяСистемаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="Наименование" id="1">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="СдвигЧасовогоПояса" id="34">
+					<DataPath>Объект.СдвигЧасовогоПояса</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Часовой пояс (разница во времени в часах относительно номинала)</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СдвигЧасовогоПоясаКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="СдвигЧасовогоПоясаРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<UsualGroup name="ГруппаСистемаМониторинга" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа система мониторинга</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа система мониторинга</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаСистемаМониторингаРасширеннаяПодсказка" id="48"/>
+					<ChildItems>
+						<InputField name="ВидСистемыGPS" id="4">
+							<DataPath>Объект.ВидСистемыGPS</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Вид системы мониторинга</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ВидСистемыGPSКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ВидСистемыGPSРасширеннаяПодсказка" id="6"/>
+							<Events>
+								<Event name="OnChange">ВидСистемыGPSПриИзменении</Event>
+							</Events>
+						</InputField>
+						<Button name="КнопкаОткрытьСоответствиеПараметров" id="49">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаОткрытьСоответствиеПараметров</CommandName>
+							<ExtendedTooltip name="КнопкаОткрытьСоответствиеПараметровРасширеннаяПодсказка" id="50"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Логин" id="7">
+					<DataPath>Объект.Логин</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ЛогинКонтекстноеМеню" id="8"/>
+					<ExtendedTooltip name="ЛогинРасширеннаяПодсказка" id="9"/>
+				</InputField>
+				<InputField name="Пароль" id="10">
+					<DataPath>Объект.Пароль</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПарольКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПарольРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<InputField name="АдресСервера" id="13">
+					<DataPath>Объект.АдресСервера</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="АдресСервераКонтекстноеМеню" id="14"/>
+					<ExtendedTooltip name="АдресСервераРасширеннаяПодсказка" id="15"/>
+				</InputField>
+				<UsualGroup name="ГруппаТокен" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа токен</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа токен</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТокенРасширеннаяПодсказка" id="44"/>
+					<ChildItems>
+						<InputField name="ТокенАвторизации" id="37">
+							<DataPath>Объект.ТокенАвторизации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТокенАвторизацииКонтекстноеМеню" id="38"/>
+							<ExtendedTooltip name="ТокенАвторизацииРасширеннаяПодсказка" id="39"/>
+						</InputField>
+						<Button name="КнопкаПолучитьТокен" id="45">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаПолучитьТокен</CommandName>
+							<ExtendedTooltip name="КнопкаПолучитьТокенРасширеннаяПодсказка" id="46"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Ресурс" id="40">
+					<DataPath>Объект.Ресурс</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ресурс / схема</v8:content>
+						</v8:item>
+					</Title>
+					<EditMode>EnterOnInput</EditMode>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="РесурсКонтекстноеМеню" id="41"/>
+					<ExtendedTooltip name="РесурсРасширеннаяПодсказка" id="42"/>
+				</InputField>
+				<InputField name="Параметр1" id="16">
+					<DataPath>Объект.Параметр1</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Параметр1КонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="Параметр1РасширеннаяПодсказка" id="18"/>
+				</InputField>
+				<InputField name="Параметр2" id="19">
+					<DataPath>Объект.Параметр2</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="Параметр2КонтекстноеМеню" id="20"/>
+					<ExtendedTooltip name="Параметр2РасширеннаяПодсказка" id="21"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаСоответствиеПараметров" id="53">
+			<Visible>false</Visible>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа соответствие параметров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа соответствие параметров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаСоответствиеПараметровРасширеннаяПодсказка" id="54"/>
+			<ChildItems>
+				<Table name="ТаблицаСоответствияПараметров" id="55">
+					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<EnableStartDrag>true</EnableStartDrag>
+					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
+					<DataPath>Объект.ТаблицаСоответствияПараметров</DataPath>
+					<RowFilter xsi:nil="true"/>
+					<ContextMenu name="ТаблицаСоответствияПараметровКонтекстноеМеню" id="56"/>
+					<AutoCommandBar name="ТаблицаСоответствияПараметровКоманднаяПанель" id="57">
+						<ChildItems>
+							<Button name="КнопкаНаОсновнуюФорму" id="77">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.КомандаОткрытьСоответствиеПараметров</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>На основную форму</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="КнопкаНаОсновнуюФормуРасширеннаяПодсказка" id="78"/>
+							</Button>
+						</ChildItems>
+					</AutoCommandBar>
+					<ExtendedTooltip name="ТаблицаСоответствияПараметровРасширеннаяПодсказка" id="58"/>
+					<SearchStringAddition name="ТаблицаСоответствияПараметровСтрокаПоиска" id="59">
+						<AdditionSource>
+							<Item>ТаблицаСоответствияПараметров</Item>
+							<Type>SearchStringRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСоответствияПараметровСтрокаПоискаКонтекстноеМеню" id="60"/>
+						<ExtendedTooltip name="ТаблицаСоответствияПараметровСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+					</SearchStringAddition>
+					<ViewStatusAddition name="ТаблицаСоответствияПараметровСостояниеПросмотра" id="62">
+						<AdditionSource>
+							<Item>ТаблицаСоответствияПараметров</Item>
+							<Type>ViewStatusRepresentation</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСоответствияПараметровСостояниеПросмотраКонтекстноеМеню" id="63"/>
+						<ExtendedTooltip name="ТаблицаСоответствияПараметровСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+					</ViewStatusAddition>
+					<SearchControlAddition name="ТаблицаСоответствияПараметровУправлениеПоиском" id="65">
+						<AdditionSource>
+							<Item>ТаблицаСоответствияПараметров</Item>
+							<Type>SearchControl</Type>
+						</AdditionSource>
+						<ContextMenu name="ТаблицаСоответствияПараметровУправлениеПоискомКонтекстноеМеню" id="66"/>
+						<ExtendedTooltip name="ТаблицаСоответствияПараметровУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+					</SearchControlAddition>
+					<ChildItems>
+						<LabelField name="ТаблицаСоответствияПараметровНомерСтроки" id="68">
+							<DataPath>Объект.ТаблицаСоответствияПараметров.LineNumber</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСоответствияПараметровНомерСтрокиКонтекстноеМеню" id="69"/>
+							<ExtendedTooltip name="ТаблицаСоответствияПараметровНомерСтрокиРасширеннаяПодсказка" id="70"/>
+						</LabelField>
+						<InputField name="ТаблицаСоответствияПараметровПараметрБСМТС" id="71">
+							<DataPath>Объект.ТаблицаСоответствияПараметров.ПараметрБСМТС</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСоответствияПараметровПараметрБСМТСКонтекстноеМеню" id="72"/>
+							<ExtendedTooltip name="ТаблицаСоответствияПараметровПараметрБСМТСРасширеннаяПодсказка" id="73"/>
+						</InputField>
+						<InputField name="ТаблицаСоответствияПараметровПараметр1С" id="74">
+							<DataPath>Объект.ТаблицаСоответствияПараметров.Параметр1С</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТаблицаСоответствияПараметровПараметр1СКонтекстноеМеню" id="75"/>
+							<ExtendedTooltip name="ТаблицаСоответствияПараметровПараметр1СРасширеннаяПодсказка" id="76"/>
+						</InputField>
+					</ChildItems>
+				</Table>
+				<UsualGroup name="ГруппаТранспортноеСредство" id="82">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа транспортное средство</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа транспортное средство</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаТранспортноеСредствоРасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<InputField name="ТранспортноеСредство" id="79">
+							<DataPath>ТранспортноеСредство</DataPath>
+							<HorizontalStretch>true</HorizontalStretch>
+							<ContextMenu name="ТранспортноеСредствоКонтекстноеМеню" id="80"/>
+							<ExtendedTooltip name="ТранспортноеСредствоРасширеннаяПодсказка" id="81"/>
+						</InputField>
+						<Button name="КнопкаЗаполнитьПоТС" id="84">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КомандаЗаполнитьПоТС</CommandName>
+							<ExtendedTooltip name="КнопкаЗаполнитьПоТСРасширеннаяПодсказка" id="85"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СистемыМониторинга</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ТранспортноеСредство" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Транспортное средство</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатТС</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаПолучитьТокен" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить токен</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда получить токен</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПолучитьТокен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаОткрытьСоответствиеПараметров" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры БСМТС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда открыть соответствие параметров</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВидимостьГруппФормы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаполнитьПоТС" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить параметры по ТС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда заполнить по ТС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаполнитьПоТС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

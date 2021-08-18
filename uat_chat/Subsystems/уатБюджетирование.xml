@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="cabe4929-c5ce-40aa-80c8-f390bc40ec1d">
+		<Properties>
+			<Name>уатБюджетирование</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджетирование (уат)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Бюджетирование (уат)</Comment>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>false</IncludeInCommandInterface>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Бюджетирование (уат)</v8:content>
+				</v8:item>
+			</Explanation>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатКурсыВалютПоСценариям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСценарииПланирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатКонтролируемыеЗначенияБюджетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатГраницыПериодовБюджетирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатБюджетнаяОперация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccumulationRegister.уатОборотыБюджетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатПереоценкаВалютныхСтатейПриБюджетировании</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатУстановкаОграниченийПоБюджетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатЦелевыеЗначенияПоБюджетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатКонтролируемыеЗначенияПоБюджетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСтатьиОборотовПоБюджетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСтатьиБюджета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатАктуализацияБюджетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатУчетФактическихДанныхПоБюджетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатУстановкаЗависимостейОборотовПоСтатьям</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатЗависимостиОборотовПоСтатьямБюджетирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатСтруктураЗависимостейОборотов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатБюджетирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfCharacteristicTypes.уатВидыСубконтоБюджетирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">ChartOfAccounts.уатБюджетирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОборотыПоСтатьямБюджетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОтчетПоБюджету</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатКонтролируемыеЗначенияПоБюджетам</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСтатьиАналитическогоБаланса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатДетализацияАналитическогоБаланса</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСтатьиОтчетаОПрибыляхИУбытках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатФинансовыйАнализДанныхБюджетирования</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Document.уатФиксацияБюджетов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатДетализацияОтчетаОПрибыляхИУбытках</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСчетаБюджета</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОборотноСальдоваяВедомостьБюджетирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">AccountingRegister.уатБюджетирование</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатСравнительныйАнализОборотовПоСтатьямБюджетов</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects/>
+	</Subsystem>
+</MetaDataObject>

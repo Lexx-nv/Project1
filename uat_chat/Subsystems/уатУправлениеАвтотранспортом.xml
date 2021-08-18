@@ -1,0 +1,155 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Subsystem uuid="0cb3e759-28ec-44c5-9421-b29c97f95dc5">
+		<Properties>
+			<Name>уатУправлениеАвтотранспортом</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Управление автотранспортом</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<IncludeHelpInContents>true</IncludeHelpInContents>
+			<IncludeInCommandInterface>true</IncludeInCommandInterface>
+			<Explanation/>
+			<Picture/>
+			<Content>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ТекстВторостепеннойНадписи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ТекстИнформационнойНадписи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ТекстПредупреждающейНадписи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ФонГруппировкиВерхнегоУровня</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ФонГруппировкиПромежуточногоУровня</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ШрифтВажнойНадписи</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветГиперссылки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветКолонкиДляСчетовИСубконтоБУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветКолонкиДляСчетовИСубконтоНУ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветФонаЧередованияСтрок</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ФонЭпицентра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">StyleItem.ЦветРамкиЭпиценра</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Style.Основной</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.Заполнение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатICOИнформация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатАвтобусы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатВнимание</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатВодитель</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатГрузовыеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатДобавитьГруз</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатДобавитьТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатДорЗнак_Запрет</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатДорЗнак_Предупреждение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатЖурналРегистрацииКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатЗаказПоставщику</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатЗначокОрганизация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатИзбранное</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатЛегковыеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатЛоготипРарус</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатМакетГрузовогоАвто</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатМакетЛегковогоАвто</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатМетаданныеКонфигурация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатМетаданныеОбщие</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатМеханизмы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатМоделиТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатНастройка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатОбъектНайден</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатОбъектНеНайден</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатПанельФункций</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатПапка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатПометкаУдаления</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатПредупреждение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатПровестиУтвержденныеДокументы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатСервис</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатСостояниеДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатСправочникМаршруты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатСправочникПунктыНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатСправочникТипыТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатСправочникТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатСтроительныеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.уатГСМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.уатДиспетчер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.уатПлановоЭкономический</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.уатПолный</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.уатМеханик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатАдминистратор</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.уатМаршрутныйЛист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.уатМаршрутныйЛистНаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonTemplate.уатРаскраскаМаршрута</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатГлобальныйМодуль</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатКонтактнаяИнформация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбщегоНазначения</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбщегоНазначенияТиповые</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.уатПриПроведенииОснованияЗаказаНаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.уатПриУстановкеНовогоКодаПВХ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.уатПриУстановкеНовогоКодаСправочника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.уатПриУстановкеНовогоНомераДокумента</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.уатПередЗаписьюЭлементаТиповыхСправочников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">EventSubscription.уатПриЗаписиЭлементаТиповыхСправочников</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.уатФормаДляЗаполненияСчетовАктов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСпособыОпределенияМассы</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Sequence.уатПутевыеЛисты</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатОборотыПоМаршрутномуЛисту</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатДополнительныеРеквизитыНеУстановлены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатПроведение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатРаботаСМетаданными</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСостояниеТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатИнтерфейсВводаТС</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбработчикиПодписокНаСобытия</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатДополнительныеРеквизитыУстановлены</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатICOОшибка</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатICOПредупреждение</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатДиспетчер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатКадровик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатCRM</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатГСМ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатКладовщик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатМеханик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатОбновлениеОбменИФЗ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатСтаршийМеханик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатЭкономист</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.уатКладовщик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.уатОтделКадров</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Interface.уатСтаршийМеханик</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Catalog.уатСпособыПогрузки</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатЛегальностьПолученияОбновлений</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатКарточкаРаботыАвтомобильнойШины</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбщегоНазначения_проф</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбщегоНазначенияТиповые_проф</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатПроведение_проф</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатУволитьСотрудника</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonPicture.уатГрузовыеТСУдаление</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатЗащищенныеФункцииСлужебные</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Report.уатРеестрОказанныхУслуг_стм</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатЗащищенныеФункцииСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Enum.уатРегистрироватьЗаявкиНаЗаказыГрузоотправителей</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.уатНумерацияОбъектов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">Role.уатТиповаяКонфигурация</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатПечатьТТН</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбновлениеКонфигурации</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатУправлениеСоединениямиИБ</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor.уатПечатьТТН1208</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатЗаполнениеДокументов</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбщегоНазначенияКлиент</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбщегоНазначенияПовтИсп</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonModule.уатОбщегоНазначенияСервер</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">CommonForm.ФормаЦеныИВалютаУправляемая</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">InformationRegister.Температуры</xr:Item>
+				<xr:Item xsi:type="xr:MDObjectRef">DataProcessor._юкСтатистикаРаботыПользователей</xr:Item>
+			</Content>
+		</Properties>
+		<ChildObjects>
+			<Subsystem>уатАналитическаяОтчетность</Subsystem>
+			<Subsystem>уатОбменДанными</Subsystem>
+			<Subsystem>уатПланированиеТС</Subsystem>
+			<Subsystem>уатРаботаТС</Subsystem>
+			<Subsystem>уатРегламентированнаяОтчетность</Subsystem>
+			<Subsystem>уатУправлениеЗатратами</Subsystem>
+			<Subsystem>уатСкладскойУчет</Subsystem>
+			<Subsystem>уатУправлениеПерсоналом</Subsystem>
+			<Subsystem>уатУправлениеПравамиПользователей</Subsystem>
+			<Subsystem>уатУправлениеРемонтами</Subsystem>
+			<Subsystem>уатЭксплуатация</Subsystem>
+			<Subsystem>уатСервис</Subsystem>
+			<Subsystem>уатПассажирскиеПеревозки</Subsystem>
+		</ChildObjects>
+	</Subsystem>
+</MetaDataObject>

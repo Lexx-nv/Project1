@@ -1,0 +1,919 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Группа" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="ГруппаРасширеннаяПодсказка" id="124"/>
+			<ChildItems>
+				<Page name="ОбщиеПараметры" id="33">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие параметры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Общие параметры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОбщиеПараметрыРасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<UsualGroup name="Группа6" id="34">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="126"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация2" id="35">
+									<Width>6</Width>
+									<Height>3</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Picture>
+										<xr:Ref>CommonPicture.ПодсистемаАдминистрирование</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация2КонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="127"/>
+								</PictureDecoration>
+								<UsualGroup name="Группа7" id="37">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="128"/>
+									<ChildItems>
+										<InputField name="ЗаголовокСистемы" id="9">
+											<ContextMenu name="ЗаголовокСистемыКонтекстноеМеню" id="10"/>
+											<ExtendedTooltip name="ЗаголовокСистемыРасширеннаяПодсказка" id="129"/>
+											<Events>
+												<Event name="OnChange">ЗаголовокСистемыПриИзменении</Event>
+											</Events>
+										</InputField>
+										<UsualGroup name="Группа8" id="40">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="130"/>
+											<ChildItems>
+												<CheckBoxField name="ИспользоватьВерсионированиеОбъектов" id="41">
+													<TitleLocation>Right</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьВерсионированиеОбъектовКонтекстноеМеню" id="42"/>
+													<ExtendedTooltip name="ИспользоватьВерсионированиеОбъектовРасширеннаяПодсказка" id="131"/>
+												</CheckBoxField>
+												<CheckBoxField name="ItobИспользоватьОграниченияПравДоступаНаУровнеЗаписей" id="28">
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ItobИспользоватьОграниченияПравДоступаНаУровнеЗаписейКонтекстноеМеню" id="29"/>
+													<ExtendedTooltip name="ItobИспользоватьОграниченияПравДоступаНаУровнеЗаписейРасширеннаяПодсказка" id="132"/>
+												</CheckBoxField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="Группа9" id="55">
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Vertical</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="133"/>
+											<ChildItems>
+												<Button name="ПараметрыАдминистрированияИБ" id="56">
+													<Type>UsualButton</Type>
+													<SkipOnInput>false</SkipOnInput>
+													<CommandName>Form.Command.ПараметрыАдминистрированияИБ</CommandName>
+													<ExtendedTooltip name="ПараметрыАдминистрированияИБРасширеннаяПодсказка" id="134"/>
+												</Button>
+												<Button name="ОбщаяФормаПараметрыПроксиСервераКомандаОткрытиеФормыКонстант" id="57">
+													<Type>UsualButton</Type>
+													<SkipOnInput>false</SkipOnInput>
+													<CommandName>CommonForm.ПараметрыПроксиСервера.StandardCommand.Open</CommandName>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Параметры доступа в Интернет на сервере 1С:Предприятия</v8:content>
+														</v8:item>
+													</Title>
+													<ExtendedTooltip name="ОбщаяФормаПараметрыПроксиСервераКомандаОткрытиеФормыКонстантРасширеннаяПодсказка" id="135"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Сервисы" id="58">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервисы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сервисы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СервисыРасширеннаяПодсказка" id="136"/>
+					<ChildItems>
+						<UsualGroup name="Группа10" id="59">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="137"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация3" id="60">
+									<Width>6</Width>
+									<Height>3</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Picture>
+										<xr:Ref>CommonPicture.ItobИнтегрируемыеПодсистемы</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация3КонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="Декорация3РасширеннаяПодсказка" id="138"/>
+								</PictureDecoration>
+								<UsualGroup name="Группа11" id="62">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="139"/>
+									<ChildItems>
+										<Button name="ОткрытьМастерНастройкиСлужбыCsmSvc" id="17">
+											<Type>UsualButton</Type>
+											<Representation>PictureAndText</Representation>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.ОткрытьМастерНастройкиСлужбыCsmSvc</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Открыть мастер настройки службы CsmSvc</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ОткрытьМастерНастройкиСлужбыCsmSvcРасширеннаяПодсказка" id="140"/>
+										</Button>
+										<LabelDecoration name="ДекорацияАдресСервиса" id="11">
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Для работы системы требуется указать адрес службы CsmSvc
+Параметр задается в формате адрес:порт (например 10.10.0.1:8091)</v8:content>
+												</v8:item>
+											</Title>
+											<ContextMenu name="ДекорацияАдресСервисаКонтекстноеМеню" id="12"/>
+											<ExtendedTooltip name="ДекорацияАдресСервисаРасширеннаяПодсказка" id="141"/>
+										</LabelDecoration>
+										<InputField name="ItobАдресСервисаCsmSvc" id="7">
+											<DataPath>НаборКонстант.ItobАдресСервисаCsmSvc</DataPath>
+											<ContextMenu name="ItobАдресСервисаCsmSvcКонтекстноеМеню" id="8"/>
+											<ExtendedTooltip name="ItobАдресСервисаCsmSvcРасширеннаяПодсказка" id="142"/>
+										</InputField>
+										<UsualGroup name="ГруппаSMSСервер" id="22">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>SMS сервер</v8:content>
+												</v8:item>
+											</Title>
+											<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа SMSСервер</v8:content>
+												</v8:item>
+											</ToolTip>
+											<HorizontalStretch>true</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="ГруппаSMSСерверРасширеннаяПодсказка" id="143"/>
+											<ChildItems>
+												<InputField name="ItobАдресSmsСервера" id="18">
+													<DataPath>НаборКонстант.ItobАдресSmsСервера</DataPath>
+													<ContextMenu name="ItobАдресSmsСервераКонтекстноеМеню" id="19"/>
+													<ExtendedTooltip name="ItobАдресSmsСервераРасширеннаяПодсказка" id="144"/>
+												</InputField>
+												<InputField name="ItobПортSmsСервера" id="20">
+													<DataPath>НаборКонстант.ItobПортSmsСервера</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Порт</v8:content>
+														</v8:item>
+													</Title>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="ItobПортSmsСервераКонтекстноеМеню" id="21"/>
+													<ExtendedTooltip name="ItobПортSmsСервераРасширеннаяПодсказка" id="145"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаРепликация" id="23">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Параметры репликации данных</v8:content>
+												</v8:item>
+											</Title>
+											<TitleTextColor>style:FieldSelectionBackColor</TitleTextColor>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа репликация</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ExtendedTooltip name="ГруппаРепликацияРасширеннаяПодсказка" id="146"/>
+											<ChildItems>
+												<InputField name="ItobЛогинРепликации" id="24">
+													<DataPath>НаборКонстант.ItobЛогинРепликации</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Имя пользователя</v8:content>
+														</v8:item>
+													</Title>
+													<Width>15</Width>
+													<ContextMenu name="ItobЛогинРепликацииКонтекстноеМеню" id="25"/>
+													<ExtendedTooltip name="ItobЛогинРепликацииРасширеннаяПодсказка" id="147"/>
+												</InputField>
+												<InputField name="ItobПарольРепликации" id="26">
+													<DataPath>НаборКонстант.ItobПарольРепликации</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пароль</v8:content>
+														</v8:item>
+													</Title>
+													<Width>13</Width>
+													<PasswordMode>true</PasswordMode>
+													<ContextMenu name="ItobПарольРепликацииКонтекстноеМеню" id="27"/>
+													<ExtendedTooltip name="ItobПарольРепликацииРасширеннаяПодсказка" id="148"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Мониторинг" id="63">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мониторинг</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Мониторинг</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="МониторингРасширеннаяПодсказка" id="149"/>
+					<ChildItems>
+						<UsualGroup name="Группа12" id="64">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="150"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация4" id="65">
+									<Width>6</Width>
+									<Height>3</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Picture>
+										<xr:Ref>CommonPicture.ItobМониторинг</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация4КонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="Декорация4РасширеннаяПодсказка" id="151"/>
+								</PictureDecoration>
+								<UsualGroup name="Группа13" id="67">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="152"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияЗаголовокПараметрыСтоянок" id="15">
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Параметры стоянок
+Стоянкой считается промежуток времени, при котором скорость меньше "Минимальной скорости движения" в течение "Минимальное время стоянки"</v8:content>
+												</v8:item>
+											</Title>
+											<TitleHeight>3</TitleHeight>
+											<ContextMenu name="ДекорацияЗаголовокПараметрыСтоянокКонтекстноеМеню" id="16"/>
+											<ExtendedTooltip name="ДекорацияЗаголовокПараметрыСтоянокРасширеннаяПодсказка" id="153"/>
+										</LabelDecoration>
+										<InputField name="ItobМинимальнаяСкоростьДвижения" id="3">
+											<DataPath>НаборКонстант.ItobМинимальнаяСкоростьДвижения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ItobМинимальнаяСкоростьДвиженияКонтекстноеМеню" id="4"/>
+											<ExtendedTooltip name="ItobМинимальнаяСкоростьДвиженияРасширеннаяПодсказка" id="154"/>
+										</InputField>
+										<InputField name="ItobМинимальноеВремяСтоянки" id="5">
+											<DataPath>НаборКонстант.ItobМинимальноеВремяСтоянки</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ItobМинимальноеВремяСтоянкиКонтекстноеМеню" id="6"/>
+											<ExtendedTooltip name="ItobМинимальноеВремяСтоянкиРасширеннаяПодсказка" id="155"/>
+										</InputField>
+										<LabelDecoration name="ДекорацияЗаголовокСервисГеокодирования" id="77">
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Геокодирование - процесс преобразования географических координат в понятный пользователю адрес</v8:content>
+												</v8:item>
+											</Title>
+											<TitleHeight>2</TitleHeight>
+											<ContextMenu name="ДекорацияЗаголовокСервисГеокодированияКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ДекорацияЗаголовокСервисГеокодированияРасширеннаяПодсказка" id="156"/>
+										</LabelDecoration>
+										<InputField name="ItobСервисОбратногоГеокодирования" id="75">
+											<DataPath>НаборКонстант.ItobСервисОбратногоГеокодирования</DataPath>
+											<ContextMenu name="ItobСервисОбратногоГеокодированияКонтекстноеМеню" id="76"/>
+											<ExtendedTooltip name="ItobСервисОбратногоГеокодированияРасширеннаяПодсказка" id="157"/>
+										</InputField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Репликация" id="79">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Репликация</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Репликация</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="РепликацияРасширеннаяПодсказка" id="158"/>
+					<ChildItems>
+						<UsualGroup name="Группа14" id="80">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="159"/>
+							<ChildItems>
+								<PictureDecoration name="Декорация5" id="81">
+									<Width>6</Width>
+									<Height>3</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<Picture>
+										<xr:Ref>CommonPicture.ItobРепликация</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</Picture>
+									<FileDragMode>AsFile</FileDragMode>
+									<ContextMenu name="Декорация5КонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="Декорация5РасширеннаяПодсказка" id="160"/>
+								</PictureDecoration>
+								<UsualGroup name="Группа15" id="83">
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа15РасширеннаяПодсказка" id="161"/>
+									<ChildItems>
+										<LabelDecoration name="ДекорацияЗаголовокРепликация" id="84">
+											<Height>2</Height>
+											<SkipOnInput>false</SkipOnInput>
+											<TextColor>style:FieldSelectionBackColor</TextColor>
+											<Title formatted="false">
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Параметры репликации
+Рекомендуется использовать репликацию как регламентное задание</v8:content>
+												</v8:item>
+											</Title>
+											<TitleHeight>3</TitleHeight>
+											<ContextMenu name="ДекорацияЗаголовокРепликацияКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="ДекорацияЗаголовокРепликацияРасширеннаяПодсказка" id="162"/>
+										</LabelDecoration>
+										<CheckBoxField name="ИспользоватьРепликацию" id="86">
+											<DataPath>ИспользоватьРепликацию</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьРепликациюКонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="ИспользоватьРепликациюРасширеннаяПодсказка" id="163"/>
+										</CheckBoxField>
+										<UsualGroup name="ГруппаСерверПорт" id="88">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа сервер порт</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа сервер порт</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСерверПортРасширеннаяПодсказка" id="164"/>
+											<ChildItems>
+												<InputField name="СерверРепликации" id="89">
+													<DataPath>СерверРепликации</DataPath>
+													<Width>15</Width>
+													<ContextMenu name="СерверРепликацииКонтекстноеМеню" id="90"/>
+													<ExtendedTooltip name="СерверРепликацииРасширеннаяПодсказка" id="165"/>
+												</InputField>
+												<InputField name="ПортРепликации" id="91">
+													<DataPath>ПортРепликации</DataPath>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="ПортРепликацииКонтекстноеМеню" id="92"/>
+													<ExtendedTooltip name="ПортРепликацииРасширеннаяПодсказка" id="166"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаЛогинПароль" id="114">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа логин пароль</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа логин пароль</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЛогинПарольРасширеннаяПодсказка" id="167"/>
+											<ChildItems>
+												<InputField name="ItobЛогинРепликации1" id="93">
+													<DataPath>НаборКонстант.ItobЛогинРепликации</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Логин</v8:content>
+														</v8:item>
+													</Title>
+													<Width>16</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ItobЛогинРепликации1КонтекстноеМеню" id="94"/>
+													<ExtendedTooltip name="ItobЛогинРепликации1РасширеннаяПодсказка" id="168"/>
+												</InputField>
+												<InputField name="ItobПарольРепликации1" id="95">
+													<DataPath>НаборКонстант.ItobПарольРепликации</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пароль</v8:content>
+														</v8:item>
+													</Title>
+													<Width>16</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<PasswordMode>true</PasswordMode>
+													<ContextMenu name="ItobПарольРепликации1КонтекстноеМеню" id="96"/>
+													<ExtendedTooltip name="ItobПарольРепликации1РасширеннаяПодсказка" id="169"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаИнтервал" id="113">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа интервал</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа интервал</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИнтервалРасширеннаяПодсказка" id="170"/>
+											<ChildItems>
+												<InputField name="Интервал" id="97">
+													<DataPath>Интервал</DataPath>
+													<Width>10</Width>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="ИнтервалКонтекстноеМеню" id="98"/>
+													<ExtendedTooltip name="ИнтервалРасширеннаяПодсказка" id="171"/>
+												</InputField>
+												<Button name="ТестРепликация" id="99">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ТестРепликация</CommandName>
+													<ExtendedTooltip name="ТестРепликацияРасширеннаяПодсказка" id="172"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+										<CheckBoxField name="ИспользоватьРезервныйСерверРепликации" id="100">
+											<DataPath>ИспользоватьРезервныйСерверРепликации</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Включить репликацию с резервным сервером как регламентное задание</v8:content>
+												</v8:item>
+											</Title>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ИспользоватьРезервныйСерверРепликацииКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ИспользоватьРезервныйСерверРепликацииРасширеннаяПодсказка" id="173"/>
+										</CheckBoxField>
+										<UsualGroup name="ГруппаСерверПортРезерв" id="102">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа сервер порт</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа сервер порт</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаСерверПортРезервРасширеннаяПодсказка" id="174"/>
+											<ChildItems>
+												<InputField name="СерверРепликацииРезерв" id="103">
+													<DataPath>СерверРепликацииРезерв</DataPath>
+													<Width>15</Width>
+													<ContextMenu name="СерверРепликацииРезервКонтекстноеМеню" id="104"/>
+													<ExtendedTooltip name="СерверРепликацииРезервРасширеннаяПодсказка" id="175"/>
+												</InputField>
+												<InputField name="ПортРепликацииРезерв" id="105">
+													<DataPath>ПортРепликацииРезерв</DataPath>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="ПортРепликацииРезервКонтекстноеМеню" id="106"/>
+													<ExtendedTooltip name="ПортРепликацииРезервРасширеннаяПодсказка" id="176"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаЛогинПарольРезерв" id="115">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа логин пароль</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа логин пароль</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЛогинПарольРезервРасширеннаяПодсказка" id="177"/>
+											<ChildItems>
+												<InputField name="ЛогинРепликацииРезерв" id="116">
+													<DataPath>ЛогинРепликацииРезерв</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Логин</v8:content>
+														</v8:item>
+													</Title>
+													<Width>16</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<ContextMenu name="ЛогинРепликацииРезервКонтекстноеМеню" id="117"/>
+													<ExtendedTooltip name="ЛогинРепликацииРезервРасширеннаяПодсказка" id="178"/>
+												</InputField>
+												<InputField name="ПарольРепликацииРезерв" id="118">
+													<DataPath>ПарольРепликацииРезерв</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Пароль</v8:content>
+														</v8:item>
+													</Title>
+													<Width>16</Width>
+													<HorizontalStretch>false</HorizontalStretch>
+													<PasswordMode>true</PasswordMode>
+													<ContextMenu name="ПарольРепликацииРезервКонтекстноеМеню" id="119"/>
+													<ExtendedTooltip name="ПарольРепликацииРезервРасширеннаяПодсказка" id="179"/>
+												</InputField>
+											</ChildItems>
+										</UsualGroup>
+										<UsualGroup name="ГруппаИнтервал1" id="120">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа интервал</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа интервал</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Horizontal</Group>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаИнтервал1РасширеннаяПодсказка" id="180"/>
+											<ChildItems>
+												<InputField name="ИнтервалРезерв" id="111">
+													<DataPath>ИнтервалРезерв</DataPath>
+													<Width>10</Width>
+													<SpinButton>true</SpinButton>
+													<ContextMenu name="ИнтервалРезервКонтекстноеМеню" id="112"/>
+													<ExtendedTooltip name="ИнтервалРезервРасширеннаяПодсказка" id="181"/>
+												</InputField>
+												<Button name="ТестРепликацияРезерв" id="123">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ТестРепликацияРезервныйСервер</CommandName>
+													<ExtendedTooltip name="ТестРепликацияРезервРасширеннаяПодсказка" id="182"/>
+												</Button>
+											</ChildItems>
+										</UsualGroup>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="НаборКонстант" id="1">
+			<Type>
+				<v8:Type>cfg:ConstantsSet</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>НаборКонстант.ItobАдресСервисаCsmSvc</Field>
+				<Field>НаборКонстант.ItobМинимальнаяСкоростьДвижения</Field>
+				<Field>НаборКонстант.ItobМинимальноеВремяСтоянки</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ЗаголовокИзменен" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок изменен</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьРепликацию" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить репликацию данных как регламентное задание</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СерверРепликации" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПортРепликации" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Интервал" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал (минут)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИспользоватьРезервныйСерверРепликации" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать резервный сервер репликации</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СерверРепликацииРезерв" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПортРепликацииРезерв" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Порт</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>6</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнтервалРезерв" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Интервал (минут)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЛогинРепликацииРезерв" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Логин репликации резерв</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПарольРепликацииРезерв" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пароль репликации резерв</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОткрытьМастерНастройкиСлужбыCsmSvc" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть мастер настройки службы CsmSvc</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть мастер настройки службы CsmSvc</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьМастерНастройкиСлужбыCsmSvc</Action>
+		</Command>
+		<Command name="ПараметрыАдминистрированияИБ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры администрирования ИБ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры администрирования ИБ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПараметрыАдминистрированияИБ</Action>
+		</Command>
+		<Command name="ТестРепликация" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест соединения с сервером репликации</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест репликация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестРепликация</Action>
+		</Command>
+		<Command name="ТестРепликацияРезервныйСервер" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест соединения с резервным сервером</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест репликация</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестРепликацияРезервныйСервер</Action>
+		</Command>
+	</Commands>
+</Form>

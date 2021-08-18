@@ -1,0 +1,472 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<UsualGroup name="Группа1" id="1">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="Группа7" id="84">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<InputField name="фТСПЛСход" id="8">
+							<DataPath>фТСПЛСход</DataPath>
+							<ContextMenu name="фТСПЛСходКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="фТСПЛСходРасширеннаяПодсказка" id="10"/>
+						</InputField>
+						<UsualGroup name="Группа3" id="11">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="12"/>
+							<ChildItems>
+								<InputField name="фВремяВыездаСход" id="21">
+									<DataPath>фВремяВыездаСход</DataPath>
+									<ContextMenu name="фВремяВыездаСходКонтекстноеМеню" id="22"/>
+									<ExtendedTooltip name="фВремяВыездаСходРасширеннаяПодсказка" id="23"/>
+								</InputField>
+								<InputField name="фВремяВозвратаСход" id="24">
+									<DataPath>фВремяВозвратаСход</DataPath>
+									<ContextMenu name="фВремяВозвратаСходКонтекстноеМеню" id="25"/>
+									<ExtendedTooltip name="фВремяВозвратаСходРасширеннаяПодсказка" id="26"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="фВодительПЛСход" id="15">
+							<DataPath>фВодительПЛСход</DataPath>
+							<ContextMenu name="фВодительПЛСходКонтекстноеМеню" id="16"/>
+							<ExtendedTooltip name="фВодительПЛСходРасширеннаяПодсказка" id="17"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа8" id="86">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="87"/>
+					<ChildItems>
+						<Table name="фТаблицаМаршрутовПЛСход" id="36">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>фТаблицаМаршрутовПЛСход</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="фТаблицаМаршрутовПЛСходКонтекстноеМеню" id="37"/>
+							<AutoCommandBar name="фТаблицаМаршрутовПЛСходКоманднаяПанель" id="38"/>
+							<ExtendedTooltip name="фТаблицаМаршрутовПЛСходРасширеннаяПодсказка" id="39"/>
+							<SearchStringAddition name="фТаблицаМаршрутовПЛСходСтрокаПоиска" id="40">
+								<AdditionSource>
+									<Item>фТаблицаМаршрутовПЛСход</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаМаршрутовПЛСходСтрокаПоискаКонтекстноеМеню" id="41"/>
+								<ExtendedTooltip name="фТаблицаМаршрутовПЛСходСтрокаПоискаРасширеннаяПодсказка" id="42"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="фТаблицаМаршрутовПЛСходСостояниеПросмотра" id="43">
+								<AdditionSource>
+									<Item>фТаблицаМаршрутовПЛСход</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаМаршрутовПЛСходСостояниеПросмотраКонтекстноеМеню" id="44"/>
+								<ExtendedTooltip name="фТаблицаМаршрутовПЛСходСостояниеПросмотраРасширеннаяПодсказка" id="45"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="фТаблицаМаршрутовПЛСходУправлениеПоиском" id="46">
+								<AdditionSource>
+									<Item>фТаблицаМаршрутовПЛСход</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаМаршрутовПЛСходУправлениеПоискомКонтекстноеМеню" id="47"/>
+								<ExtendedTooltip name="фТаблицаМаршрутовПЛСходУправлениеПоискомРасширеннаяПодсказка" id="48"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="фТаблицаМаршрутовПЛСходНачало" id="49">
+									<DataPath>фТаблицаМаршрутовПЛСход.Начало</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="фТаблицаМаршрутовПЛСходНачалоКонтекстноеМеню" id="50"/>
+									<ExtendedTooltip name="фТаблицаМаршрутовПЛСходНачалоРасширеннаяПодсказка" id="51"/>
+								</InputField>
+								<InputField name="фТаблицаМаршрутовПЛСходОкончание" id="52">
+									<DataPath>фТаблицаМаршрутовПЛСход.Окончание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="фТаблицаМаршрутовПЛСходОкончаниеКонтекстноеМеню" id="53"/>
+									<ExtendedTooltip name="фТаблицаМаршрутовПЛСходОкончаниеРасширеннаяПодсказка" id="54"/>
+								</InputField>
+								<InputField name="фТаблицаМаршрутовПЛСходМаршрут" id="55">
+									<DataPath>фТаблицаМаршрутовПЛСход.Маршрут</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="фТаблицаМаршрутовПЛСходМаршрутКонтекстноеМеню" id="56"/>
+									<ExtendedTooltip name="фТаблицаМаршрутовПЛСходМаршрутРасширеннаяПодсказка" id="57"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="Группа2" id="3">
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="4"/>
+			<ChildItems>
+				<UsualGroup name="Группа6" id="82">
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="83"/>
+					<ChildItems>
+						<InputField name="фТСНовыйПЛ" id="33">
+							<DataPath>фТСНовыйПЛ</DataPath>
+							<ContextMenu name="фТСНовыйПЛКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="фТСНовыйПЛРасширеннаяПодсказка" id="35"/>
+						</InputField>
+						<UsualGroup name="Группа4" id="13">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="14"/>
+							<ChildItems>
+								<InputField name="фВремяВыездаНовыйПЛ" id="27">
+									<DataPath>фВремяВыездаНовыйПЛ</DataPath>
+									<ContextMenu name="фВремяВыездаНовыйПЛКонтекстноеМеню" id="28"/>
+									<ExtendedTooltip name="фВремяВыездаНовыйПЛРасширеннаяПодсказка" id="29"/>
+								</InputField>
+								<InputField name="фВремяВозвратаНовыйПЛ" id="30">
+									<DataPath>фВремяВозвратаНовыйПЛ</DataPath>
+									<ContextMenu name="фВремяВозвратаНовыйПЛКонтекстноеМеню" id="31"/>
+									<ExtendedTooltip name="фВремяВозвратаНовыйПЛРасширеннаяПодсказка" id="32"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<InputField name="фВодительНовыйПЛ" id="18">
+							<DataPath>фВодительНовыйПЛ</DataPath>
+							<ContextMenu name="фВодительНовыйПЛКонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="фВодительНовыйПЛРасширеннаяПодсказка" id="20"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="80">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="81"/>
+					<ChildItems>
+						<Table name="фТаблицаМаршрутовПЛНовый" id="58">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>фТаблицаМаршрутовПЛНовый</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="фТаблицаМаршрутовПЛНовыйКонтекстноеМеню" id="59"/>
+							<AutoCommandBar name="фТаблицаМаршрутовПЛНовыйКоманднаяПанель" id="60"/>
+							<ExtendedTooltip name="фТаблицаМаршрутовПЛНовыйРасширеннаяПодсказка" id="61"/>
+							<SearchStringAddition name="фТаблицаМаршрутовПЛНовыйСтрокаПоиска" id="62">
+								<AdditionSource>
+									<Item>фТаблицаМаршрутовПЛНовый</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаМаршрутовПЛНовыйСтрокаПоискаКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="фТаблицаМаршрутовПЛНовыйСтрокаПоискаРасширеннаяПодсказка" id="64"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="фТаблицаМаршрутовПЛНовыйСостояниеПросмотра" id="65">
+								<AdditionSource>
+									<Item>фТаблицаМаршрутовПЛНовый</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаМаршрутовПЛНовыйСостояниеПросмотраКонтекстноеМеню" id="66"/>
+								<ExtendedTooltip name="фТаблицаМаршрутовПЛНовыйСостояниеПросмотраРасширеннаяПодсказка" id="67"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="фТаблицаМаршрутовПЛНовыйУправлениеПоиском" id="68">
+								<AdditionSource>
+									<Item>фТаблицаМаршрутовПЛНовый</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаМаршрутовПЛНовыйУправлениеПоискомКонтекстноеМеню" id="69"/>
+								<ExtendedTooltip name="фТаблицаМаршрутовПЛНовыйУправлениеПоискомРасширеннаяПодсказка" id="70"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="фТаблицаМаршрутовПЛНовыйНачало" id="71">
+									<DataPath>фТаблицаМаршрутовПЛНовый.Начало</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="фТаблицаМаршрутовПЛНовыйНачалоКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="фТаблицаМаршрутовПЛНовыйНачалоРасширеннаяПодсказка" id="73"/>
+								</InputField>
+								<InputField name="фТаблицаМаршрутовПЛНовыйОкончание" id="74">
+									<DataPath>фТаблицаМаршрутовПЛНовый.Окончание</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="фТаблицаМаршрутовПЛНовыйОкончаниеКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="фТаблицаМаршрутовПЛНовыйОкончаниеРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<InputField name="фТаблицаМаршрутовПЛНовыйМаршрут" id="77">
+									<DataPath>фТаблицаМаршрутовПЛНовый.Маршрут</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="фТаблицаМаршрутовПЛНовыйМаршрутКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="фТаблицаМаршрутовПЛНовыйМаршрутРасширеннаяПодсказка" id="79"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="фПутевойЛистСход" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф путевой лист сход</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фТСНовыйПЛ" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф ТСНовый ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фВодительНовыйПЛ" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф водитель новый ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фВодительПЛСход" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф водитель ПЛСход</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фТСПЛСход" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф ТСПЛСход</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фВремяВыездаСход" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф время выезда сход</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фВремяВозвратаСход" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф время возврата сход</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фВремяВыездаНовыйПЛ" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф время выезда новый ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фВремяВозвратаНовыйПЛ" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф время возврата новый ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фТаблицаМаршрутовПЛСход" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф таблица маршрутов ПЛСход</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Начало" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Окончание" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Маршрут" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="фТаблицаМаршрутовПЛНовый" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф таблица маршрутов ПЛНовый</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Начало" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Окончание" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Окончание</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Маршрут" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Маршрут</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+</Form>

@@ -1,0 +1,485 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Администрирование системы "Проект ОКО"</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<HorizontalStretch>true</HorizontalStretch>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="48"/>
+			<ChildItems>
+				<Button name="КомандаЗаписатьИЗакрыть" id="98">
+					<Type>UsualButton</Type>
+					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+					<CommandName>Form.Command.КомандаЗаписатьИЗакрыть</CommandName>
+					<TextColor>#000000</TextColor>
+					<BackColor>#FFCC99</BackColor>
+					<Font ref="style:NormalTextFont" height="16" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Записать данные и закрыть форму администрирования</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="КомандаЗаписатьИЗакрытьРасширеннаяПодсказка" id="99"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаОсновная" id="49">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="50"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаГаражи" id="51">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Справочник "Гаражи"</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа гаражи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<ExtendedTooltip name="ГруппаГаражиРасширеннаяПодсказка" id="52"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация2" id="58">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>#008080</TextColor>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В этой таблице содержится перечень гаражей (мест стоянки и ремонта). Возможно только редактирование этих элементов - указание геозоны и установка цвета.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<ContextMenu name="Декорация2КонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="Декорация2РасширеннаяПодсказка" id="60"/>
+						</LabelDecoration>
+						<Table name="СправочникГаражи" id="3">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>СправочникГаражи</DataPath>
+							<RowPictureDataPath>СправочникГаражи.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<ContextMenu name="СправочникГаражиКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="СправочникГаражиКоманднаяПанель" id="5"/>
+							<ExtendedTooltip name="СправочникГаражиРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="СправочникГаражиСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>СправочникГаражи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СправочникГаражиСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="СправочникГаражиСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СправочникГаражиСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>СправочникГаражи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СправочникГаражиСостояниеПросмотраКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="СправочникГаражиСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СправочникГаражиУправлениеПоиском" id="13">
+								<AdditionSource>
+									<Item>СправочникГаражи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СправочникГаражиУправлениеПоискомКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="СправочникГаражиУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СправочникГаражиНаименование" id="16">
+									<DataPath>СправочникГаражи.Description</DataPath>
+									<ContextMenu name="СправочникГаражиНаименованиеКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="СправочникГаражиНаименованиеРасширеннаяПодсказка" id="18"/>
+								</LabelField>
+								<LabelField name="СправочникГаражиНаименованиеГеозоны" id="25">
+									<DataPath>СправочникГаражи.НаименованиеГеозоны</DataPath>
+									<ContextMenu name="СправочникГаражиНаименованиеГеозоныКонтекстноеМеню" id="26"/>
+									<ExtendedTooltip name="СправочникГаражиНаименованиеГеозоныРасширеннаяПодсказка" id="27"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаИсключаемыеОбъекты" id="53">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исключаемые из проекта объекты </v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа исключаемые объекты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<HorizontalAlign>Center</HorizontalAlign>
+					<ExtendedTooltip name="ГруппаИсключаемыеОбъектыРасширеннаяПодсказка" id="54"/>
+					<ChildItems>
+						<LabelDecoration name="Декорация1" id="55">
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<HorizontalStretch>true</HorizontalStretch>
+							<TextColor>#0000FF</TextColor>
+							<Font ref="style:NormalTextFont" height="12" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>В эти таблицы заносятся объекты, которые должны быть исключены из работы системы "Проект ОКО". Это может быть как подразделение, так и отдельно взятое транспортное средство.</v8:content>
+								</v8:item>
+							</Title>
+							<GroupHorizontalAlign>Center</GroupHorizontalAlign>
+							<HorizontalAlign>Center</HorizontalAlign>
+							<ContextMenu name="Декорация1КонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="57"/>
+						</LabelDecoration>
+						<UsualGroup name="ГруппаТаблицы" id="77">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблицы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа таблицы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="78"/>
+							<ChildItems>
+								<Table name="ИсключаемыеПодразделения" id="61">
+									<Representation>List</Representation>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ИсключаемыеПодразделения</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ИсключаемыеПодразделенияКонтекстноеМеню" id="62"/>
+									<AutoCommandBar name="ИсключаемыеПодразделенияКоманднаяПанель" id="63"/>
+									<ExtendedTooltip name="ИсключаемыеПодразделенияРасширеннаяПодсказка" id="64"/>
+									<SearchStringAddition name="ИсключаемыеПодразделенияСтрокаПоиска" id="65">
+										<AdditionSource>
+											<Item>ИсключаемыеПодразделения</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсключаемыеПодразделенияСтрокаПоискаКонтекстноеМеню" id="66"/>
+										<ExtendedTooltip name="ИсключаемыеПодразделенияСтрокаПоискаРасширеннаяПодсказка" id="67"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ИсключаемыеПодразделенияСостояниеПросмотра" id="68">
+										<AdditionSource>
+											<Item>ИсключаемыеПодразделения</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсключаемыеПодразделенияСостояниеПросмотраКонтекстноеМеню" id="69"/>
+										<ExtendedTooltip name="ИсключаемыеПодразделенияСостояниеПросмотраРасширеннаяПодсказка" id="70"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ИсключаемыеПодразделенияУправлениеПоиском" id="71">
+										<AdditionSource>
+											<Item>ИсключаемыеПодразделения</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсключаемыеПодразделенияУправлениеПоискомКонтекстноеМеню" id="72"/>
+										<ExtendedTooltip name="ИсключаемыеПодразделенияУправлениеПоискомРасширеннаяПодсказка" id="73"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="AfterDeleteRow">ПослеУдаленияСтрокиОбъектовИсключения</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ИсключаемыеПодразделенияИсключаемыйОбъект" id="74">
+											<DataPath>ИсключаемыеПодразделения.ИсключаемыйОбъект</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсключаемыеПодразделенияИсключаемыйОбъектКонтекстноеМеню" id="75"/>
+											<ExtendedTooltip name="ИсключаемыеПодразделенияИсключаемыйОбъектРасширеннаяПодсказка" id="76"/>
+											<Events>
+												<Event name="OnChange">ИсключаемыеПодразделенияИсключаемыйОбъектПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Table name="ИсключаемыеТС" id="79">
+									<Representation>List</Representation>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ИсключаемыеТС</DataPath>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ИсключаемыеТСКонтекстноеМеню" id="80"/>
+									<AutoCommandBar name="ИсключаемыеТСКоманднаяПанель" id="81"/>
+									<ExtendedTooltip name="ИсключаемыеТСРасширеннаяПодсказка" id="82"/>
+									<SearchStringAddition name="ИсключаемыеТССтрокаПоиска" id="83">
+										<AdditionSource>
+											<Item>ИсключаемыеТС</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсключаемыеТССтрокаПоискаКонтекстноеМеню" id="84"/>
+										<ExtendedTooltip name="ИсключаемыеТССтрокаПоискаРасширеннаяПодсказка" id="85"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ИсключаемыеТССостояниеПросмотра" id="86">
+										<AdditionSource>
+											<Item>ИсключаемыеТС</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсключаемыеТССостояниеПросмотраКонтекстноеМеню" id="87"/>
+										<ExtendedTooltip name="ИсключаемыеТССостояниеПросмотраРасширеннаяПодсказка" id="88"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ИсключаемыеТСУправлениеПоиском" id="89">
+										<AdditionSource>
+											<Item>ИсключаемыеТС</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ИсключаемыеТСУправлениеПоискомКонтекстноеМеню" id="90"/>
+										<ExtendedTooltip name="ИсключаемыеТСУправлениеПоискомРасширеннаяПодсказка" id="91"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="AfterDeleteRow">ПослеУдаленияСтрокиОбъектовИсключения</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ИсключаемыеТСГаражныйНомер" id="95">
+											<DataPath>ИсключаемыеТС.ГаражныйНомер</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Гаражный №</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсключаемыеТСГаражныйНомерКонтекстноеМеню" id="96"/>
+											<ExtendedTooltip name="ИсключаемыеТСГаражныйНомерРасширеннаяПодсказка" id="97"/>
+										</InputField>
+										<InputField name="ИсключаемыеТСИсключаемыйОбъект" id="92">
+											<DataPath>ИсключаемыеТС.ИсключаемыйОбъект</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ИсключаемыеТСИсключаемыйОбъектКонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ИсключаемыеТСИсключаемыйОбъектРасширеннаяПодсказка" id="94"/>
+											<Events>
+												<Event name="OnChange">ИсключаемыеТСИсключаемыйОбъектПриИзменении</Event>
+											</Events>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Button name="КомандаСформироватьФайлДанныхБСМТС" id="1">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.КомандаСформироватьФайлДанныхБСМТС</CommandName>
+			<ExtendedTooltip name="КомандаСформироватьФайлДанныхБСМТСРасширеннаяПодсказка" id="2"/>
+		</Button>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СправочникГаражи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Справочник гаражи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Edit>
+				<xr:Common>true</xr:Common>
+				<xr:Value name="Role.ПроектОКО">true</xr:Value>
+			</Edit>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.уатГаражи</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ИсключаемыеПодразделения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключаемые подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИсключаемыйОбъект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исключаемый объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИсключаемыеТС" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключаемые ТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИсключаемыйОбъект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исключаемый объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.уатТС</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ГаражныйНомер" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Гаражный номер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>5</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Объект" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РабочийСтолПроектОКО</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="КомандаСформироватьФайлДанныхБСМТС" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать файл данных БСМТС</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда сформировать файл данных БСМТС</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаСформироватьФайлДанныхБСМТС</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КомандаЗаписатьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда записать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда записать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗаписатьИЗакрыть</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

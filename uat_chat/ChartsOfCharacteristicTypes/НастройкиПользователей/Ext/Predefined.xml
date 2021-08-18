@@ -1,0 +1,370 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="PlanOfCharacteristicKindPredefinedItems" version="2.11">
+	<Item id="31d09f6c-334f-4b5f-b156-4627b6ccfabd">
+		<Name>ВстроенныйПочтовыйКлиент</Name>
+		<Code>00040    </Code>
+		<Description>Встроенный почтовый клиент</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="6f9a413d-e5ea-4f58-8f82-02f7450e7a33">
+				<Name>АвтооткрытиеЭлектроннойПочтыПриЗапускеПрограммы</Name>
+				<Code>00036    </Code>
+				<Description>Автооткрытие электронной почты при запуске программы</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="07498eca-bc7a-4995-83ae-70a72df31cd4">
+				<Name>ИзменятьСписокЭлектронныхПисемПриВыбореПапкиПисем</Name>
+				<Code>00030    </Code>
+				<Description>Изменять список электронных писем при выборе папки а не при активизации</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="11548358-8794-455a-8c81-782545bbc88b">
+				<Name>КоманднаяСтрокаДляЗапускаВнешнегоХТМЛРедактора</Name>
+				<Code>00054    </Code>
+				<Description>Командная строка для запуска внешнего редактора HTML-текстов</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>300</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8def5cbc-223b-495c-a94f-c83d306efbbf">
+				<Name>ПолучениеЭлектронныхПисемПриОткрытии</Name>
+				<Code>00031    </Code>
+				<Description>Получение электронных писем при открытии формы обработки почты</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b589bb41-208f-4a28-a37c-efc63fe10464">
+				<Name>ОсновнаяУчетнаяЗапись</Name>
+				<Code>00029    </Code>
+				<Description>Учетная запись электронной почты по умолчанию</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="8966c475-d626-4faa-88bf-4991ccf0b129">
+		<Name>ДругиеНастройки</Name>
+		<Code>00060    </Code>
+		<Description>Другие настройки</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="7b275624-7fdc-4728-b2bf-009a44e2dfed">
+				<Name>ЗапрашиватьПодтверждениеПриЗакрытии</Name>
+				<Code>00045    </Code>
+				<Description>Запрашивать подтверждение при закрытии</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b2de8b42-3009-422f-9c2c-1899e6625300">
+				<Name>ОсновнаяДатаНачалаОтчетов</Name>
+				<Code>00015    </Code>
+				<Description>Основная дата начала отчетов</Description>
+				<Type>
+					<v8:Type>xs:dateTime</v8:Type>
+					<v8:DateQualifiers>
+						<v8:DateFractions>Date</v8:DateFractions>
+					</v8:DateQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="e03864e8-0245-4a27-bb0c-7178fbb9e7f8">
+				<Name>ОсновнойКаталогФайлов</Name>
+				<Code>00016    </Code>
+				<Description>Основной каталог файлов</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>200</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="8a9f0f01-938d-4b80-a10e-1bbc066740e0">
+				<Name>ОткрыватьФормуВыбораСправочникаКонтрагентыСОтборомПоТекущемуПользователю</Name>
+				<Code>00023    </Code>
+				<Description>Открытие списка выбора контрагентов по умолчанию с отбором по менеджеру</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="eb1c19cc-94b9-4390-acd9-3969cabed8bf">
+				<Name>ОткрыватьФормуВыбораСправочникаНоменклатураСОтборомПоПоставщику</Name>
+				<Code>00039    </Code>
+				<Description>Открытие списка выбора номенклатуры по умолчанию с отбором по поставщику</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="aa457f1d-c0f0-4c18-a214-54fbd328e974">
+				<Name>ПечатьДокументовБезПредварительногоПросмотра</Name>
+				<Code>00032    </Code>
+				<Description>Печать документов без предварительного просмотра</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0371a512-550a-44bb-a59f-9153a5d7d8c3">
+				<Name>ПриИзмененииСуммыПересчитыватьСкидку</Name>
+				<Code>00024    </Code>
+				<Description>При изменении суммы пересчитывать скидку, а не цену</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="37204309-1b6c-4cef-b4d9-73bdceb2251a">
+				<Name>РегистрироватьЦеныПоставщика</Name>
+				<Code>00063    </Code>
+				<Description>Регистрировать цены поставщика</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="f2a72331-4873-4ee8-8ac0-7534bb006c00">
+		<Name>КалендарьПользователяСобытияНапоминания</Name>
+		<Code>00041    </Code>
+		<Description>Календарь пользователя, События, Напоминания</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="20199b7c-9524-4baf-9603-0b19615179d7">
+				<Name>ИзменениеПользователяВКалендареПользователя</Name>
+				<Code>00022    </Code>
+				<Description>Возможность просмотра календарей других пользователей</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+	<Item id="7bbbf04c-d322-46ce-bd80-b295b1d69a91">
+		<Name>ОсновныеЗначенияДляПодстановки</Name>
+		<Code>00056    </Code>
+		<Description>Основные значения для подстановки в документы и справочники</Description>
+		<Type/>
+		<IsFolder>true</IsFolder>
+		<ChildItems>
+			<Item id="bc3ff3ff-0879-4926-9599-bf18d2801215">
+				<Name>НомерКомПорта</Name>
+				<Code>00070    </Code>
+				<Description>Номер ком порта</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>1</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="90b6e951-74ce-4b3a-96a0-834f050792b8">
+				<Name>РучнаяКорректировкаРеестрУслуг</Name>
+				<Code>00071    </Code>
+				<Description>Разрешить ручную корректировку Реестра Услуг</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="bae2d4fb-2934-4b4c-b84f-9d65391dd526">
+				<Name>НомерПачки</Name>
+				<Code>00067    </Code>
+				<Description>Номер пачки</Description>
+				<Type>
+					<v8:Type>xs:string</v8:Type>
+					<v8:StringQualifiers>
+						<v8:Length>300</v8:Length>
+						<v8:AllowedLength>Variable</v8:AllowedLength>
+					</v8:StringQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="ab51eba3-f5ce-4da6-8582-dee25648f48e">
+				<Name>ОсновнаяВалютаВзаиморасчетов</Name>
+				<Code>00011    </Code>
+				<Description>Основная валюта взаиморасчетов</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Валюты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="fd3808f9-50e0-4d06-972a-d2a068f37319">
+				<Name>ОсновнаяЕдиницаПоКлассификатору</Name>
+				<Code>00014    </Code>
+				<Description>Основная единица по классификатору</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.КлассификаторЕдиницИзмерения</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="c26dfb38-9f54-4885-bca8-4b73654e2727">
+				<Name>ОсновнаяКасса</Name>
+				<Code>00066    </Code>
+				<Description>Основная касса</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Кассы</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="1d6571d0-fabb-457a-9626-9b2f77fa4d34">
+				<Name>ОсновнаяОрганизация</Name>
+				<Code>00001    </Code>
+				<Description>Основная организация</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Организации</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="0e773ac4-fd29-496f-bd07-a080dab9bc84">
+				<Name>ОсновнаяСтавкаНДС</Name>
+				<Code>00012    </Code>
+				<Description>Основная ставка НДС</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.СтавкиНДС</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="4b38e2c4-03a7-4ae7-9fd7-f7652255888c">
+				<Name>ОсновноеВедениеВзаиморасчетовПоДоговорам</Name>
+				<Code>00064    </Code>
+				<Description>Основное ведение взаиморасчетов по договорам</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.ВедениеВзаиморасчетовПоДоговорам</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="6c91bb98-95c5-474f-abaa-d62a614321be">
+				<Name>ОсновноеПодразделениеОрганизации</Name>
+				<Code>00065    </Code>
+				<Description>Основное подразделение организации</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.ПодразделенияОрганизаций</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="3a86dcac-72df-4003-9766-34acdbbbca76">
+				<Name>ОсновнойОбъектЗатрат</Name>
+				<Code>00068    </Code>
+				<Description>Основной объект затрат</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.уатОбъектыСтроительства</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="31c3a865-57a7-427d-b5fa-c900584f1d5f">
+				<Name>ОсновнойОтветственный</Name>
+				<Code>00062    </Code>
+				<Description>Основной ответственный</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Пользователи</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="496a97fc-db99-467c-a1aa-0a9e07050868">
+				<Name>ОсновнойПокупатель</Name>
+				<Code>00008    </Code>
+				<Description>Основной покупатель</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="24f8f6ca-a3b6-4d29-8983-72e9bcd428d9">
+				<Name>ОсновнойПоставщик</Name>
+				<Code>00007    </Code>
+				<Description>Основной поставщик</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Контрагенты</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="f8cb179b-1eaf-4885-abb2-84c017577e45">
+				<Name>ОсновнойСклад</Name>
+				<Code>00002    </Code>
+				<Description>Основной склад</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:CatalogRef.Склады</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b29ff252-d300-4db4-8cc3-e191615e2dc1">
+				<Name>ОсновнойСтатусКонтрагента</Name>
+				<Code>00059    </Code>
+				<Description>Основной статус контрагента</Description>
+				<Type>
+					<v8:Type xmlns:d6p1="http://v8.1c.ru/8.1/data/enterprise/current-config">d6p1:EnumRef.СтатусыКонтрагентов</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="b276d128-341c-4fce-8216-6b1ee536a151">
+				<Name>ОтражатьДокументыВБухгалтерскомУчете</Name>
+				<Code>00052    </Code>
+				<Description>Отражать документы в бухгалтерском учете</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="82679289-dca7-450f-a621-dd93f9b4185d">
+				<Name>ОтражатьДокументыВНалоговомУчете</Name>
+				<Code>00057    </Code>
+				<Description>Отражать документы в налоговом учете</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="99d7742b-2071-4991-8456-6eb9ebde5cbf">
+				<Name>ОтражатьДокументыВУправленческомУчете</Name>
+				<Code>00058    </Code>
+				<Description>Отражать документы в управленческом учете</Description>
+				<Type>
+					<v8:Type>xs:boolean</v8:Type>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+			<Item id="2ca45701-0b6c-4550-994e-d2d58d5094ee">
+				<Name>УровеньДоступа</Name>
+				<Code>00069    </Code>
+				<Description>Уровень доступа</Description>
+				<Type>
+					<v8:Type>xs:decimal</v8:Type>
+					<v8:NumberQualifiers>
+						<v8:Digits>5</v8:Digits>
+						<v8:FractionDigits>0</v8:FractionDigits>
+						<v8:AllowedSign>Any</v8:AllowedSign>
+					</v8:NumberQualifiers>
+				</Type>
+				<IsFolder>false</IsFolder>
+			</Item>
+		</ChildItems>
+	</Item>
+</PredefinedData>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="8fee5c6d-3b7d-441d-866e-75c14d47c13c">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.уатВидыОперацийЗаказНаТС" category="Ref">
+				<xr:TypeId>2c789663-a276-4436-a5be-7fb63ef24f58</xr:TypeId>
+				<xr:ValueId>488c9b6e-07c7-44c7-b107-dcea023a83ae</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.уатВидыОперацийЗаказНаТС" category="Manager">
+				<xr:TypeId>8160367e-06e8-4657-beeb-6a1fee0cfba0</xr:TypeId>
+				<xr:ValueId>706dc963-26f1-4e34-878d-6912820bed89</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.уатВидыОперацийЗаказНаТС" category="List">
+				<xr:TypeId>fe3c13d6-13e9-4229-acd7-09673349484a</xr:TypeId>
+				<xr:ValueId>6d11769a-db77-43bc-9659-befa55230907</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>уатВидыОперацийЗаказНаТС</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды операций заказ на ТС</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment>Удалить в релизе 1.0.8.1</Comment>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="0efa1f27-a74d-441e-be67-efd08e96e443">
+				<Properties>
+					<Name>ВнешнийЗаказ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ внешнего контрагента</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Заказ внешнего контрагента (уат)</Comment>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="58b1f187-47bd-459e-9e30-d3ecf493908e">
+				<Properties>
+					<Name>ВнутреннийЗаказ</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Заказ от подразделения</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment>Заказ от собственного подразделения</Comment>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

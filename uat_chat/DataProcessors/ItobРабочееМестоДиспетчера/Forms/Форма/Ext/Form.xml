@@ -1,0 +1,2634 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Рабочее место диспетчера</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<Group>Horizontal</Group>
+	<AutoFillCheck>false</AutoFillCheck>
+	<CommandBarLocation>None</CommandBarLocation>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаЛеваяПанель" id="85">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа левая панель</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа левая панель</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаЛеваяПанельРасширеннаяПодсказка" id="182"/>
+			<ChildItems>
+				<InputField name="РежимРаботы" id="147">
+					<DataPath>РежимРаботы</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Режим</v8:content>
+						</v8:item>
+					</Title>
+					<Height>1</Height>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>On-line слежение</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Фактические маршруты</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Расчет маршрута</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">3</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="РежимРаботыКонтекстноеМеню" id="148"/>
+					<ExtendedTooltip name="РежимРаботыРасширеннаяПодсказка" id="183"/>
+					<Events>
+						<Event name="OnChange">ТекущийРежимПриИзменении</Event>
+					</Events>
+				</InputField>
+				<UsualGroup name="ГруппаКоманднаяПанельРежимов" id="86">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель режимов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа командная панель режимов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКоманднаяПанельРежимовРасширеннаяПодсказка" id="184"/>
+					<ChildItems>
+						<Button name="КнопкаOnLineСлежение" id="87">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<Width>6</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.РежимOnLineСлежения</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ItobРежимСлежения</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="КнопкаOnLineСлежениеРасширеннаяПодсказка" id="185"/>
+						</Button>
+						<Button name="КнопкаПостроениеМаршрутов" id="88">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<Width>6</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.РежимПостроенияМаршрутов</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ItobРежимМаршрута</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="КнопкаПостроениеМаршрутовРасширеннаяПодсказка" id="186"/>
+						</Button>
+						<Button name="КнопкаРедакторГеозон" id="89">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<Width>6</Width>
+							<Height>2</Height>
+							<Check>true</Check>
+							<CommandName>Form.Command.РежимРедактораГеозон</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ItobРедактированиеГеозон</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="КнопкаРедакторГеозонРасширеннаяПодсказка" id="187"/>
+						</Button>
+						<Button name="КнопкаРасчетМаршрута" id="90">
+							<Type>UsualButton</Type>
+							<Representation>Picture</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<Width>6</Width>
+							<Height>2</Height>
+							<CommandName>Form.Command.РежимРасчетаМаршрута</CommandName>
+							<Picture>
+								<xr:Ref>CommonPicture.ItobРасчетМаршрута</xr:Ref>
+								<xr:LoadTransparent>false</xr:LoadTransparent>
+							</Picture>
+							<ExtendedTooltip name="КнопкаРасчетМаршрутаРасширеннаяПодсказка" id="188"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<Pages name="ПанельЗакладок" id="47">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Панель закладок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Панель закладок</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Width>30</Width>
+					<PagesRepresentation>None</PagesRepresentation>
+					<ExtendedTooltip name="ПанельЗакладокРасширеннаяПодсказка" id="189"/>
+					<Events>
+						<Event name="OnCurrentPageChange">ПанельЗакладокПриСменеСтраницы</Event>
+					</Events>
+					<ChildItems>
+						<Page name="OnLineСлежение" id="48">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Слежение</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>On line слежение</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="OnLineСлежениеРасширеннаяПодсказка" id="190"/>
+							<ChildItems>
+								<Table name="ДеревоОбъектовМониторинга" id="1">
+									<Representation>Tree</Representation>
+									<CommandBarLocation>Top</CommandBarLocation>
+									<SkipOnInput>false</SkipOnInput>
+									<ChangeRowSet>false</ChangeRowSet>
+									<Width>33</Width>
+									<HeightInTableRows>10</HeightInTableRows>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<InitialTreeView>ExpandAllLevels</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ДеревоОбъектовМониторинга</DataPath>
+									<RowPictureDataPath>ДеревоОбъектовМониторинга.Картинка</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.ItobИерархическийСписок</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</RowsPicture>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+									</CommandSet>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево объектов мониторинга</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<ContextMenu name="ДеревоОбъектовМониторингаКонтекстноеМеню" id="2">
+										<ChildItems>
+											<Button name="ОтчетПоДвижениюКонтекст" id="118">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоДвижениюИСтоянкам</CommandName>
+												<ExtendedTooltip name="ОтчетПоДвижениюКонтекстРасширеннаяПодсказка" id="191"/>
+											</Button>
+											<Button name="ОтчетМаршрутПоГеозонамКонтекст" id="119">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетМаршрутПоГеозонам</CommandName>
+												<ExtendedTooltip name="ОтчетМаршрутПоГеозонамКонтекстРасширеннаяПодсказка" id="192"/>
+											</Button>
+											<Button name="ОтчетПоПростоямКонтекст" id="120">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоПростоям</CommandName>
+												<ExtendedTooltip name="ОтчетПоПростоямКонтекстРасширеннаяПодсказка" id="193"/>
+											</Button>
+											<Button name="ОтчетПосещениеГеозонКонтекст" id="122">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПосещениеГеозон</CommandName>
+												<ExtendedTooltip name="ОтчетПосещениеГеозонКонтекстРасширеннаяПодсказка" id="194"/>
+											</Button>
+											<Button name="ОтчетПоТопливуКонтекст" id="121">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоТопливу</CommandName>
+												<ExtendedTooltip name="ОтчетПоТопливуКонтекстРасширеннаяПодсказка" id="195"/>
+											</Button>
+											<Button name="ОтчетПоИмпульснымДатчикамКонтекст" id="180">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоИмпульснымДатчикам</CommandName>
+												<ExtendedTooltip name="ОтчетПоИмпульснымДатчикамКонтекстРасширеннаяПодсказка" id="196"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="ДеревоОбъектовМониторингаКоманднаяПанель" id="3">
+										<ChildItems>
+											<Button name="УстановитьФлажки" id="91">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.УстановитьФлажкиДереваОбъектовМониторинга</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.CheckAll</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="УстановитьФлажкиРасширеннаяПодсказка" id="197"/>
+											</Button>
+											<Button name="СнятьФлажки" id="92">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.СнятьФлажкиДереваОбъектовМониторинга</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="СнятьФлажкиРасширеннаяПодсказка" id="198"/>
+											</Button>
+											<Button name="СортироватьПоВозрастанию" id="93">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Item.ДеревоОбъектовМониторинга.StandardCommand.SortListAsc</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="СортироватьПоВозрастаниюРасширеннаяПодсказка" id="199"/>
+											</Button>
+											<Button name="СортироватьПоУбыванию" id="94">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Item.ДеревоОбъектовМониторинга.StandardCommand.SortListDesc</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="СортироватьПоУбываниюРасширеннаяПодсказка" id="200"/>
+											</Button>
+											<Button name="ОбновитьДерево" id="95">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОбновитьДеревоОбъектовМониторинга</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.Refresh</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ОбновитьДеревоРасширеннаяПодсказка" id="201"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДеревоОбъектовМониторингаРасширеннаяПодсказка" id="202"/>
+									<SearchStringAddition name="ДеревоОбъектовМониторингаСтрокаПоиска" id="203">
+										<AdditionSource>
+											<Item>ДеревоОбъектовМониторинга</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовМониторингаСтрокаПоискаКонтекстноеМеню" id="204"/>
+										<ExtendedTooltip name="ДеревоОбъектовМониторингаСтрокаПоискаРасширеннаяПодсказка" id="205"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоОбъектовМониторингаСостояниеПросмотра" id="206">
+										<AdditionSource>
+											<Item>ДеревоОбъектовМониторинга</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовМониторингаСостояниеПросмотраКонтекстноеМеню" id="207"/>
+										<ExtendedTooltip name="ДеревоОбъектовМониторингаСостояниеПросмотраРасширеннаяПодсказка" id="208"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоОбъектовМониторингаУправлениеПоиском" id="209">
+										<AdditionSource>
+											<Item>ДеревоОбъектовМониторинга</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовМониторингаУправлениеПоискомКонтекстноеМеню" id="210"/>
+										<ExtendedTooltip name="ДеревоОбъектовМониторингаУправлениеПоискомРасширеннаяПодсказка" id="211"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">ДеревоОбъектовМониторингаПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<InputField name="ДеревоОбъектовМониторингаОбъект" id="37">
+											<DataPath>ДеревоОбъектовМониторинга.Объект</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Объект мониторинга</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>20</Width>
+											<ContextMenu name="ДеревоОбъектовМониторингаОбъектКонтекстноеМеню" id="38"/>
+											<ExtendedTooltip name="ДеревоОбъектовМониторингаОбъектРасширеннаяПодсказка" id="212"/>
+										</InputField>
+										<CheckBoxField name="ДеревоОбъектовМониторингаПометка" id="41">
+											<DataPath>ДеревоОбъектовМониторинга.Пометка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Пометка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ThreeState>true</ThreeState>
+											<ContextMenu name="ДеревоОбъектовМониторингаПометкаКонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="ДеревоОбъектовМониторингаПометкаРасширеннаяПодсказка" id="213"/>
+											<Events>
+												<Event name="OnChange">ДеревоОбъектовМониторингаПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ДеревоОбъектовМониторингаАктуальностьДанных" id="45">
+											<DataPath>ДеревоОбъектовМониторинга.АктуальностьДанных</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Актуальность</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Актуальность данных</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ='dd/MM HH:mm:ss'</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ='dd/MM HH:mm:ss'</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ДеревоОбъектовМониторингаАктуальностьДанныхКонтекстноеМеню" id="46"/>
+											<ExtendedTooltip name="ДеревоОбъектовМониторингаАктуальностьДанныхРасширеннаяПодсказка" id="214"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Table name="ДеревоДатчиков" id="96">
+									<Representation>Tree</Representation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<SkipOnInput>false</SkipOnInput>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<InitialTreeView>ExpandAllLevels</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ДеревоДатчиков</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>List</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>OutputList</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+										<ExcludedCommand>Tree</ExcludedCommand>
+									</CommandSet>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево датчиков</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<ContextMenu name="ДеревоДатчиковКонтекстноеМеню" id="97">
+										<ChildItems>
+											<Button name="ОтчетПоДатчикуКонтекст" id="134">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоДатчику</CommandName>
+												<ExtendedTooltip name="ОтчетПоДатчикуКонтекстРасширеннаяПодсказка" id="215"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="ДеревоДатчиковКоманднаяПанель" id="98"/>
+									<ExtendedTooltip name="ДеревоДатчиковРасширеннаяПодсказка" id="216"/>
+									<SearchStringAddition name="ДеревоДатчиковСтрокаПоиска" id="217">
+										<AdditionSource>
+											<Item>ДеревоДатчиков</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоДатчиковСтрокаПоискаКонтекстноеМеню" id="218"/>
+										<ExtendedTooltip name="ДеревоДатчиковСтрокаПоискаРасширеннаяПодсказка" id="219"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоДатчиковСостояниеПросмотра" id="220">
+										<AdditionSource>
+											<Item>ДеревоДатчиков</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоДатчиковСостояниеПросмотраКонтекстноеМеню" id="221"/>
+										<ExtendedTooltip name="ДеревоДатчиковСостояниеПросмотраРасширеннаяПодсказка" id="222"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоДатчиковУправлениеПоиском" id="223">
+										<AdditionSource>
+											<Item>ДеревоДатчиков</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоДатчиковУправлениеПоискомКонтекстноеМеню" id="224"/>
+										<ExtendedTooltip name="ДеревоДатчиковУправлениеПоискомРасширеннаяПодсказка" id="225"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ДеревоДатчиковПоказатель" id="99">
+											<DataPath>ДеревоДатчиков.Показатель</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Показатель</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоДатчиковПоказательКонтекстноеМеню" id="100"/>
+											<ExtendedTooltip name="ДеревоДатчиковПоказательРасширеннаяПодсказка" id="226"/>
+										</InputField>
+										<InputField name="ДеревоДатчиковЗначение" id="101">
+											<DataPath>ДеревоДатчиков.Значение</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Значение</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоДатчиковЗначениеКонтекстноеМеню" id="102"/>
+											<ExtendedTooltip name="ДеревоДатчиковЗначениеРасширеннаяПодсказка" id="227"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</Page>
+						<Page name="ПостроениеМаршрутов" id="49">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Маршруты</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Построение маршрутов</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ПостроениеМаршрутовРасширеннаяПодсказка" id="228"/>
+							<ChildItems>
+								<InputField name="ДатаНачала" id="67">
+									<DataPath>Объект.ДатаНачала</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период  с</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата начала</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Wrap>false</Wrap>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="68"/>
+									<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="229"/>
+									<Events>
+										<Event name="Tuning">ДатаНачалаРегулирование</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаКонецИнтервала" id="72">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа конец интервала</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа конец интервала</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКонецИнтервалаРасширеннаяПодсказка" id="230"/>
+									<ChildItems>
+										<InputField name="ДатаОкончания" id="69">
+											<DataPath>Объект.ДатаОкончания</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>по</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата окончания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Wrap>false</Wrap>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="70"/>
+											<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="231"/>
+											<Events>
+												<Event name="Tuning">ДатаОкончанияРегулирование</Event>
+												<Event name="ChoiceProcessing">ДатаОкончанияОбработкаВыбора</Event>
+											</Events>
+										</InputField>
+										<Button name="УстановитьИнтервал" id="71">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.УстановитьИнтервал</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="УстановитьИнтервалРасширеннаяПодсказка" id="232"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="ДеревоОбъектовМаршруты" id="52">
+									<Representation>Tree</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<ChangeRowSet>false</ChangeRowSet>
+									<Width>33</Width>
+									<HeightInTableRows>10</HeightInTableRows>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<InitialTreeView>ExpandAllLevels</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ДеревоОбъектовМониторинга</DataPath>
+									<RowPictureDataPath>ДеревоОбъектовМониторинга.Картинка</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.ItobИерархическийСписок</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</RowsPicture>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+									</CommandSet>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дерево объектов в режиме отображения маршрутов</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<ContextMenu name="ДеревоОбъектовМаршрутыКонтекстноеМеню" id="53">
+										<ChildItems>
+											<Button name="ОтчетПоДвижениюМаршрутыКонтекст" id="135">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоДвижениюИСтоянкам</CommandName>
+												<ExtendedTooltip name="ОтчетПоДвижениюМаршрутыКонтекстРасширеннаяПодсказка" id="233"/>
+											</Button>
+											<Button name="ОтчетМаршрутПоГеозонамМаршрутыКонтекст" id="136">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетМаршрутПоГеозонам</CommandName>
+												<ExtendedTooltip name="ОтчетМаршрутПоГеозонамМаршрутыКонтекстРасширеннаяПодсказка" id="234"/>
+											</Button>
+											<Button name="ОтчетПоПростоямМаршрутыКонтекст" id="137">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоПростоям</CommandName>
+												<ExtendedTooltip name="ОтчетПоПростоямМаршрутыКонтекстРасширеннаяПодсказка" id="235"/>
+											</Button>
+											<Button name="ОтчетПосещениеГеозонМаршрутыКонтекст" id="138">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПосещениеГеозон</CommandName>
+												<ExtendedTooltip name="ОтчетПосещениеГеозонМаршрутыКонтекстРасширеннаяПодсказка" id="236"/>
+											</Button>
+											<Button name="ОтчетПоТопливуМаршрутыКонтекст" id="139">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоТопливу</CommandName>
+												<ExtendedTooltip name="ОтчетПоТопливуМаршрутыКонтекстРасширеннаяПодсказка" id="237"/>
+											</Button>
+											<Button name="ОтчетПоИмпульснымДатчикамМаршрутыКонтекст" id="181">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОткрытьОтчетПоИмпульснымДатчикам</CommandName>
+												<ExtendedTooltip name="ОтчетПоИмпульснымДатчикамМаршрутыКонтекстРасширеннаяПодсказка" id="238"/>
+											</Button>
+										</ChildItems>
+									</ContextMenu>
+									<AutoCommandBar name="ДеревоОбъектовМаршрутыКоманднаяПанель" id="54">
+										<ChildItems>
+											<Button name="УстановитьФлажкиМаршруты" id="61">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.УстановитьФлажкиДереваОбъектовМониторинга</CommandName>
+												<ExtendedTooltip name="УстановитьФлажкиМаршрутыРасширеннаяПодсказка" id="239"/>
+											</Button>
+											<Button name="СнятьФлажкиМаршруты" id="123">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.СнятьФлажкиДереваОбъектовМониторинга</CommandName>
+												<ExtendedTooltip name="СнятьФлажкиМаршрутыРасширеннаяПодсказка" id="240"/>
+											</Button>
+											<Button name="СортироватьПоВозрастаниюМаршруты" id="124">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Item.ДеревоОбъектовМаршруты.StandardCommand.SortListAsc</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="СортироватьПоВозрастаниюМаршрутыРасширеннаяПодсказка" id="241"/>
+											</Button>
+											<Button name="СортироватьПоУбываниюМаршруты" id="125">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Item.ДеревоОбъектовМаршруты.StandardCommand.SortListDesc</CommandName>
+												<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+												<ExtendedTooltip name="СортироватьПоУбываниюМаршрутыРасширеннаяПодсказка" id="242"/>
+											</Button>
+											<Button name="ОбновитьДеревоМаршруты" id="126">
+												<Type>CommandBarButton</Type>
+												<SkipOnInput>false</SkipOnInput>
+												<CommandName>Form.Command.ОбновитьДеревоОбъектовМаршруты</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.Refresh</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ОбновитьДеревоМаршрутыРасширеннаяПодсказка" id="243"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДеревоОбъектовМаршрутыРасширеннаяПодсказка" id="244"/>
+									<SearchStringAddition name="ДеревоОбъектовМаршрутыСтрокаПоиска" id="245">
+										<AdditionSource>
+											<Item>ДеревоОбъектовМаршруты</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовМаршрутыСтрокаПоискаКонтекстноеМеню" id="246"/>
+										<ExtendedTooltip name="ДеревоОбъектовМаршрутыСтрокаПоискаРасширеннаяПодсказка" id="247"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоОбъектовМаршрутыСостояниеПросмотра" id="248">
+										<AdditionSource>
+											<Item>ДеревоОбъектовМаршруты</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовМаршрутыСостояниеПросмотраКонтекстноеМеню" id="249"/>
+										<ExtendedTooltip name="ДеревоОбъектовМаршрутыСостояниеПросмотраРасширеннаяПодсказка" id="250"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоОбъектовМаршрутыУправлениеПоиском" id="251">
+										<AdditionSource>
+											<Item>ДеревоОбъектовМаршруты</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовМаршрутыУправлениеПоискомКонтекстноеМеню" id="252"/>
+										<ExtendedTooltip name="ДеревоОбъектовМаршрутыУправлениеПоискомРасширеннаяПодсказка" id="253"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ДеревоОбъектовМаршрутыОбъект" id="55">
+											<DataPath>ДеревоОбъектовМониторинга.Объект</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Объект</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>20</Width>
+											<ContextMenu name="ДеревоОбъектовМаршрутыОбъектКонтекстноеМеню" id="56"/>
+											<ExtendedTooltip name="ДеревоОбъектовМаршрутыОбъектРасширеннаяПодсказка" id="254"/>
+										</InputField>
+										<CheckBoxField name="ДеревоОбъектовМаршрутыПометка" id="57">
+											<DataPath>ДеревоОбъектовМониторинга.Пометка</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Подсказка</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<ThreeState>true</ThreeState>
+											<ContextMenu name="ДеревоОбъектовМаршрутыПометкаКонтекстноеМеню" id="58"/>
+											<ExtendedTooltip name="ДеревоОбъектовМаршрутыПометкаРасширеннаяПодсказка" id="255"/>
+											<Events>
+												<Event name="OnChange">ДеревоОбъектовМаршрутыПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ДеревоОбъектовМаршрутыАктуальностьДанных" id="59">
+											<DataPath>ДеревоОбъектовМониторинга.АктуальностьДанных</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Актуальность</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Актуальность данных</v8:content>
+												</v8:item>
+											</ToolTip>
+											<EditMode>EnterOnInput</EditMode>
+											<Width>10</Width>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ='dd/MM HH:mm:ss'</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ='dd/MM HH:mm:ss'</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="ДеревоОбъектовМаршрутыАктуальностьДанныхКонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="ДеревоОбъектовМаршрутыАктуальностьДанныхРасширеннаяПодсказка" id="256"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Button name="КнопкаПоказатьМаршрутыНаКарте" id="62">
+									<Type>UsualButton</Type>
+									<SkipOnInput>false</SkipOnInput>
+									<Height>2</Height>
+									<CommandName>Form.Command.ПоказатьМаршрутыНаКарте</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Показать маршруты на карте =&gt;</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="КнопкаПоказатьМаршрутыНаКартеРасширеннаяПодсказка" id="257"/>
+								</Button>
+								<UsualGroup name="ГруппаПроигрываниеМаршрута" id="174">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проигрывание маршрута</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проигрывание маршрута</v8:content>
+										</v8:item>
+									</ToolTip>
+									<HorizontalStretch>true</HorizontalStretch>
+									<Group>Horizontal</Group>
+									<ExtendedTooltip name="ГруппаПроигрываниеМаршрутаРасширеннаяПодсказка" id="258"/>
+									<ChildItems>
+										<InputField name="КоэффициентУскоренияПроигрываниеМаршрута" id="175">
+											<DataPath>КоэффициентУскоренияПроигрываниеМаршрута</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>k</v8:content>
+												</v8:item>
+											</Title>
+											<Width>9</Width>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="КоэффициентУскоренияПроигрываниеМаршрутаКонтекстноеМеню" id="176"/>
+											<ExtendedTooltip name="КоэффициентУскоренияПроигрываниеМаршрутаРасширеннаяПодсказка" id="259"/>
+										</InputField>
+										<Button name="ПроигратьМаршрут" id="177">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<Height>1</Height>
+											<CommandName>Form.Command.ПроигратьМаршрут</CommandName>
+											<ExtendedTooltip name="ПроигратьМаршрутРасширеннаяПодсказка" id="260"/>
+										</Button>
+										<Button name="ПаузаПроигрыванияМаршрута" id="178">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПаузаПроигрыванияМаршрута</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>П</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ПаузаПроигрыванияМаршрутаРасширеннаяПодсказка" id="261"/>
+										</Button>
+										<Button name="ЗакончитьПроигрываниеМаршрута" id="179">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ЗакончитьПроигрываниеМаршрута</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>С</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="ЗакончитьПроигрываниеМаршрутаРасширеннаяПодсказка" id="262"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="РедакторГеозон" id="50">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Геозоны</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Редактор геозон</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="РедакторГеозонРасширеннаяПодсказка" id="263"/>
+							<ChildItems>
+								<Table name="СписокГеозон" id="73">
+									<Representation>Tree</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<UseAlternationRowColor>true</UseAlternationRowColor>
+									<InitialTreeView>ExpandAllLevels</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>СписокГеозон</DataPath>
+									<RowPictureDataPath>СписокГеозон.DefaultPicture</RowPictureDataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Список геозон</v8:content>
+										</v8:item>
+									</ToolTip>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<AutoRefresh>false</AutoRefresh>
+									<AutoRefreshPeriod>60</AutoRefreshPeriod>
+									<Period>
+										<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+										<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+										<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+									</Period>
+									<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+									<RestoreCurrentRow>false</RestoreCurrentRow>
+									<TopLevelParent xsi:nil="true"/>
+									<ShowRoot>false</ShowRoot>
+									<AllowRootChoice>false</AllowRootChoice>
+									<UpdateOnDataChange>Auto</UpdateOnDataChange>
+									<ContextMenu name="СписокГеозонКонтекстноеМеню" id="74"/>
+									<AutoCommandBar name="СписокГеозонКоманднаяПанель" id="75"/>
+									<ExtendedTooltip name="СписокГеозонРасширеннаяПодсказка" id="264"/>
+									<SearchStringAddition name="СписокГеозонСтрокаПоиска" id="265">
+										<AdditionSource>
+											<Item>СписокГеозон</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокГеозонСтрокаПоискаКонтекстноеМеню" id="266"/>
+										<ExtendedTooltip name="СписокГеозонСтрокаПоискаРасширеннаяПодсказка" id="267"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="СписокГеозонСостояниеПросмотра" id="268">
+										<AdditionSource>
+											<Item>СписокГеозон</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокГеозонСостояниеПросмотраКонтекстноеМеню" id="269"/>
+										<ExtendedTooltip name="СписокГеозонСостояниеПросмотраРасширеннаяПодсказка" id="270"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="СписокГеозонУправлениеПоиском" id="271">
+										<AdditionSource>
+											<Item>СписокГеозон</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="СписокГеозонУправлениеПоискомКонтекстноеМеню" id="272"/>
+										<ExtendedTooltip name="СписокГеозонУправлениеПоискомРасширеннаяПодсказка" id="273"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="OnActivateRow">СписокГеозонПриАктивизацииСтроки</Event>
+									</Events>
+									<ChildItems>
+										<LabelField name="СписокГеозонСсылка" id="78">
+											<DataPath>~СписокГеозон.Ref</DataPath>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Геозона</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ContextMenu name="СписокГеозонСсылкаКонтекстноеМеню" id="79"/>
+											<ExtendedTooltip name="СписокГеозонСсылкаРасширеннаяПодсказка" id="274"/>
+										</LabelField>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="ГруппаКнопкиДействийГеозоны" id="80">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки действий геозоны</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки действий геозоны</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКнопкиДействийГеозоныРасширеннаяПодсказка" id="275"/>
+									<ChildItems>
+										<Button name="КнопкаПринятьИзменения" id="81">
+											<Type>UsualButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.ПринятьИзменения</CommandName>
+											<ExtendedTooltip name="КнопкаПринятьИзмененияРасширеннаяПодсказка" id="276"/>
+										</Button>
+										<Button name="КнопкаОтменитьИзменения" id="82">
+											<Type>UsualButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.ОтменитьИзменения</CommandName>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Отмена</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="КнопкаОтменитьИзмененияРасширеннаяПодсказка" id="277"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</Page>
+						<Page name="РасчетМаршрута" id="51">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расчет маршрута</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Расчет маршрута</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="РасчетМаршрутаРасширеннаяПодсказка" id="278"/>
+							<ChildItems>
+								<InputField name="ТипОптимизацииМаршрута" id="83">
+									<DataPath>СпособОптимизацииМаршрута</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Оптимизация </v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Метод оптимизации маршрута</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Width>12</Width>
+									<Height>1</Height>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ListChoiceMode>true</ListChoiceMode>
+									<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+									<AutoMarkIncomplete>true</AutoMarkIncomplete>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По времени</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Время</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>По расстоянию</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:string">Расстояние</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="ТипОптимизацииМаршрутаКонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ТипОптимизацииМаршрутаРасширеннаяПодсказка" id="279"/>
+								</InputField>
+								<LabelDecoration name="ДекорацияПодсказкаПоРасчетуМаршрута" id="129">
+									<Width>26</Width>
+									<Height>3</Height>
+									<SkipOnInput>false</SkipOnInput>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Удерживая клавишу Ctrl клавиатуры, кликами левой кнопки мыши по карте задайте точки маршрута</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Подсказка</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияПодсказкаПоРасчетуМаршрутаКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="ДекорацияПодсказкаПоРасчетуМаршрутаРасширеннаяПодсказка" id="280"/>
+								</LabelDecoration>
+								<Button name="КнопкаОчиститьВсеТочкиРассчитанногоМаршрута" id="131">
+									<Type>UsualButton</Type>
+									<Representation>PictureAndText</Representation>
+									<SkipOnInput>false</SkipOnInput>
+									<CommandName>Form.Command.ОчиститьВсеТочкиРассчитанногоМаршрута</CommandName>
+									<ExtendedTooltip name="КнопкаОчиститьВсеТочкиРассчитанногоМаршрутаРасширеннаяПодсказка" id="281"/>
+								</Button>
+								<LabelDecoration name="ДекорацияИнформационнаяНадписьРасчетаМаршрута" id="132">
+									<SkipOnInput>false</SkipOnInput>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Информационная надпись</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="ДекорацияИнформационнаяНадписьРасчетаМаршрутаКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="ДекорацияИнформационнаяНадписьРасчетаМаршрутаРасширеннаяПодсказка" id="282"/>
+								</LabelDecoration>
+							</ChildItems>
+						</Page>
+						<Page name="ЗаправкиИСливы" id="149">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заправки и сливы</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Заправки и сливы</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ExtendedTooltip name="ЗаправкиИСливыРасширеннаяПодсказка" id="283"/>
+							<ChildItems>
+								<InputField name="ДатаНачалаТопливо" id="150">
+									<DataPath>Объект.ДатаНачала</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период  с</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дата начала</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Wrap>false</Wrap>
+									<SpinButton>true</SpinButton>
+									<ContextMenu name="ДатаНачалаТопливоКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="ДатаНачалаТопливоРасширеннаяПодсказка" id="284"/>
+									<Events>
+										<Event name="Tuning">ДатаНачалаРегулирование</Event>
+									</Events>
+								</InputField>
+								<UsualGroup name="ГруппаКонецИнтервалаТопливо" id="152">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа конец интервала</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа конец интервала</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Horizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКонецИнтервалаТопливоРасширеннаяПодсказка" id="285"/>
+									<ChildItems>
+										<InputField name="ДатаОкончанияТопливо" id="153">
+											<DataPath>Объект.ДатаОкончания</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>по</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Дата окончания</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Wrap>false</Wrap>
+											<SpinButton>true</SpinButton>
+											<ContextMenu name="ДатаОкончанияТопливоКонтекстноеМеню" id="154"/>
+											<ExtendedTooltip name="ДатаОкончанияТопливоРасширеннаяПодсказка" id="286"/>
+											<Events>
+												<Event name="Tuning">ДатаОкончанияРегулирование</Event>
+												<Event name="ChoiceProcessing">ДатаОкончанияОбработкаВыбора</Event>
+											</Events>
+										</InputField>
+										<Button name="УстановитьИнтервалТопливо" id="155">
+											<Type>UsualButton</Type>
+											<Representation>Picture</Representation>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.УстановитьИнтервал</CommandName>
+											<Picture>
+												<xr:Ref>StdPicture.SetDateInterval</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="УстановитьИнтервалТопливоРасширеннаяПодсказка" id="287"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<Table name="ДеревоОбъектовТопливо" id="156">
+									<Representation>Tree</Representation>
+									<CommandBarLocation>Top</CommandBarLocation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<InitialTreeView>ExpandAllLevels</InitialTreeView>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ДеревоОбъектовМониторинга</DataPath>
+									<RowPictureDataPath>ДеревоОбъектовМониторинга.Картинка</RowPictureDataPath>
+									<RowsPicture>
+										<xr:Ref>CommonPicture.ItobИерархическийСписок</xr:Ref>
+										<xr:LoadTransparent>false</xr:LoadTransparent>
+									</RowsPicture>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>CopyToClipboard</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>HierarchicalList</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>SelectAll</ExcludedCommand>
+									</CommandSet>
+									<SearchStringLocation>None</SearchStringLocation>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<SearchControlLocation>None</SearchControlLocation>
+									<ContextMenu name="ДеревоОбъектовТопливоКонтекстноеМеню" id="157"/>
+									<AutoCommandBar name="ДеревоОбъектовТопливоКоманднаяПанель" id="158">
+										<Autofill>false</Autofill>
+										<ChildItems>
+											<Button name="ДеревоОбъектовТопливоКнопкаСортироватьСписокПоВозрастанию" id="170">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ДеревоОбъектовТопливо.StandardCommand.SortListAsc</CommandName>
+												<ExtendedTooltip name="ДеревоОбъектовТопливоКнопкаСортироватьСписокПоВозрастаниюРасширеннаяПодсказка" id="288"/>
+											</Button>
+											<Button name="ДеревоОбъектовТопливоКнопкаСортироватьСписокПоУбыванию" id="171">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Item.ДеревоОбъектовТопливо.StandardCommand.SortListDesc</CommandName>
+												<ExtendedTooltip name="ДеревоОбъектовТопливоКнопкаСортироватьСписокПоУбываниюРасширеннаяПодсказка" id="289"/>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДеревоОбъектовТопливоРасширеннаяПодсказка" id="290"/>
+									<SearchStringAddition name="ДеревоОбъектовТопливоСтрокаПоиска" id="291">
+										<AdditionSource>
+											<Item>ДеревоОбъектовТопливо</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовТопливоСтрокаПоискаКонтекстноеМеню" id="292"/>
+										<ExtendedTooltip name="ДеревоОбъектовТопливоСтрокаПоискаРасширеннаяПодсказка" id="293"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоОбъектовТопливоСостояниеПросмотра" id="294">
+										<AdditionSource>
+											<Item>ДеревоОбъектовТопливо</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовТопливоСостояниеПросмотраКонтекстноеМеню" id="295"/>
+										<ExtendedTooltip name="ДеревоОбъектовТопливоСостояниеПросмотраРасширеннаяПодсказка" id="296"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоОбъектовТопливоУправлениеПоиском" id="297">
+										<AdditionSource>
+											<Item>ДеревоОбъектовТопливо</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоОбъектовТопливоУправлениеПоискомКонтекстноеМеню" id="298"/>
+										<ExtendedTooltip name="ДеревоОбъектовТопливоУправлениеПоискомРасширеннаяПодсказка" id="299"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ДеревоОбъектовТопливоОбъект" id="159">
+											<DataPath>ДеревоОбъектовМониторинга.Объект</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоОбъектовТопливоОбъектКонтекстноеМеню" id="160"/>
+											<ExtendedTooltip name="ДеревоОбъектовТопливоОбъектРасширеннаяПодсказка" id="300"/>
+										</InputField>
+										<CheckBoxField name="ДеревоОбъектовТопливоПометка" id="163">
+											<DataPath>ДеревоОбъектовМониторинга.Пометка</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДеревоОбъектовТопливоПометкаКонтекстноеМеню" id="164"/>
+											<ExtendedTooltip name="ДеревоОбъектовТопливоПометкаРасширеннаяПодсказка" id="301"/>
+											<Events>
+												<Event name="OnChange">ДеревоОбъектовТопливоПометкаПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+										<InputField name="ДеревоОбъектовТопливоАктуальностьДанных" id="167">
+											<DataPath>ДеревоОбъектовМониторинга.АктуальностьДанных</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоОбъектовТопливоАктуальностьДанныхКонтекстноеМеню" id="168"/>
+											<ExtendedTooltip name="ДеревоОбъектовТопливоАктуальностьДанныхРасширеннаяПодсказка" id="302"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+								<Button name="ПоказатьЗаправкиИСливы" id="169">
+									<Type>UsualButton</Type>
+									<Height>2</Height>
+									<CommandName>Form.Command.ПоказатьЗаправкиИСливы</CommandName>
+									<ExtendedTooltip name="ПоказатьЗаправкиИСливыРасширеннаяПодсказка" id="303"/>
+								</Button>
+							</ChildItems>
+						</Page>
+					</ChildItems>
+				</Pages>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаГеоданные" id="142">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа географические данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Географические данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаГеоданныеРасширеннаяПодсказка" id="304"/>
+			<ChildItems>
+				<Page name="ГруппаКарта" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Карта</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Карта</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<ExtendedTooltip name="ГруппаКартаРасширеннаяПодсказка" id="305"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаКоманднойПанели" id="117">
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа командной панели</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКоманднойПанелиРасширеннаяПодсказка" id="306"/>
+							<ChildItems>
+								<CommandBar name="ГруппаКнопкиКоманднойПанелиКарты" id="15">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки командной панели карты</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа кнопки командной панели карты</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаКнопкиКоманднойПанелиКартыРасширеннаяПодсказка" id="307"/>
+									<ChildItems>
+										<Popup name="ПодменюВыборКарты" id="140">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текущее местоположение</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Текущее местоположение</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Picture>
+												<xr:Ref>StdPicture.GeographicalSchema</xr:Ref>
+												<xr:LoadTransparent>true</xr:LoadTransparent>
+											</Picture>
+											<ExtendedTooltip name="ПодменюВыборКартыРасширеннаяПодсказка" id="308"/>
+										</Popup>
+										<Button name="КнопкаАвтомасштабКарты" id="141">
+											<Type>CommandBarButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.АвтомасштабКарты</CommandName>
+											<ExtendedTooltip name="КнопкаАвтомасштабКартыРасширеннаяПодсказка" id="309"/>
+										</Button>
+										<Button name="Увеличить" id="16">
+											<Type>CommandBarButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.УвеличитьКарту</CommandName>
+											<ExtendedTooltip name="УвеличитьРасширеннаяПодсказка" id="310"/>
+										</Button>
+										<Button name="Уменьшить" id="17">
+											<Type>CommandBarButton</Type>
+											<SkipOnInput>false</SkipOnInput>
+											<CommandName>Form.Command.УменьшитьКарту</CommandName>
+											<ExtendedTooltip name="УменьшитьРасширеннаяПодсказка" id="311"/>
+										</Button>
+									</ChildItems>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<HTMLDocumentField name="ПолеHTML" id="10">
+							<DataPath>ПолеHTML</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Карта</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Width>70</Width>
+							<ContextMenu name="ПолеHTMLКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ПолеHTMLРасширеннаяПодсказка" id="312"/>
+							<Events>
+								<Event name="DocumentComplete">ПолеHTMLДокументСформирован</Event>
+								<Event name="OnClick">ПолеHTMLПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаОшибкиОтображенияКарты" id="143">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ошибки отображения карты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ошибки отображения карты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаОшибкиОтображенияКартыРасширеннаяПодсказка" id="313"/>
+					<ChildItems>
+						<LabelDecoration name="НадписьОшибкаОтображенияКарты" id="144">
+							<SkipOnInput>false</SkipOnInput>
+							<TextColor>style:FieldSelectionBackColor</TextColor>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Ошибка отображения карты!</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НадписьОшибкаОтображенияКартыКонтекстноеМеню" id="145"/>
+							<ExtendedTooltip name="НадписьОшибкаОтображенияКартыРасширеннаяПодсказка" id="314"/>
+						</LabelDecoration>
+						<Button name="ЗапуститьМастерНастройкиСлужбыCsmSvc" id="146">
+							<Type>UsualButton</Type>
+							<Representation>PictureAndText</Representation>
+							<SkipOnInput>false</SkipOnInput>
+							<CommandName>Form.Command.ЗапуститьМастерНастройкиСлужбыCsmSvc</CommandName>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Запустить мастер настройки службы CsmSvc</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗапуститьМастерНастройкиСлужбыCsmSvcРасширеннаяПодсказка" id="315"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ItobРабочееМестоДиспетчера</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПолеHTML" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоОбъектовМониторинга" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево объектов мониторинга</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЭтоГруппа" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Это группа</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="АктуальностьДанных" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Актуальность данных</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Широта" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Широта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>9</v8:Digits>
+							<v8:FractionDigits>6</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Долгота" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Долгота</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>9</v8:Digits>
+							<v8:FractionDigits>6</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Терминал" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Терминал</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ItobТерминалы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Скорость" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Скорость</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Направление" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Направление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="КрайниеТочки" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Крайние точки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПериодUTC0" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Период UTC0</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦветоваяСхема" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цветовая схема</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИконкаНаКарте" id="14">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Иконка на карте</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокГеозон" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список геозон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникItobГеографическиеЗоны.Ссылка	
+ИЗ
+	Справочник.ItobГеографическиеЗоны КАК СправочникItobГеографическиеЗоны</QueryText>
+				<MainTable>1:11c85c43-1ae0-4c5e-a6c8-69cb4fdcdb6d</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ТекущийРежим" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий режим</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоДатчиков" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево датчиков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Показатель" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показатель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Датчик" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Датчик</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ItobДатчики</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Объект" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="Терминал" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Терминал</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ItobТерминалы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипДатчика" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип датчика</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ItobТипыДатчиков</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокСобытий" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список событий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Событие" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Событие</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Комментарий" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Комментарий</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Дата" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="5">
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СпособОптимизацииМаршрута" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Способ оптимизации маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИнформацияПоРасчетуМаршрута" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Информация по расчету маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущееМестоположение" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущее местоположение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ItobМестоположенияПоУмолчанию</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийМасштаб" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий масштаб</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяШирота" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая широта</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>9</v8:Digits>
+					<v8:FractionDigits>6</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяДолгота" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая долгота</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>9</v8:Digits>
+					<v8:FractionDigits>6</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВебСсылкаСервер" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Веб ссылка сервер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КартаДоступна" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Карта доступна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимРаботы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим работы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КоэффициентУскоренияПроигрываниеМаршрута" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Коэффициент ускорения проигрывание маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФлагПаузаПроигрыванияМаршрута" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Флаг пауза проигрывания маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="УвеличитьКарту" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Увеличить карту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Увеличить карту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ItobУвеличить</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УвеличитьКарту</Action>
+		</Command>
+		<Command name="УменьшитьКарту" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшить карту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Уменьшить карту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ItobУменьшить</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>УменьшитьКарту</Action>
+		</Command>
+		<Command name="РежимOnLineСлежения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим on line слежения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим слежения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РежимOnLineСлежения</Action>
+		</Command>
+		<Command name="ПоказатьМаршрутыНаКарте" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать маршруты на карте</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать маршруты на карте</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьМаршрутыНаКарте</Action>
+		</Command>
+		<Command name="УстановитьИнтервал" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить интервал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьИнтервал</Action>
+		</Command>
+		<Command name="ПринятьИзменения" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Принять изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПринятьИзменения</Action>
+		</Command>
+		<Command name="ОтменитьИзменения" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменить изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтменитьИзменения</Action>
+		</Command>
+		<Command name="РежимПостроенияМаршрутов" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим построения маршрутов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим построения маршрутов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РежимПостроенияМаршрутов</Action>
+		</Command>
+		<Command name="РежимРедактораГеозон" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим редактора геозон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим редактора геозон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РежимРедактораГеозон</Action>
+		</Command>
+		<Command name="РежимРасчетаМаршрута" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим расчета маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим расчета маршрута</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РежимРасчетаМаршрута</Action>
+		</Command>
+		<Command name="УстановитьФлажкиДереваОбъектовМониторинга" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УстановитьФлажкиДереваОбъектовМониторинга</Action>
+		</Command>
+		<Command name="СнятьФлажкиДереваОбъектовМониторинга" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять флажки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СнятьФлажкиДереваОбъектовМониторинга</Action>
+		</Command>
+		<Command name="ОбновитьДеревоОбъектовМониторинга" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьДеревоОбъектовМониторинга</Action>
+		</Command>
+		<Command name="ОткрытьОтчетПоДвижениюИСтоянкам" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по движению и стоянкам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет по движению и стоянкам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчетПоДвижениюИСтоянкам</Action>
+		</Command>
+		<Command name="ОткрытьОтчетМаршрутПоГеозонам" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Маршрут по географическим зонам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет маршрут по геозонам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчетМаршрутПоГеозонам</Action>
+		</Command>
+		<Command name="ОткрытьОтчетПоПростоям" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по простоям</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет по простоям при заведенном двигателе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчетПоПростоям</Action>
+		</Command>
+		<Command name="ОткрытьОтчетПоТопливу" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по топливу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет по топливу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчетПоТопливу</Action>
+		</Command>
+		<Command name="ОткрытьОтчетПосещениеГеозон" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Посещение географических зон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет по посещению географических зон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчетПосещениеГеозон</Action>
+		</Command>
+		<Command name="ОбновитьДеревоОбъектовМаршруты" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьДеревоОбъектовМаршруты</Action>
+		</Command>
+		<Command name="ОчиститьВсеТочкиРассчитанногоМаршрута" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить все точки маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить все точки рассчитанного маршрута</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОчиститьВсеТочкиРассчитанногоМаршрута</Action>
+		</Command>
+		<Command name="ОткрытьОтчетПоДатчику" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по датчику</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет по датчику</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчетПоДатчику</Action>
+		</Command>
+		<Command name="АвтомасштабКарты" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автомасштаб карты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Автомасштаб карты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ItobАвтомасштаб</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>АвтомасштабКарты</Action>
+		</Command>
+		<Command name="ЗапуститьМастерНастройкиСлужбыCsmSvc" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить мастер настройки службы CsmSvc</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить мастер настройки службы CsmSvc</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ListSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗапуститьМастерНастройкиСлужбыCsmSvc</Action>
+		</Command>
+		<Command name="ПоказатьЗаправкиИСливы" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать заправки и сливы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать заправки и сливы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьЗаправкиИСливы</Action>
+		</Command>
+		<Command name="ПроигратьМаршрут" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проиграть маршрут</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проиграть маршрут</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ItobПроигрываниеСтарт</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПроигратьМаршрут</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ПаузаПроигрыванияМаршрута" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пауза проигрывания маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пауза проигрывания маршрута</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ItobПроигрываниеПауза</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ПаузаПроигрыванияМаршрута</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ЗакончитьПроигрываниеМаршрута" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закончить проигрывание маршрута</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закончить проигрывание маршрута</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ItobПроигрываниеСтоп</xr:Ref>
+				<xr:LoadTransparent>false</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗакончитьПроигрываниеМаршрута</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ОткрытьОтчетПоИмпульснымДатчикам" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет по импульсным датчикам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть отчет по импульсным датчикам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Report</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОткрытьОтчетПоИмпульснымДатчикам</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Enum uuid="2797332f-8eff-4b09-955e-41f67681d7e5">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.уатУсловияФильтровЭлектронныхПисем" category="Ref">
+				<xr:TypeId>a1ef4ed0-1f8d-43dc-a894-04c6a96ff833</xr:TypeId>
+				<xr:ValueId>cb0f15e2-63fa-4471-91e7-a06d68457554</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.уатУсловияФильтровЭлектронныхПисем" category="Manager">
+				<xr:TypeId>c9b4958b-13ab-4014-b4d5-d2e4062b3315</xr:TypeId>
+				<xr:ValueId>d686b3db-07e6-49f8-882d-aea0557df107</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.уатУсловияФильтровЭлектронныхПисем" category="List">
+				<xr:TypeId>2eade191-e2b8-48b8-8623-a1bf0d9d97f5</xr:TypeId>
+				<xr:ValueId>cce96d56-ff8c-418a-af09-c3c3fdc22186</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>уатУсловияФильтровЭлектронныхПисем</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия фильтров электронных писем (уат)</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Условия фильтров электронных писем (уат)</v8:content>
+				</v8:item>
+			</Explanation>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="f67057bf-df31-4eff-b1a6-9b4aded910b8">
+				<Properties>
+					<Name>ПолеОтправительСодержит</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле "Отправитель" содержит ...</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fc7e1f2b-4158-4a34-b7c1-ca096c3c398e">
+				<Properties>
+					<Name>ТемаПисьмаСодержит</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тема письма содержит ...</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b6552978-7da2-4984-9cc9-76cc59d586f1">
+				<Properties>
+					<Name>ТекстПисьмаСодержит</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст письма содержит ...</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="961f204a-d3c4-430e-92a6-718fbbe6b9c8">
+				<Properties>
+					<Name>ПолеКомуСодержит</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле "Кому" содержит ...</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="55f04fec-42d6-4a63-b114-f82cbd2720fc">
+				<Properties>
+					<Name>ПолеКопииСодержит</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поле "Копии" содержит ...</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Разбивка строки</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<Table name="фТаблицаРазбивки" id="1">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>фТаблицаРазбиения</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="фТаблицаРазбивкиКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="фТаблицаРазбивкиКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="фТаблицаРазбивкиВставкаПереноса" id="29">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ВставкаПереноса</CommandName>
+						<BackColor>web:Moccasin</BackColor>
+						<Picture>
+							<xr:Ref>CommonPicture.уатЗаказПоставщику</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<ExtendedTooltip name="фТаблицаРазбивкиВставкаПереносаРасширеннаяПодсказка" id="30"/>
+					</Button>
+					<Button name="фТаблицаРазбивкиПереносВДругойДокумент" id="34">
+						<Type>CommandBarButton</Type>
+						<Representation>PictureAndText</Representation>
+						<CommandName>Form.Command.ПереносВДругойДокумент</CommandName>
+						<Picture>
+							<xr:Ref>StdPicture.DataCompositionSelection</xr:Ref>
+							<xr:LoadTransparent>true</xr:LoadTransparent>
+						</Picture>
+						<LocationInCommandBar>InCommandBarAndInAdditionalSubmenu</LocationInCommandBar>
+						<ExtendedTooltip name="фТаблицаРазбивкиПереносВДругойДокументРасширеннаяПодсказка" id="35"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="фТаблицаРазбивкиРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="фТаблицаРазбивкиСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>фТаблицаРазбивки</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="фТаблицаРазбивкиСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="фТаблицаРазбивкиСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="фТаблицаРазбивкиСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>фТаблицаРазбивки</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="фТаблицаРазбивкиСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="фТаблицаРазбивкиСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="фТаблицаРазбивкиУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>фТаблицаРазбивки</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="фТаблицаРазбивкиУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="фТаблицаРазбивкиУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnStartEdit">фТаблицаРазбивкиПриНачалеРедактирования</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="фТаблицаРазбивкиИдентификаторСтрокиЗаявки" id="14">
+					<DataPath>фТаблицаРазбиения.ИдентификаторСтрокиЗаявки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="фТаблицаРазбивкиИдентификаторСтрокиЗаявкиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="фТаблицаРазбивкиИдентификаторСтрокиЗаявкиРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="фТаблицаРазбивкиЦехМаршрут" id="17">
+					<DataPath>фТаблицаРазбиения.ЦехМаршрут</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">фКонтрагент</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="фТаблицаРазбивкиЦехМаршрутКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="фТаблицаРазбивкиЦехМаршрутРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="фТаблицаРазбивкиВремяПодачи" id="20">
+					<DataPath>фТаблицаРазбиения.ВремяПодачи</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="фТаблицаРазбивкиВремяПодачиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="фТаблицаРазбивкиВремяПодачиРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="фТаблицаРазбивкиВремяВозврата" id="23">
+					<DataPath>фТаблицаРазбиения.ВремяВозврата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="фТаблицаРазбивкиВремяВозвратаКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="фТаблицаРазбивкиВремяВозвратаРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="фТаблицаРазбивкиМестоРаботы" id="31">
+					<DataPath>фТаблицаРазбиения.МестоРаботы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="фТаблицаРазбивкиМестоРаботыКонтекстноеМеню" id="32"/>
+					<ExtendedTooltip name="фТаблицаРазбивкиМестоРаботыРасширеннаяПодсказка" id="33"/>
+				</InputField>
+				<InputField name="фТаблицаРазбивкиПозицияПП" id="26">
+					<DataPath>фТаблицаРазбиения.ПозицияПП</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="фТаблицаРазбивкиПозицияППКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="фТаблицаРазбивкиПозицияППРасширеннаяПодсказка" id="28"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="фТаблицаРазбиения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф таблица разбиения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИдентификаторСтрокиЗаявки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Идентификатор строки заявки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>36</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦехМаршрут" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цех маршрут</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.уатМаршруты</v8:Type>
+						<v8:Type>cfg:CatalogRef.ЦехаКонтрагента</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВремяПодачи" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время подачи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВремяВозврата" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Время подачи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Time</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПозицияПП" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Позиция ПП</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ПозицияПроизводсвеннойПрограммы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="МестоРаботы" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Место работы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.юкМестаРаботы</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="фКонтрагент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф контрагент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фСтруктураПереноса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф структура переноса</v8:content>
+				</v8:item>
+			</Title>
+			<Type/>
+		</Attribute>
+		<Attribute name="фПереносВДругойДокумент" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф перенос в другой документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВставкаПереноса" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставка переноса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставка переноса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставкаПереноса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПереносВДругойДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенос в другой документ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенос в другой документ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПереносВДругойДокумент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

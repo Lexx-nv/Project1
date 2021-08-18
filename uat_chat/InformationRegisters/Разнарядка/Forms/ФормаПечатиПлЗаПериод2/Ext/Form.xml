@@ -1,0 +1,966 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="Группа2" id="9">
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="10"/>
+			<ChildItems>
+				<UsualGroup name="Группа4" id="13">
+					<HorizontalStretch>false</HorizontalStretch>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="14"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="11">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="12"/>
+							<ChildItems>
+								<InputField name="фОрганизация" id="15">
+									<DataPath>фОрганизация</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Организация</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<ContextMenu name="фОрганизацияКонтекстноеМеню" id="16"/>
+									<ExtendedTooltip name="фОрганизацияРасширеннаяПодсказка" id="17"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа1" id="7">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="8"/>
+							<ChildItems>
+								<InputField name="фДатаНачала" id="1">
+									<DataPath>фДатаНачала</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>с</v8:content>
+										</v8:item>
+									</Title>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="фДатаНачалаКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="фДатаНачалаРасширеннаяПодсказка" id="3"/>
+									<Events>
+										<Event name="OnChange">ОтобратьВыписанныеПутевыеЛистыЗаПериод</Event>
+									</Events>
+								</InputField>
+								<InputField name="фДатаОкончания" id="4">
+									<DataPath>фДатаОкончания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=dd.MM.yyyy</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="фДатаОкончанияКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="фДатаОкончанияРасширеннаяПодсказка" id="6"/>
+									<Events>
+										<Event name="OnChange">ОтобратьВыписанныеПутевыеЛистыЗаПериод</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа6" id="45">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="46"/>
+							<ChildItems>
+								<InputField name="фТС" id="42">
+									<DataPath>фТС</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ТС</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="фТСКонтекстноеМеню" id="43"/>
+									<ExtendedTooltip name="фТСРасширеннаяПодсказка" id="44"/>
+									<Events>
+										<Event name="OnChange">фТСПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа7" id="47">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="48"/>
+							<ChildItems>
+								<InputField name="фВремяВыезда" id="51">
+									<DataPath>фВремяВыезда</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Выезд</v8:content>
+										</v8:item>
+									</Title>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="фВремяВыездаКонтекстноеМеню" id="52"/>
+									<ExtendedTooltip name="фВремяВыездаРасширеннаяПодсказка" id="53"/>
+								</InputField>
+								<InputField name="фВремяВозврата" id="54">
+									<DataPath>фВремяВозврата</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Возврат</v8:content>
+										</v8:item>
+									</Title>
+									<EditFormat>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>ДФ=ЧЧ:мм</v8:content>
+										</v8:item>
+									</EditFormat>
+									<ContextMenu name="фВремяВозвратаКонтекстноеМеню" id="55"/>
+									<ExtendedTooltip name="фВремяВозвратаРасширеннаяПодсказка" id="56"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа8" id="49">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="50"/>
+							<ChildItems>
+								<InputField name="фВодитель" id="57">
+									<DataPath>фВодитель</DataPath>
+									<ContextMenu name="фВодительКонтекстноеМеню" id="58"/>
+									<ExtendedTooltip name="фВодительРасширеннаяПодсказка" id="59"/>
+								</InputField>
+								<InputField name="фВодитель2" id="60">
+									<DataPath>фВодитель2</DataPath>
+									<ContextMenu name="фВодитель2КонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="фВодитель2РасширеннаяПодсказка" id="62"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа9" id="63">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="64"/>
+							<ChildItems>
+								<InputField name="фПрицеп" id="71">
+									<DataPath>фПрицеп</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прицеп</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="фПрицепКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="фПрицепРасширеннаяПодсказка" id="73"/>
+								</InputField>
+								<InputField name="фЗаказчик" id="74">
+									<DataPath>фЗаказчик</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Заказчик</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="фЗаказчикКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="фЗаказчикРасширеннаяПодсказка" id="76"/>
+								</InputField>
+								<InputField name="фЦех" id="77">
+									<DataPath>фЦех</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Цех</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="фЦехКонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="фЦехРасширеннаяПодсказка" id="79"/>
+								</InputField>
+								<InputField name="фПозицияПП" id="80">
+									<DataPath>фПозицияПП</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Позиция ПП</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="фПозицияППКонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="фПозицияППРасширеннаяПодсказка" id="82"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа10" id="65">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа10РасширеннаяПодсказка" id="66"/>
+						</UsualGroup>
+						<UsualGroup name="Группа11" id="67">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа11РасширеннаяПодсказка" id="68"/>
+							<ChildItems>
+								<InputField name="фВрач" id="86">
+									<DataPath>фВрач</DataPath>
+									<ContextMenu name="фВрачКонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="фВрачРасширеннаяПодсказка" id="88"/>
+								</InputField>
+								<InputField name="фДиспетчер" id="89">
+									<DataPath>фДиспетчер</DataPath>
+									<ContextMenu name="фДиспетчерКонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="фДиспетчерРасширеннаяПодсказка" id="91"/>
+								</InputField>
+								<InputField name="фМеханик" id="95">
+									<DataPath>фМеханик</DataPath>
+									<ContextMenu name="фМеханикКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="фМеханикРасширеннаяПодсказка" id="97"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа12" id="69">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа12РасширеннаяПодсказка" id="70"/>
+							<ChildItems>
+								<InputField name="фДниНедели" id="98">
+									<DataPath>фДниНедели</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Дни недели</v8:content>
+										</v8:item>
+									</Title>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>5-дневка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">0</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>6-дневка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>7-дневка</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="фДниНеделиКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="фДниНеделиРасширеннаяПодсказка" id="100"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="фПечатьСразуНаПринтер" id="156">
+							<DataPath>фПечатьСразуНаПринтер</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Печать сразу на принтер</v8:content>
+								</v8:item>
+							</Title>
+							<TitleFont ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="фПечатьСразуНаПринтерКонтекстноеМеню" id="157"/>
+							<ExtendedTooltip name="фПечатьСразуНаПринтерРасширеннаяПодсказка" id="158"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа5" id="18">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="19"/>
+					<ChildItems>
+						<UsualGroup name="Группа14" id="144">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа14РасширеннаяПодсказка" id="145"/>
+							<ChildItems>
+								<Button name="УстановитьПометкиТаблицыПЛ" id="146">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.УстановитьПометкиТаблицыПЛ</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.CheckAll</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="УстановитьПометкиТаблицыПЛРасширеннаяПодсказка" id="147"/>
+								</Button>
+								<Button name="СнятьПометкиТаблицыПЛ" id="148">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<CommandName>Form.Command.СнятьПометкиТаблицыПЛ</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<ExtendedTooltip name="СнятьПометкиТаблицыПЛРасширеннаяПодсказка" id="149"/>
+								</Button>
+								<LabelDecoration name="Декорация1" id="153">
+									<HorizontalStretch>true</HorizontalStretch>
+									<ContextMenu name="Декорация1КонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="155"/>
+								</LabelDecoration>
+								<CheckBoxField name="фРазрешитьСовпадениеВремени" id="150">
+									<DataPath>фРазрешитьСовпадениеВремени</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Разрешить запись второго ПЛ с совпадающим временем</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Left</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="фРазрешитьСовпадениеВремениКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="фРазрешитьСовпадениеВремениРасширеннаяПодсказка" id="152"/>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="фТаблицаПутевыхЛистовПериода" id="20">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>фТаблицаПутевыхЛистовПериода</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="фТаблицаПутевыхЛистовПериодаКонтекстноеМеню" id="21"/>
+							<AutoCommandBar name="фТаблицаПутевыхЛистовПериодаКоманднаяПанель" id="22">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаРасширеннаяПодсказка" id="23"/>
+							<SearchStringAddition name="фТаблицаПутевыхЛистовПериодаСтрокаПоиска" id="24">
+								<AdditionSource>
+									<Item>фТаблицаПутевыхЛистовПериода</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаПутевыхЛистовПериодаСтрокаПоискаКонтекстноеМеню" id="25"/>
+								<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаСтрокаПоискаРасширеннаяПодсказка" id="26"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="фТаблицаПутевыхЛистовПериодаСостояниеПросмотра" id="27">
+								<AdditionSource>
+									<Item>фТаблицаПутевыхЛистовПериода</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаПутевыхЛистовПериодаСостояниеПросмотраКонтекстноеМеню" id="28"/>
+								<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаСостояниеПросмотраРасширеннаяПодсказка" id="29"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="фТаблицаПутевыхЛистовПериодаУправлениеПоиском" id="30">
+								<AdditionSource>
+									<Item>фТаблицаПутевыхЛистовПериода</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="фТаблицаПутевыхЛистовПериодаУправлениеПоискомКонтекстноеМеню" id="31"/>
+								<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаУправлениеПоискомРасширеннаяПодсказка" id="32"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<ColumnGroup name="фТаблицаПутевыхЛистовПериодаГруппа1" id="122">
+									<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаГруппа1РасширеннаяПодсказка" id="123"/>
+									<ChildItems>
+										<ColumnGroup name="фТаблицаПутевыхЛистовПериодаГруппа4" id="134">
+											<Group>Horizontal</Group>
+											<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаГруппа4РасширеннаяПодсказка" id="135"/>
+											<ChildItems>
+												<CheckBoxField name="фТаблицаПутевыхЛистовПериодаВыбран" id="131">
+													<DataPath>фТаблицаПутевыхЛистовПериода.Выбрано</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="фТаблицаПутевыхЛистовПериодаВыбранКонтекстноеМеню" id="132"/>
+													<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаВыбранРасширеннаяПодсказка" id="133"/>
+												</CheckBoxField>
+												<InputField name="фТаблицаПутевыхЛистовПериодаПутевойЛист" id="101">
+													<DataPath>фТаблицаПутевыхЛистовПериода.ПутевойЛист</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="фТаблицаПутевыхЛистовПериодаПутевойЛистКонтекстноеМеню" id="102"/>
+													<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаПутевойЛистРасширеннаяПодсказка" id="103"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="фТаблицаПутевыхЛистовПериодаВодитель" id="119">
+											<DataPath>фТаблицаПутевыхЛистовПериода.Водитель</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="фТаблицаПутевыхЛистовПериодаВодительКонтекстноеМеню" id="120"/>
+											<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаВодительРасширеннаяПодсказка" id="121"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="фТаблицаПутевыхЛистовПериодаГруппа2" id="124">
+									<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаГруппа2РасширеннаяПодсказка" id="125"/>
+									<ChildItems>
+										<InputField name="фТаблицаПутевыхЛистовПериодаДатаВыезда" id="104">
+											<DataPath>фТаблицаПутевыхЛистовПериода.ДатаВыезда</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=dd.MM.yyyy</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="фТаблицаПутевыхЛистовПериодаДатаВыездаКонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаДатаВыездаРасширеннаяПодсказка" id="106"/>
+										</InputField>
+										<InputField name="фТаблицаПутевыхЛистовПериодаДатаВыезда1" id="116">
+											<DataPath>фТаблицаПутевыхЛистовПериода.ДатаВыезда</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Время выезда</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<Format>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=ЧЧ:мм</v8:content>
+												</v8:item>
+											</Format>
+											<EditFormat>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>ДФ=ЧЧ:мм</v8:content>
+												</v8:item>
+											</EditFormat>
+											<ContextMenu name="фТаблицаПутевыхЛистовПериодаДатаВыезда1КонтекстноеМеню" id="117"/>
+											<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаДатаВыезда1РасширеннаяПодсказка" id="118"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="фТаблицаПутевыхЛистовПериодаГруппа3" id="126">
+									<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаГруппа3РасширеннаяПодсказка" id="127"/>
+									<ChildItems>
+										<InputField name="фТаблицаПутевыхЛистовПериодаДатаВозвращения" id="107">
+											<DataPath>фТаблицаПутевыхЛистовПериода.ДатаВозвращения</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="фТаблицаПутевыхЛистовПериодаДатаВозвращенияКонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаДатаВозвращенияРасширеннаяПодсказка" id="109"/>
+										</InputField>
+										<InputField name="фТаблицаПутевыхЛистовПериодаКонтрагент" id="110">
+											<DataPath>фТаблицаПутевыхЛистовПериода.Контрагент</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="фТаблицаПутевыхЛистовПериодаКонтрагентКонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаКонтрагентРасширеннаяПодсказка" id="112"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="фТаблицаПутевыхЛистовПериодаЦехКонтрагента" id="128">
+									<DataPath>фТаблицаПутевыхЛистовПериода.ЦехКонтрагента</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="фТаблицаПутевыхЛистовПериодаЦехКонтрагентаКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="фТаблицаПутевыхЛистовПериодаЦехКонтрагентаРасширеннаяПодсказка" id="130"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<UsualGroup name="Группа13" id="136">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа13РасширеннаяПодсказка" id="137"/>
+							<ChildItems>
+								<Button name="ВыписатьИНапечатать" id="138">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВыписатьИНапечатать</CommandName>
+									<BackColor>web:Moccasin</BackColor>
+									<ExtendedTooltip name="ВыписатьИНапечататьРасширеннаяПодсказка" id="139"/>
+								</Button>
+								<Button name="Напечатать" id="142">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Напечатать</CommandName>
+									<BackColor>web:Moccasin</BackColor>
+									<ExtendedTooltip name="НапечататьРасширеннаяПодсказка" id="143"/>
+								</Button>
+								<Button name="Выписать" id="140">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.Выписать</CommandName>
+									<BackColor>web:Moccasin</BackColor>
+									<ExtendedTooltip name="ВыписатьРасширеннаяПодсказка" id="141"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="фОрганизация" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф организация</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Организации</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фДатаНачала" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата начала</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фДатаОкончания" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дата окончания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фПечатьСразуНаПринтер" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф печать сразу на принтер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фТаблицаПутевыхЛистовПериода" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф таблица путевых листов периода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПутевойЛист" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путевой лист</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:DocumentRef.уатПутевойЛист</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ДатаВыезда" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата выезда</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаВозвращения" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата возвращения</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ЦехКонтрагента" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цех контрагента</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ЦехаКонтрагента</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Водитель" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Водитель</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.уатСотрудники</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Выбрано" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выбрано</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="фТС" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф ТС</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатТС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фВремяВыезда" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф время выезда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Time</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фВремяВозврата" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф время возврата</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Time</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фВодитель" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Водитель</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатСотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фВодитель2" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Водитель 2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатСотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фПрицеп" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф прицеп</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатТС</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фЗаказчик" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заказчик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фЦех" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф цех</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ЦехаКонтрагента</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фПозицияПП" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф позиция ПП</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.ПозицияПроизводсвеннойПрограммы</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фВрач" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Медик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатСотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фМеханик" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Механик</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатСотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фДиспетчер" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Диспетчер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.уатСотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фДниНедели" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф дни недели</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="фРазрешитьСовпадениеВремени" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф разрешить совпадение времени</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="фИдентификаторСтрокиЗаявки" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ф идентификатор строки заявки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>36</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыписатьИНапечатать" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выписать и напечатать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выписать и напечатать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыписатьИНапечатать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Выписать" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выписать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выписать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Выписать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="Напечатать" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напечатать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Напечатать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Напечатать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УстановитьПометкиТаблицыПЛ" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки таблицы ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить пометки таблицы ПЛ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьПометкиТаблицыПЛ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СнятьПометкиТаблицыПЛ" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки таблицы ПЛ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять пометки таблицы ПЛ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СнятьПометкиТаблицыПЛ</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

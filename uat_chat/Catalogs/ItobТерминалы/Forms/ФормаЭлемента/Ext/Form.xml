@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<WarningOnEditRepresentation>DontShow</WarningOnEditRepresentation>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="22"/>
+			<Events>
+				<Event name="OnChange">КодПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Модель" id="7">
+			<DataPath>Объект.Модель</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="МодельКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="МодельРасширеннаяПодсказка" id="23"/>
+			<Events>
+				<Event name="OnChange">МодельПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Наименование" id="3">
+			<DataPath>Объект.Description</DataPath>
+			<SkipOnInput>true</SkipOnInput>
+			<EditMode>EnterOnInput</EditMode>
+			<ChoiceListButton>true</ChoiceListButton>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="4"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="24"/>
+			<Events>
+				<Event name="OnChange">НаименованиеПриИзменении</Event>
+				<Event name="StartListChoice">НаименованиеНачалоВыбораИзСписка</Event>
+			</Events>
+		</InputField>
+		<InputField name="IMEI" id="5">
+			<DataPath>Объект.IMEI</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="IMEIКонтекстноеМеню" id="6"/>
+			<ExtendedTooltip name="IMEIРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<InputField name="НомерSimКарты" id="9">
+			<DataPath>Объект.НомерSimКарты</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>№ Sim-карты</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерSimКартыКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="НомерSimКартыРасширеннаяПодсказка" id="26"/>
+		</InputField>
+		<Table name="Датчики" id="11">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<FileDragMode>AsFile</FileDragMode>
+			<DataPath>Объект.Датчики</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДатчикиКонтекстноеМеню" id="12"/>
+			<AutoCommandBar name="ДатчикиКоманднаяПанель" id="13"/>
+			<ExtendedTooltip name="ДатчикиРасширеннаяПодсказка" id="27"/>
+			<SearchStringAddition name="ДатчикиСтрокаПоиска" id="28">
+				<AdditionSource>
+					<Item>Датчики</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДатчикиСтрокаПоискаКонтекстноеМеню" id="29"/>
+				<ExtendedTooltip name="ДатчикиСтрокаПоискаРасширеннаяПодсказка" id="30"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДатчикиСостояниеПросмотра" id="31">
+				<AdditionSource>
+					<Item>Датчики</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДатчикиСостояниеПросмотраКонтекстноеМеню" id="32"/>
+				<ExtendedTooltip name="ДатчикиСостояниеПросмотраРасширеннаяПодсказка" id="33"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДатчикиУправлениеПоиском" id="34">
+				<AdditionSource>
+					<Item>Датчики</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДатчикиУправлениеПоискомКонтекстноеМеню" id="35"/>
+				<ExtendedTooltip name="ДатчикиУправлениеПоискомРасширеннаяПодсказка" id="36"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ДатчикиНомерСтроки" id="14">
+					<DataPath>Объект.Датчики.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатчикиНомерСтрокиКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ДатчикиНомерСтрокиРасширеннаяПодсказка" id="37"/>
+				</LabelField>
+				<InputField name="ДатчикиДатчик" id="16">
+					<DataPath>Объект.Датчики.Датчик</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ChoiceParameterLinks>
+						<xr:Link>
+							<xr:Name>Отбор.Владелец</xr:Name>
+							<xr:DataPath xsi:type="xs:string">Объект.Модель</xr:DataPath>
+							<xr:ValueChange>Clear</xr:ValueChange>
+						</xr:Link>
+					</ChoiceParameterLinks>
+					<ContextMenu name="ДатчикиДатчикКонтекстноеМеню" id="17"/>
+					<ExtendedTooltip name="ДатчикиДатчикРасширеннаяПодсказка" id="38"/>
+				</InputField>
+				<InputField name="ДатчикиНазначение" id="18">
+					<DataPath>Объект.Датчики.Назначение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатчикиНазначениеКонтекстноеМеню" id="19"/>
+					<ExtendedTooltip name="ДатчикиНазначениеРасширеннаяПодсказка" id="39"/>
+				</InputField>
+				<InputField name="ДатчикиКалибровочныйГрафик" id="20">
+					<DataPath>Объект.Датчики.КалибровочныйГрафик</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатчикиКалибровочныйГрафикКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДатчикиКалибровочныйГрафикРасширеннаяПодсказка" id="40"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.ItobТерминалы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

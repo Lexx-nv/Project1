@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.11">
+	<CommandsVisibility>
+		<Command name="InformationRegister.Температуры.StandardCommand.OpenList">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="Report.уатРеестрОказанныхУслуг_стм.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+		<Command name="DataProcessor.уатЛегальностьПолученияОбновлений.StandardCommand.Open">
+			<Visibility>
+				<xr:Common>false</xr:Common>
+			</Visibility>
+		</Command>
+	</CommandsVisibility>
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатУправлениеПерсоналом</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатУправлениеРемонтами</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатУправлениеПравамиПользователей</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатОбменДанными</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатСервис</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатУправлениеЗатратами</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатСкладскойУчет</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатПланированиеТС</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатАналитическаяОтчетность</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатПассажирскиеПеревозки</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатРегламентированнаяОтчетность</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатРаботаТС</Subsystem>
+		<Subsystem>Subsystem.уатУправлениеАвтотранспортом.Subsystem.уатЭксплуатация</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>
